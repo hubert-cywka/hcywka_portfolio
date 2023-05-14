@@ -1,0 +1,28 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.skill-badge-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+
+  @include small-tile(1);
+  padding: $spacing-xl;
+
+  .skill-icon {
+    width: $xxxl-font;
+    aspect-ratio: 1;
+    filter: brightness(100%) saturate(100%);
+  }
+
+  .skill-name {
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top: $spacing-s;
+    font-size: $s-font;
+    pointer-events: none;
+  }
+}

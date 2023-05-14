@@ -1,0 +1,24 @@
+@import 'src/styles/mixins';
+
+.experience-container {
+  @include tile(0);
+  border-radius: 0;
+  height: 100%;
+  position: relative;
+
+  .experience-responsibilities {
+    padding: $spacing-standard;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+
+    .experience-divider {
+      margin-right: $spacing-xl;
+      border-radius: 10px;
+      width: 5px;
+      height: 100%;
+      border: thin solid #222222;
+      @include shadow($not-pressed-button-shadow);
+    }
+  }
+}

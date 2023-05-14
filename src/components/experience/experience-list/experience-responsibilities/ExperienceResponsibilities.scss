@@ -1,0 +1,18 @@
+@import "../../../../styles/mixins";
+
+.experience-responsibilities-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-s;
+  height: 100%;
+  margin-bottom: $spacing-l;
+
+  .responsibilities-header {
+    font-weight: bold;
+    font-size: $l-font;
+  }
+
+  .responsibility {
+    font-size: $s-font;
+  }
+}

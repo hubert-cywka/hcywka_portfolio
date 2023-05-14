@@ -1,0 +1,24 @@
+@import "src/styles/constants";
+
+.header {
+  word-break: break-all;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  padding: $spacing-xl;
+  box-sizing: border-box;
+
+  .role {
+    font-size: $s-font;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+  }
+
+  .header-text {
+    line-height: $xxxl-font;
+    font-size: $xxxl-font;
+    font-weight: 700;
+  }
+}

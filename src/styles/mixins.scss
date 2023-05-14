@@ -1,0 +1,21 @@
+@import "src/styles/constants";
+
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin tile($background-opacity) {
+  @include shadow($shadow);
+  box-sizing: border-box;
+  border: thin solid black;
+  padding: $spacing-standard;
+  background: rgba(235, 77, 90, $background-opacity);
+  border-radius: 10px;
+}
+
+@mixin small-tile($background-opacity) {
+  @include tile($background-opacity);
+  @include shadow($small-shadow);
+}

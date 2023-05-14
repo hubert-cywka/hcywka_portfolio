@@ -1,0 +1,30 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.about-me-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include tile(0.5);
+  border-radius: 0;
+
+  .description {
+    text-align: justify;
+    font-size: $s-font;
+    transform: translateX(-$spacing-xl);
+  }
+
+  .picture-container {
+    transform: translateX(-50%);
+
+    filter: drop-shadow(8px 4px 0px rgba(72, 0, 0, 0.56));
+    width: fit-content;
+    height: fit-content;
+
+    .picture {
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+      max-width: 125px;
+    }
+  }
+}

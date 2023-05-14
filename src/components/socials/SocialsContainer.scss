@@ -1,0 +1,24 @@
+@import '../../styles/constants';
+@import "../../styles/mixins";
+
+.auto-scroll-container {
+  justify-content: space-evenly;
+  display: flex;
+  gap: $spacing-standard;
+  overflow-x: clip;
+  @include tile(0);
+  padding: $spacing-xl;
+
+  .skill-badge-container {
+    animation: 3s primary linear infinite;
+  }
+
+  @keyframes primary {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(2 * calc(#{$spacing-standard} + 100%)));
+    }
+  }
+}

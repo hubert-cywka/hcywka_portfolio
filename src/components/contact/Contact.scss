@@ -1,0 +1,49 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.contact-container {
+  @include tile(1);
+  padding: $spacing-xl;
+  display: flex;
+  gap: $spacing-xl;
+  height: 100%;
+  border-radius: 0;
+  background: #6700cc;
+  z-index: 100;
+
+  .margin {
+    width: $spacing-s;
+    height: 100%;
+    background: rgba(34, 34, 34, 0.35);
+    border: thin solid #222222;
+  }
+
+  .contact-icon {
+    width: $xl-font;
+    filter: invert(1);
+    margin-right: $spacing-standard;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: $xl-font;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .role {
+    font-weight: bold;
+    margin-bottom: $spacing-xl;
+  }
+
+  .contact {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: $s-font;
+    width: fit-content;
+    margin-top: $spacing-l;
+    display: flex;
+    align-items: center;
+  }
+}

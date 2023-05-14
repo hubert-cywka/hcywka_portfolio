@@ -1,0 +1,43 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.project-container {
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  @include tile(0);
+
+  .buttons-container {
+    position: absolute;
+    left: 0;
+    display: flex;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: $spacing-standard;
+    z-index: 1000;
+
+    .image-change-button {
+      @include tile(1);
+      @include shadow($not-pressed-button-shadow);
+      box-sizing: content-box;
+      aspect-ratio: 1;
+      text-align: center;
+      font-size: $xl-font;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background: rgb(234, 37, 67);
+      }
+
+      &.active {
+        background: rgb(139, 41, 255);
+        transform: translateY(3px) translateX(3px);
+        @include shadow($pressed-button-shadow);
+      }
+    }
+  }
+}

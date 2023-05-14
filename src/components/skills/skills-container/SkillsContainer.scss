@@ -1,0 +1,23 @@
+@import "src/styles/constants";
+
+.skills-container {
+  display: flex;
+  gap: $spacing-standard;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .skill-badge-container {
+    cursor: auto;
+    transition: 0.3s;
+    background: rgba(235, 77, 90, 0.25);
+    width: calc(2 * #{$xxxl-font});
+
+    .skill-icon {
+      width: $xxl-font;
+    }
+
+    &:hover {
+      transform: translateY(-$spacing-s);
+    }
+  }
+}

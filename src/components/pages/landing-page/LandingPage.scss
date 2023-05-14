@@ -1,0 +1,24 @@
+@import "src/styles/constants";
+
+.landing-page-container {
+  padding: $spacing-xxxl $spacing-xl $spacing-xl;
+  box-sizing: border-box;
+
+  .section-header {
+    text-align: center;
+    font-size: $xxl-font;
+    font-weight: bold;
+    margin-top: $spacing-xxxl;
+    color: #222222;
+
+    &.bottom-margin {
+      margin-bottom: $spacing-l;
+    }
+  }
+
+  .text-paragraph {
+    margin-bottom: $spacing-standard;
+    font-size: $s-font;
+    text-align: justify;
+  }
+}
