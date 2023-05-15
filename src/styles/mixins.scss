@@ -6,16 +6,37 @@
   box-shadow: $shadow;
 }
 
-@mixin tile($background-opacity) {
-  @include shadow($shadow);
+@mixin tile {
   box-sizing: border-box;
-  border: thin solid black;
+  border: thin solid $purple-darker;
   padding: $spacing-standard;
-  background: rgba(235, 77, 90, $background-opacity);
   border-radius: 10px;
 }
 
-@mixin small-tile($background-opacity) {
-  @include tile($background-opacity);
-  @include shadow($small-shadow);
+@mixin small-tile {
+  @include tile;
+}
+
+@mixin badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  border-radius: 25px;
+  box-sizing: border-box;
+
+  .badge-icon {
+    filter: brightness(100%) saturate(100%) invert(1);
+    max-width: $xl-font;
+  }
+
+  .badge-name {
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top: $spacing-s;
+    font-size: $s-font;
+    pointer-events: none;
+  }
 }

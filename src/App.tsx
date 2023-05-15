@@ -6,7 +6,7 @@ import { AppRouter } from './router/AppRouter';
 function App() {
   return (
     <AppProvider>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <RouterProvider router={AppRouter} />
       </Container>
     </AppProvider>

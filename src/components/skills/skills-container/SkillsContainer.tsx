@@ -7,7 +7,7 @@ const SkillsContainer = () => {
   return (
     <Box className="skills-container">
       {SKILLS.map((skill, index) => (
-        <SkillBadge key={index} imageSrc={skill.img} name={skill.name} />
+        <SkillBadge key={index} imageSrc={skill.img} name={skill.name} level={skill.level} />
       ))}
     </Box>
   );

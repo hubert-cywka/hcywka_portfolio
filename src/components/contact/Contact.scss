@@ -2,20 +2,53 @@
 @import "src/styles/constants";
 
 .contact-container {
-  @include tile(1);
-  padding: $spacing-xl;
-  display: flex;
+  @include tile;
+  padding: $spacing-xl 0 $spacing-xl $spacing-xl;
+  margin-top: $spacing-xl;
   gap: $spacing-xl;
+  display: flex;
   height: 100%;
   border-radius: 0;
-  background: #6700cc;
-  z-index: 100;
+  background: $purple;
+  z-index: $contact-z-index;
+  position: relative;
+  transition: 0.2s;
+
+  @media (min-width: $md-breakpoint) {
+    transform: translateX(-$spacing-xl);
+
+    &:hover {
+      transform: translateX(0) translateY(-$spacing-s);
+      @include shadow($distant-shadow);
+    }
+  }
 
   .margin {
+    @include shadow($pressed-button-shadow);
     width: $spacing-s;
     height: 100%;
-    background: rgba(34, 34, 34, 0.35);
-    border: thin solid #222222;
+    border: thin solid $gray;
+  }
+
+  .take-me {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: $spacing-standard;
+    background: $purple-darker;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    letter-spacing: 2px;
+    border-left: 2px dashed $gray;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: $purple-lighter;
+    }
   }
 
   .contact-icon {
@@ -24,15 +57,18 @@
     margin-right: $spacing-standard;
   }
 
-  .name {
+  .name, .role {
     font-weight: bold;
+  }
+
+  .name {
+    text-transform: uppercase;
     font-size: $xl-font;
     margin: 0 auto;
     width: fit-content;
   }
 
   .role {
-    font-weight: bold;
     margin-bottom: $spacing-xl;
   }
 

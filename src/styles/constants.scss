@@ -1,3 +1,19 @@
+@import "zindexes";
+
+$md-breakpoint: 900px;
+
+$red-darker: #ea2543;
+$purple-lighter: #8a15ff;
+$purple: #6700cc;
+$purple-darker: #5300a7;
+$green: #00eca4;
+$green-darker: #028b65;
+$gradient-100: rgba(235, 77, 90, 1);
+$gradient-75: rgba(235, 77, 90, 0.75);
+$gradient-50: rgba(235, 77, 90, 0.50);
+$gradient-25: rgba(235, 77, 90, 0.25);
+$gray: #222222;
+
 $standard-font-size: 1rem;
 $s-font: 0.8125rem;
 $xs-font: 0.725rem;
@@ -12,11 +28,12 @@ $spacing-s: 5px;
 $spacing-l: 15px;
 $spacing-xl: 20px;
 $spacing-xxl: 50px;
-$spacing-xxxl: 100px;
+$spacing-xxxl: 200px;
 
-$shadow: 12px 12px 0px -2px rgba(154, 0, 0, 0.5);
-$medium-shadow: 8px 8px 0px -2px rgba(154, 0, 0, 0.5);
-$small-shadow: 0px 3px 0px -2px rgba(154, 0, 0, 0.5);
-$not-pressed-button-shadow: 3px 3px 0px 0 rgba(154, 0, 0, 1);
-$pressed-button-shadow: 1px 1px 0px 0 rgba(154, 0, 0, 1);
-$inset-shadow: inset 0px 0px 24px 0px rgba(36, 0, 64, 0.5);
+$distant-shadow: 18px 18px 5px -2px rgba(30, 30, 30, 0.5);
+$shadow: 12px 12px 0px -2px rgba(30, 30, 30, 0.5);
+$medium-shadow: 8px 8px 0px -2px rgba(30, 30, 30, 0.5);
+$small-shadow: 0px 3px 0px -2px rgba(30, 30, 30, 0.5);
+$not-pressed-button-shadow: 3px 3px 0px 0 rgba(30, 30, 30, 1);
+$pressed-button-shadow: 1px 1px 0px 0 rgba(30, 30, 30, 1);
+$inset-shadow: inset 0px 0px 24px 0px rgba(30, 30, 30, 0.5);

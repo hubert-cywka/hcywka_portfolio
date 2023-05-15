@@ -1,24 +1,29 @@
 @import "src/styles/constants";
 
 .landing-page-container {
-  padding: $spacing-xxxl $spacing-xl $spacing-xl;
+  padding: $spacing-xxxl $spacing-xl;
   box-sizing: border-box;
 
-  .section-header {
-    text-align: center;
-    font-size: $xxl-font;
-    font-weight: bold;
-    margin-top: $spacing-xxxl;
-    color: #222222;
-
-    &.bottom-margin {
-      margin-bottom: $spacing-l;
-    }
+  .content-container {
+    overflow-y: auto;
   }
 
-  .text-paragraph {
-    margin-bottom: $spacing-standard;
-    font-size: $s-font;
-    text-align: justify;
+  .section-header {
+    display: block;
+    width: fit-content;
+    margin: $spacing-l 0 $spacing-l;
+
+    @media (min-width: $md-breakpoint) {
+      display: flex;
+      gap: $spacing-standard;
+    }
+
+    &.extra-margin {
+      margin: $spacing-xxxl 0 $spacing-l;
+    }
+
+    :nth-child(2) {
+      color: $purple-lighter;
+    }
   }
 }

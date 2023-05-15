@@ -1,16 +1,17 @@
 import { Link } from '../types/interfaces/Link';
+import { GITHUB_URL, LINKEDIN_URL } from './URLConstants';
 
 export const LINKS: Link[] = Array(25)
   .fill([
     {
       img: 'linkedin.svg',
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/hubert-cywka'
+      url: LINKEDIN_URL
     },
     {
       img: 'github.svg',
       name: 'GitHub',
-      url: 'https://www.github.com/hejs22'
+      url: GITHUB_URL
     }
   ])
   .flat();

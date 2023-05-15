@@ -1,24 +1,21 @@
 @import 'src/styles/mixins';
 
 .experience-container {
-  @include tile(0);
-  border-radius: 0;
-  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid $gray;
+  padding-left: $spacing-xl;
+  gap: $spacing-xl;
 
-  .experience-responsibilities {
-    padding: $spacing-standard;
+  .timeline-point {
+    position: absolute;
+    left: 0;
+    width: 7px;
+    aspect-ratio: 1;
+    background: $purple-lighter;
+    border-radius: 10px;
+    transform: translateX(calc(-50% - 1px)) translateY(8px);
     box-sizing: border-box;
-    height: 100%;
-    display: flex;
-
-    .experience-divider {
-      margin-right: $spacing-xl;
-      border-radius: 10px;
-      width: 5px;
-      height: 100%;
-      border: thin solid #222222;
-      @include shadow($not-pressed-button-shadow);
-    }
   }
 }

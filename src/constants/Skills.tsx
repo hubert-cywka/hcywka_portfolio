@@ -1,64 +1,96 @@
 import { Skill } from '../types/interfaces/Skill';
+import {
+  CSS_IMAGE,
+  DOCKER_IMAGE,
+  GIT_IMAGE,
+  GITHUB_IMAGE,
+  HTML_IMAGE,
+  ILLUSTRATOR_IMAGE,
+  JAVA_IMAGE,
+  JEST_IMAGE,
+  JS_IMAGE,
+  MUI_IMAGE,
+  PHOTOSHOP_IMAGE,
+  REACT_IMAGE,
+  REST_IMAGE,
+  SPRING_IMAGE,
+  TS_IMAGE
+} from './ImageConstants';
 
 export const SKILLS: Skill[] = [
   {
-    img: 'react.svg',
-    name: 'React.js'
+    img: REACT_IMAGE,
+    name: 'React.js',
+    level: 4
   },
   {
-    img: 'js.svg',
-    name: 'JavaScript'
+    img: JS_IMAGE,
+    name: 'JavaScript',
+    level: 3
   },
   {
-    img: 'ts.svg',
-    name: 'TypeScript'
+    img: TS_IMAGE,
+    name: 'TypeScript',
+    level: 3
   },
   {
-    img: 'html.svg',
-    name: 'HTML'
+    img: HTML_IMAGE,
+    name: 'HTML',
+    level: 4
   },
   {
-    img: 'css.svg',
-    name: 'CSS'
+    img: CSS_IMAGE,
+    name: 'CSS',
+    level: 4
   },
   {
-    img: 'github.svg',
-    name: 'GitHub'
+    img: GITHUB_IMAGE,
+    name: 'GitHub',
+    level: 4
   },
   {
-    img: 'git.svg',
-    name: 'Git'
+    img: GIT_IMAGE,
+    name: 'Git',
+    level: 4
   },
   {
-    img: 'docker.svg',
-    name: 'Docker'
+    img: DOCKER_IMAGE,
+    name: 'Docker',
+    level: 2
   },
   {
-    img: 'mui.svg',
-    name: 'Material UI'
+    img: MUI_IMAGE,
+    name: 'Material UI',
+    level: 4
   },
   {
-    img: 'jest.svg',
-    name: 'Jest'
+    img: JEST_IMAGE,
+    name: 'Jest',
+    level: 4
   },
   {
-    img: 'rest.svg',
-    name: 'REST API'
+    img: REST_IMAGE,
+    name: 'REST API',
+    level: 3
   },
   {
-    img: 'java.svg',
-    name: 'Java'
+    img: JAVA_IMAGE,
+    name: 'Java',
+    level: 2
   },
   {
-    img: 'spring.svg',
-    name: 'Spring Boot'
+    img: SPRING_IMAGE,
+    name: 'Spring Boot',
+    level: 1
   },
   {
-    img: 'photoshop.svg',
-    name: 'Photoshop'
+    img: PHOTOSHOP_IMAGE,
+    name: 'Photoshop',
+    level: 3
   },
   {
-    img: 'illustrator.svg',
-    name: 'Illustrator'
+    img: ILLUSTRATOR_IMAGE,
+    name: 'Illustrator',
+    level: 4
   }
 ];

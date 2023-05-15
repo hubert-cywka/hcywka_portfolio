@@ -2,27 +2,27 @@
 @import "src/styles/mixins";
 
 .skill-badge-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
+  @include badge;
+  width: 100px;
 
-  @include small-tile(1);
-  padding: $spacing-xl;
+  .skill-level {
+    margin-top: $spacing-standard;
+    display: flex;
+    gap: $spacing-s;
 
-  .skill-icon {
-    width: $xxxl-font;
-    aspect-ratio: 1;
-    filter: brightness(100%) saturate(100%);
-  }
+    .skill-level-dot {
+      width: 6px;
+      aspect-ratio: 1;
+      border-radius: 50px;
+      background: $purple;
 
-  .skill-name {
-    text-decoration: none;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-top: $spacing-s;
-    font-size: $s-font;
-    pointer-events: none;
+      &.on {
+        transform: scale(1.1);
+      }
+
+      &.off {
+        opacity: 0.35;
+      }
+    }
   }
 }

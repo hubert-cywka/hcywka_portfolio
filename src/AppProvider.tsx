@@ -1,5 +1,5 @@
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, darken, ThemeProvider } from '@mui/material';
 
 interface AppProviderProps {
   children: ReactJSXElement | ReactJSXElement[];
@@ -13,7 +13,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
       }
     },
     palette: {
-      mode: 'light',
+      mode: 'dark',
       primary: {
         main: '#100037',
         light: '#2D0C6E',
@@ -25,6 +25,25 @@ const AppProvider = ({ children }: AppProviderProps) => {
       text: {
         primary: '#ffffff',
         secondary: '#222222'
+      }
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none'
+          }
+        },
+        variants: [
+          {
+            props: { variant: 'contained' },
+            style: {
+              color: '#ffffff',
+              backgroundColor: '#7100fb',
+              ':hover': { backgroundColor: darken('#7100fb', 0.15) }
+            }
+          }
+        ]
       }
     }
   });

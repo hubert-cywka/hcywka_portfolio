@@ -3,4 +3,5 @@ export interface Project {
   name: string;
   url: string;
   github: string;
+  description: string[];
 }

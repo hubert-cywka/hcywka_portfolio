@@ -1,24 +1,80 @@
 @import "src/styles/constants";
+@import "src/styles/mixins";
 
 .header {
-  word-break: break-all;
-  height: 100%;
+  @include tile;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: right;
-  padding: $spacing-xl;
-  box-sizing: border-box;
-
-  .role {
-    font-size: $s-font;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
+  justify-content: space-evenly;
+  @media (min-width: $md-breakpoint) {
+    position: fixed;
   }
 
-  .header-text {
-    line-height: $xxxl-font;
-    font-size: $xxxl-font;
-    font-weight: 700;
+  @media (max-width: $md-breakpoint) {
+    height: 90vh;
+    transform: translateY(-20%);
+  }
+
+  .socials {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    gap: $spacing-standard;
+
+    .social-button {
+      border-radius: 100%;
+      padding: $spacing-standard;
+      width: 20px;
+      height: 20px;
+      border: thin solid #888;
+      filter: invert(1) brightness(50%);
+      transition: 0.2s;
+
+      &:hover {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    gap: $spacing-l;
+    padding: $spacing-xl;
+    box-sizing: border-box;
+
+    .text-container {
+      .role {
+        color: $purple-lighter;
+        font-size: $s-font;
+        letter-spacing: 0.5rem;
+        font-weight: bold;
+      }
+
+      .header-text {
+        line-height: $xxxl-font;
+        font-size: $xxxl-font;
+        font-weight: 700;
+      }
+    }
+
+    .picture {
+      max-width: 200px;
+      border-radius: 20px;
+      border: thin solid $purple-lighter;
+      background: $purple-darker;
+    }
+  }
+
+  .all-rights-reserved {
+    opacity: 0.5;
+    margin: $spacing-standard auto;
+    display: block;
+    width: fit-content;
   }
 }

@@ -1,5 +1,5 @@
 import './ExperienceResponsibilities.scss';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 interface ExperienceResponsibilitiesProps {
   responsibilities: string[];
@@ -8,12 +8,11 @@ interface ExperienceResponsibilitiesProps {
 const ExperienceResponsibilities = ({ responsibilities }: ExperienceResponsibilitiesProps) => {
   return (
     <Box className="experience-responsibilities-container">
-      <Box className="responsibilities-header">My responsibilities</Box>
       {responsibilities.map((responsibility, index) => {
         return (
-          <Box className="responsibility" key={index}>
+          <Typography variant="caption" className="responsibility" key={index}>
             {responsibility}
-          </Box>
+          </Typography>
         );
       })}
     </Box>

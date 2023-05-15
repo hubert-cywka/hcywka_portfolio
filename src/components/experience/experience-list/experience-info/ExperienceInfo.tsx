@@ -1,37 +1,50 @@
-import { Box } from '@mui/material';
+import { Box, Collapse, IconButton, Typography } from '@mui/material';
 import { Experience } from '../../../../types/interfaces/Experience';
 import './ExperienceInfo.scss';
+import ExperienceResponsibilities from '../experience-responsibilities/ExperienceResponsibilities';
+import { useState } from 'react';
+import { KeyboardArrowDownRounded } from '@mui/icons-material';
 
 const ExperienceInfo = ({
   since,
   to,
   position,
+  companyName,
   description,
-  url,
-  linkedin,
-  logo,
-  companyName
+  responsibilities
 }: Experience) => {
+  const [areResponsibilitiesVisible, setAreResponsibilitiesVisible] = useState(false);
+  const toggleResponsibilitiesVisibility = () => {
+    setAreResponsibilitiesVisible((prev) => !prev);
+  };
+
   return (
     <Box className="experience-info-container">
-      <Box className="experience-info-text">
-        <Box className="additional-info">
-          <Box className="position">{position}</Box>
-          <Box className="date">
-            {since} - {to}
+      <Typography variant="caption" className="date">{`${since} - ${to}`}</Typography>
+      <Typography variant="h6" className="company-name">
+        {companyName}
+      </Typography>
+      <Typography variant="subtitle2" className="position">
+        {position}
+      </Typography>
+      <Typography variant="caption" className="description">
+        {description}
+      </Typography>
+      {responsibilities?.length && (
+        <>
+          <Box>
+            <Typography variant="caption">Responsibilities</Typography>
+            <IconButton sx={{ color: 'text.primary' }} onClick={toggleResponsibilitiesVisibility}>
+              <KeyboardArrowDownRounded
+                className={`expand-button ${areResponsibilitiesVisible ? 'collapse' : ''}`}
+              />
+            </IconButton>
           </Box>
-        </Box>
-        <Box className="company-name">{companyName}</Box>
-        <Box className="description">{description}</Box>
-        <Box className="company-buttons">
-          <a target="_blank" href={url} rel="noreferrer">
-            <img className="logo" src={logo} alt="Company website" />
-          </a>
-          <a href={linkedin} target="_blank" rel="noreferrer">
-            <img className="linkedin" src="linkedin.svg" alt="Company LinkedIn page" />
-          </a>
-        </Box>
-      </Box>
+          <Collapse in={areResponsibilitiesVisible}>
+            <ExperienceResponsibilities responsibilities={responsibilities} />
+          </Collapse>
+        </>
+      )}
     </Box>
   );
 };

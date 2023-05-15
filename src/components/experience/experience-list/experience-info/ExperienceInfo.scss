@@ -2,94 +2,37 @@
 @import "src/styles/mixins";
 
 .experience-info-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
+  width: 100%;
 
-  .experience-info-text {
-    padding: $spacing-l;
+  .date {
+    margin-bottom: $spacing-xl;
+    opacity: 0.75;
+  }
 
-    .date, .company-name, .position {
-      font-weight: bold;
+  .company-name {
+    margin-bottom: -$spacing-s;
+  }
+
+  .position {
+    opacity: 0.75;
+  }
+
+  .description {
+    opacity: 0.5;
+    margin-top: $spacing-s;
+    text-align: justify;
+    display: block;
+
+    @media (min-width: $md-breakpoint) {
+      max-width: 80%;
     }
+  }
 
-    .additional-info {
-      display: flex;
-      align-items: center;
-      gap: $spacing-l;
-      width: fit-content;
-      transform: translateY(-50%);
-      position: absolute;
-      left: $spacing-standard;
-      top: 0;
+  .expand-button {
+    transition: 0.2s;
 
-      .date, .position {
-        @include tile(1);
-        @include shadow($not-pressed-button-shadow);
-        width: fit-content;
-        height: fit-content;
-      }
-
-      .position {
-        font-size: $l-font;
-      }
-
-      .date {
-        font-size: $s-font;
-        background: #6700cc;
-      }
-    }
-
-    .company-name {
-      font-size: $xxl-font;
-      @media (max-width: 1000px) {
-        margin-top: $spacing-xl;
-      }
-    }
-
-    .description {
-      font-size: $s-font;
-      margin-top: $spacing-l;
-      text-align: justify;
-      opacity: 0.9;
-    }
-
-    .company-buttons {
-      display: flex;
-      align-items: center;
-      gap: $spacing-l;
-      position: absolute;
-      bottom: 0;
-      right: $spacing-standard;
-      transform: translateY(50%);
-
-      .logo {
-        @include tile(1);
-        @include shadow($not-pressed-button-shadow);
-        background: white;
-        width: 100px;
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover {
-          background: #cccccc;
-        }
-      }
-
-      .linkedin {
-        @include tile(1);
-        @include shadow($not-pressed-button-shadow);
-        background: #00eca4;
-        width: $xxxl-font;
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover {
-          background: #028b65;
-        }
-      }
+    &.collapse {
+      transform: rotate(180deg);
     }
   }
 }

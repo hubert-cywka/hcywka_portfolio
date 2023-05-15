@@ -2,55 +2,16 @@
 @import "src/styles/constants";
 
 .project-description-container {
-  @include tile(0.5);
-  @include shadow($medium-shadow);
-  border-radius: 0;
-  padding: $spacing-xl;
+  margin-top: $spacing-xxl;
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin: $spacing-xl $spacing-s $spacing-s;
+  gap: $spacing-xl;
 
-  .project-name {
-    @include tile(1);
-    @include shadow($not-pressed-button-shadow);
-    border-radius: 0;
-    padding: $spacing-s $spacing-standard;
-    font-size: $l-font;
-    font-weight: bold;
-    background: #6700cc;
-    transform: translateY(-100%);
-    width: fit-content;
-  }
-
-  .project-description {
-    margin-bottom: auto;
-  }
-
-  .github-link {
-    @include small-tile(1);
-    @include shadow($not-pressed-button-shadow);
-    padding: $spacing-s;
-    width: $xxxl-font;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(50%);
-    cursor: pointer;
-    transition: 0.2s;
-    background: #00eca4;
-
-    &:hover {
-      background: #028b65;
-    }
-  }
-
-  .project-link {
-    @include tile(1);
-    @include shadow($not-pressed-button-shadow);
-    width: fit-content;
-    font-weight: bold;
-    background: #6700cc;
-    transform: translateY(100%);
-    margin-left: auto;
+  .project-description-paragraph {
+    opacity: 0.75;
+    text-align: justify;
+    display: block;
+    border-left: 2px solid $gray;
+    padding-left: $spacing-standard;
   }
 }

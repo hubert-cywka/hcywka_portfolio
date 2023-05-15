@@ -2,22 +2,22 @@
 @import "src/styles/mixins";
 
 .project-picture-container {
-  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
 
   .project-picture {
-    @include tile(0);
-    @include shadow(none);
-    object-fit: contain;
-    height: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: $spacing-s;
-    max-height: 500px;
-    border-radius: 25px;
-    position: relative;
+    max-width: 90%;
+    border-radius: 50px;
+    padding: $spacing-l;
+    box-sizing: border-box;
+  }
+
+  .image-change-buttons {
+    align-items: center;
+    display: flex;
+    gap: $spacing-standard;
   }
 }

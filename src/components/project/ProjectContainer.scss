@@ -2,42 +2,22 @@
 @import "src/styles/constants";
 
 .project-container {
-  height: 100%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  @include tile(0);
+  .project-name {
+    margin-top: $spacing-l;
+    border-left: 5px solid $purple-lighter;
+    padding-left: $spacing-standard;
+  }
 
   .buttons-container {
-    position: absolute;
-    left: 0;
+    margin-top: $spacing-xxl;
+    justify-content: center;
     display: flex;
-    transform: translateX(-50%);
-    flex-direction: column;
-    gap: $spacing-standard;
-    z-index: 1000;
+    gap: $spacing-l;
 
-    .image-change-button {
-      @include tile(1);
-      @include shadow($not-pressed-button-shadow);
-      box-sizing: content-box;
-      aspect-ratio: 1;
-      text-align: center;
-      font-size: $xl-font;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.2s;
-
-      &:hover {
-        background: rgb(234, 37, 67);
-      }
-
-      &.active {
-        background: rgb(139, 41, 255);
-        transform: translateY(3px) translateX(3px);
-        @include shadow($pressed-button-shadow);
-      }
+    .redirect-button {
+      text-transform: none;
+      border-radius: 50px;
+      padding: $spacing-s $spacing-l;
     }
   }
 }
