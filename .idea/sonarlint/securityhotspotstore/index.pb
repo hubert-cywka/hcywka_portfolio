@@ -17,8 +17,6 @@ H
 src/styles/zindexes.scss,0\b\0bfff9da34f70a3cf85de0107494b6e6ac3ceedc
 N
 src/types/interfaces/Skill.tsx,1\4\1472be16e53df067d38ac49dcc3c94b3c5415243
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 F
 src/styles/mixins.scss,d\1\d14bd21289a19cd63451a5325550dc1b7ff42a61
 S

@@ -5,8 +5,6 @@ A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 H
 src/styles/zindexes.scss,0\b\0bfff9da34f70a3cf85de0107494b6e6ac3ceedc
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 R
 "src/types/interfaces/Developer.tsx,5\f\5f1f6b59783f49513418715d8eb0a9b173961dca
 D
