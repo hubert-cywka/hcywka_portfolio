@@ -7,8 +7,6 @@ A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 P
  src/types/interfaces/Project.tsx,4\f\4fed3c23a8609fd0e70151627e0923f95c9888f2
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 D
 src/constants/Me.tsx,d\0\d095191626f46cf5da75d5b28578fb551bffe453
 R

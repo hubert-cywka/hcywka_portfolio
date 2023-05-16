@@ -13,8 +13,6 @@ P
  src/types/interfaces/Project.tsx,4\f\4fed3c23a8609fd0e70151627e0923f95c9888f2
 N
 src/types/interfaces/Skill.tsx,1\4\1472be16e53df067d38ac49dcc3c94b3c5415243
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 F
 src/styles/mixins.scss,d\1\d14bd21289a19cd63451a5325550dc1b7ff42a61
 S
