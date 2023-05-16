@@ -13,7 +13,7 @@ const SkillBadge = ({ imageSrc, name, level }: SkillBadgeProps) => {
     const skillLevelDots: ReactJSXElement[] = [];
     for (let iterator = 1; iterator <= 5; iterator++) {
       skillLevelDots.push(
-        <Box className={`skill-level-dot ${level >= iterator ? 'on' : 'off'}`} />
+        <Box key={iterator} className={`skill-level-dot ${level >= iterator ? 'on' : 'off'}`} />
       );
     }
     return skillLevelDots;

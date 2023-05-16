@@ -3,9 +3,10 @@
 
 .project-container {
   .project-name {
-    margin-top: $spacing-l;
+    margin-top: $spacing-xl;
     border-left: 5px solid $purple-lighter;
     padding-left: $spacing-standard;
+    margin-bottom: $spacing-xxl;
   }
 
   .buttons-container {

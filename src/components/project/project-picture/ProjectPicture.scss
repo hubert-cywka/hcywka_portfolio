@@ -9,10 +9,11 @@
   width: 100%;
 
   .project-picture {
-    max-width: 90%;
+    max-width: 80%;
     border-radius: 50px;
     padding: $spacing-l;
     box-sizing: border-box;
+    @include tile;
   }
 
   .image-change-buttons {

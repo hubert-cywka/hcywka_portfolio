@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
-import './Header.scss';
+import './AboutMe.scss';
 import { Developer } from '../../types/interfaces/Developer';
 import { EMAIL_IMAGE, GITHUB_IMAGE, LINKEDIN_IMAGE } from '../../constants/ImageConstants';
 
-const Header = ({ name, role, picture, mail, github, linkedin }: Developer) => {
+const AboutMe = ({ name, role, picture, mail, github, linkedin }: Developer) => {
   const getFirstName = () => {
     return name.slice(0, name.indexOf(' '));
   };
@@ -13,13 +13,13 @@ const Header = ({ name, role, picture, mail, github, linkedin }: Developer) => {
   };
 
   return (
-    <Box className="header">
+    <Box className="about-me">
       <Box className="me">
-        <img className="picture" src={picture} />
+        <img className="picture" src={picture} alt="Picture of this website creator" />
         <Box className="text-container">
-          <Box className="role">{role}</Box>
-          <Box className="header-text first-name">{getFirstName()}</Box>
-          <Box className="header-text last-name">{getLastName()}</Box>
+          <Typography className="role">{role}</Typography>
+          <Typography className="header-text first-name">{getFirstName()}</Typography>
+          <Typography className="header-text last-name">{getLastName()}</Typography>
         </Box>
       </Box>
       <Box className="socials">
@@ -40,4 +40,4 @@ const Header = ({ name, role, picture, mail, github, linkedin }: Developer) => {
   );
 };
 
-export default Header;
+export default AboutMe;

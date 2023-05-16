@@ -23,7 +23,7 @@ export const EXPERIENCE: Experience[] = [
       'Participating in designing openAPI.'
     ],
     description:
-      'I worked from scratch on a web application project in a team of 4 frontend and 5 backend developers. It was a great opportunity to learn good practices in a controlled environment and learn about the process of creating applications, including collecting customer requirements, presentations of progress, or the process of releasing applications to the cloud.'
+      'It was a great opportunity to learn good practices in a controlled environment and learn about the process of creating applications, including collecting customer requirements, presentations of progress, or the process of releasing applications to the cloud. We worked from scratch on a web application project in a team of 4 frontend and 5 backend developers. '
   },
   {
     companyName: 'Politechnika Łódzka',
@@ -31,6 +31,6 @@ export const EXPERIENCE: Experience[] = [
     to: 'Present',
     since: '10.2021',
     description:
-      'I am a second-year IT student at Politechnika Łódzka. Currently, I am immersing myself in the world of Information Technology, learning programming, network administration, and system analysis. As I progress through my studies, I am excited to broaden my knowledge and discover the vast opportunities that await me in the IT industry.'
+      'I am a second-year IT student at Politechnika Łódzka. Currently, I am immersing myself in the world of Information Technology, learning programming, network administration, and system analysis.'
   }
 ];

@@ -1,28 +1,32 @@
 @import "src/styles/constants";
 
 .landing-page-container {
-  padding: $spacing-xxxl $spacing-xl;
+  padding: $spacing-xxl 0;
   box-sizing: border-box;
 
-  .content-container {
-    overflow-y: auto;
+  @media (min-width: $md-breakpoint) {
+    padding-top: 10%;
   }
 
-  .section-header {
-    display: block;
-    width: fit-content;
-    margin: $spacing-l 0 $spacing-l;
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+  }
 
-    @media (min-width: $md-breakpoint) {
-      display: flex;
-      gap: $spacing-standard;
-    }
+
+  .section-header {
+    width: fit-content;
+    margin-bottom: $spacing-standard;
+    display: flex;
+    gap: $spacing-standard;
+    flex-wrap: wrap;
 
     &.extra-margin {
-      margin: $spacing-xxxl 0 $spacing-l;
+      margin: $header-spacing 0 $spacing-l;
     }
 
-    :nth-child(2) {
+    :last-child {
       color: $purple-lighter;
     }
   }

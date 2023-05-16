@@ -34,10 +34,11 @@ const ExperienceInfo = ({
         <>
           <Box>
             <Typography variant="caption">Responsibilities</Typography>
-            <IconButton sx={{ color: 'text.primary' }} onClick={toggleResponsibilitiesVisibility}>
-              <KeyboardArrowDownRounded
-                className={`expand-button ${areResponsibilitiesVisible ? 'collapse' : ''}`}
-              />
+            <IconButton
+              sx={{ color: 'text.primary' }}
+              className={`expand-button ${areResponsibilitiesVisible ? 'collapse' : ''}`}
+              onClick={toggleResponsibilitiesVisibility}>
+              <KeyboardArrowDownRounded />
             </IconButton>
           </Box>
           <Collapse in={areResponsibilitiesVisible}>

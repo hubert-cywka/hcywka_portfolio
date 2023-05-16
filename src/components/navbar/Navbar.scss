@@ -1,0 +1,36 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.navbar-container {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  padding: $spacing-xl $spacing-standard;
+  color: white;
+
+  @media (max-width: $md-breakpoint) {
+    display: none;
+  }
+
+  .navbar-item {
+    @include tile;
+    border-radius: 50px;
+    display: flex;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+
+    * {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

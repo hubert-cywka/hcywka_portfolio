@@ -1,19 +1,15 @@
 @import "src/styles/constants";
 @import "src/styles/mixins";
 
-.header {
+.about-me {
   @include tile;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  @media (min-width: $md-breakpoint) {
-    position: fixed;
-  }
 
   @media (max-width: $md-breakpoint) {
     height: 90vh;
-    transform: translateY(-20%);
   }
 
   .socials {
@@ -54,6 +50,7 @@
         font-size: $s-font;
         letter-spacing: 0.5rem;
         font-weight: bold;
+        margin-bottom: $spacing-xl;
       }
 
       .header-text {

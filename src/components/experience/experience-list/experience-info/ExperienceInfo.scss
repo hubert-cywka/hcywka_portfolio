@@ -30,6 +30,7 @@
 
   .expand-button {
     transition: 0.2s;
+    margin-left: $spacing-standard;
 
     &.collapse {
       transform: rotate(180deg);
