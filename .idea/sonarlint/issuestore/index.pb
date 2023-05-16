@@ -15,8 +15,6 @@ P
  src/types/interfaces/Project.tsx,4\f\4fed3c23a8609fd0e70151627e0923f95c9888f2
 N
 src/types/interfaces/Skill.tsx,1\4\1472be16e53df067d38ac49dcc3c94b3c5415243
-H
-src/constants/Skills.tsx,d\6\d6e3b3df48ba599d383061d2121180e0f42c8800
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 F
@@ -29,7 +27,5 @@ R
 "src/components/contact/Contact.tsx,3\4\34693d8d056eaba17ba2628621110d24dadd6cfd
 a
 1src/components/skills/skill-badge/SkillBadge.scss,8\7\87273e547fc48491cc4415ac304f1ceedaa87e64
-N
-src/constants/URLConstants.tsx,0\7\07e25bf62f5387e1c4ec7c277981c3c282eddd97
 G
 src/constants/Links.tsx,8\a\8a50c5d4f5ae9ce8a12db69aba2eb9860cfe5611

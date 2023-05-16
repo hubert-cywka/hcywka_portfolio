@@ -5,3 +5,5 @@ export const FLAVOURIFY_URL = 'https://flavourify.netlify.app';
 export const EMAIL_URL = 'hcywka@gmail.com';
 export const IDEMIA_LINKEDIN_URL = 'https://www.linkedin.com/company/idemiagroup/';
 export const IDEMIA_WEBSITE_URL = 'https://idemia.com';
+export const PORTFOLIO_GITHUB_URL = 'https://github.com/hejs22/hcywka_portfolio';
+export const PORTFOLIO_URL = 'https://hcywka.netlify.app';
