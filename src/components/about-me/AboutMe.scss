@@ -9,7 +9,7 @@
   justify-content: space-evenly;
 
   @media (max-width: $md-breakpoint) {
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .socials {
