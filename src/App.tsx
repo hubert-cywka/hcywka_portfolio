@@ -15,7 +15,7 @@ function App() {
 
   return (
     <AppProvider>
-      <Container maxWidth="xl" sx={{ overflowX: 'hidden' }}>
+      <Container maxWidth="xl">
         <RouterProvider router={AppRouter} />
       </Container>
     </AppProvider>
