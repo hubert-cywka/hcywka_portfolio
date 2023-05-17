@@ -13,6 +13,6 @@ body {
   background: rgb(25, 25, 37);
   background: radial-gradient(circle, rgb(25, 25, 37) 0%, rgb(23, 16, 39) 100%);
   background-size: 100% 200%;
-  height: 100vh;
-  width: 100vw;
+  height: var(--trueViewportHeight);
+  width: var(--trueViewportWidth);
 }
