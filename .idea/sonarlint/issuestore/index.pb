@@ -5,21 +5,13 @@ A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 H
 src/styles/zindexes.scss,0\b\0bfff9da34f70a3cf85de0107494b6e6ac3ceedc
-R
-"src/types/interfaces/Developer.tsx,5\f\5f1f6b59783f49513418715d8eb0a9b173961dca
-D
-src/constants/Me.tsx,d\0\d095191626f46cf5da75d5b28578fb551bffe453
 P
  src/types/interfaces/Project.tsx,4\f\4fed3c23a8609fd0e70151627e0923f95c9888f2
 N
 src/types/interfaces/Skill.tsx,1\4\1472be16e53df067d38ac49dcc3c94b3c5415243
-S
-#src/types/interfaces/Experience.tsx,1\3\13c077a5f390f3d6d44ec5728c5fc0bfacf23866
 C
 src/AppProvider.tsx,3\d\3d9e664fd875ff98eb0cf116ed82805d6a14dccf
 R
 "src/components/contact/Contact.tsx,3\4\34693d8d056eaba17ba2628621110d24dadd6cfd
 a
 1src/components/skills/skill-badge/SkillBadge.scss,8\7\87273e547fc48491cc4415ac304f1ceedaa87e64
-G
-src/constants/Links.tsx,8\a\8a50c5d4f5ae9ce8a12db69aba2eb9860cfe5611

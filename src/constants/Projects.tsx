@@ -1,7 +1,12 @@
 import { Project } from '../types/interfaces/Project';
-import { FLAVOURIFY_GITHUB_URL, FLAVOURIFY_URL } from './URLConstants';
+import {
+  FLAVOURIFY_GITHUB_URL,
+  FLAVOURIFY_URL,
+  PORTFOLIO_GITHUB_URL,
+  PORTFOLIO_URL
+} from './URLConstants';
 
-export const FLAVOURIFY: Project = {
+const FLAVOURIFY: Project = {
   github: FLAVOURIFY_GITHUB_URL,
   url: FLAVOURIFY_URL,
   imageSrc: [
@@ -21,14 +26,16 @@ export const FLAVOURIFY: Project = {
   ]
 };
 
-export const PORTFOLIO: Project = {
-  github: FLAVOURIFY_GITHUB_URL,
-  url: FLAVOURIFY_URL,
+const PORTFOLIO: Project = {
+  github: PORTFOLIO_GITHUB_URL,
+  url: PORTFOLIO_URL,
   imageSrc: ['projects/portfolio/1.png', 'projects/portfolio/2.png'],
   name: 'Portfolio',
   description: [
-    'Modern, simple and elegant fully responsive portfolio website created in React with as little libraries as possible.',
-    'There were actually at least 3 design versions, but only this one met my requirements. I am really happy of the outcome, especially that I have achieved that with low amount of css and it took me like only 3 hours to complete my vision.',
+    'Modern, simple and elegant responsive portfolio website created in React with as little libraries as possible.',
+    'There were actually at least 3 design versions, but only this one met my requirements. I am quite happy of the outcome, especially that I have achieved that with low amount of css and it took me like only 3 hours to complete my vision.',
     "Technologies used: React, TypeScript, SCSS, MaterialUI. That's it."
   ]
 };
+
+export const PROJECTS: Project[] = [FLAVOURIFY, PORTFOLIO];

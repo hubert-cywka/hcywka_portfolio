@@ -1,7 +1,7 @@
 @import "src/styles/constants";
 @import "src/styles/mixins";
 
-.about-me {
+.about-developer-container {
   @include tile;
   max-width: 100%;
   display: flex;
@@ -12,13 +12,13 @@
     min-height: 85vh;
   }
 
-  .socials {
+  .contacts {
     margin: 0 auto;
     width: fit-content;
     display: flex;
     gap: $spacing-standard;
 
-    .social-button {
+    .contact-button {
       border-radius: 100%;
       padding: $spacing-standard;
       width: 20px;
@@ -33,7 +33,7 @@
     }
   }
 
-  .me {
+  .developer {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,6 +1,4 @@
 import { Experience } from '../types/interfaces/Experience';
-import { IDEMIA_LINKEDIN_URL, IDEMIA_WEBSITE_URL } from './URLConstants';
-import { IDEMIA_IMAGE } from './ImageConstants';
 
 export const EXPERIENCE: Experience[] = [
   {
@@ -8,9 +6,6 @@ export const EXPERIENCE: Experience[] = [
     position: 'React Developer',
     to: 'Present',
     since: '10.2022',
-    url: IDEMIA_WEBSITE_URL,
-    linkedin: IDEMIA_LINKEDIN_URL,
-    logo: IDEMIA_IMAGE,
     responsibilities: [
       'Creating web application using React, HTML, SCSS, TypeScript.',
       'Implementing several libraries, eg. React Query, React Hook Form.',

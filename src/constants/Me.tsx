@@ -9,5 +9,5 @@ export const ME: Developer = {
   mail: 'hcywka@gmail.com',
   picture: 'me.png',
   about:
-    'Hardworking and quick-learning programmer with basic knowledge of Java Spring Boot, eager to secure next entry-level frontend developer position. Ready to continue developing skills and help team achieve company goals.'
+    'Enthusiastic second-year IT student at Politechnika Łódzka, specializing in React development. With one year of commercial experience under my belt, I have honed my skills and gained practical knowledge in building web applications using React. I am eager to continue learning and expanding my expertise, embracing new challenges and opportunities in the dynamic world of software development.'
 };

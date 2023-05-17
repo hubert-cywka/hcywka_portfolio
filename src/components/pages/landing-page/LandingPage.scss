@@ -8,32 +8,4 @@
   @media (min-width: $md-breakpoint) {
     padding-top: 10%;
   }
-
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xxxl;
-  }
-
-
-  .section-header {
-    width: fit-content;
-    margin-bottom: $spacing-standard;
-    display: flex;
-    gap: $spacing-standard;
-    flex-wrap: wrap;
-
-    @media (max-width: $md-breakpoint) {
-      justify-content: center;
-      width: 100%;
-    }
-
-    &.extra-margin {
-      margin: $header-spacing 0 $spacing-l;
-    }
-
-    :last-child {
-      color: $purple-lighter;
-    }
-  }
 }

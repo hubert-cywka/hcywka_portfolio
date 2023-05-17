@@ -1,0 +1,7 @@
+@import "src/styles/constants";
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xxxl;
+}

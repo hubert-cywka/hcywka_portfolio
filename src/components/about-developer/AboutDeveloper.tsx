@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
-import './AboutMe.scss';
+import './AboutDeveloper.scss';
 import { Developer } from '../../types/interfaces/Developer';
 import { EMAIL_IMAGE, GITHUB_IMAGE, LINKEDIN_IMAGE } from '../../constants/ImageConstants';
 
-const AboutMe = ({ name, role, picture, mail, github, linkedin }: Developer) => {
+const AboutDeveloper = ({ name, role, picture, mail, github, linkedin }: Developer) => {
   const getFirstName = () => {
     return name.slice(0, name.indexOf(' '));
   };
@@ -13,8 +13,8 @@ const AboutMe = ({ name, role, picture, mail, github, linkedin }: Developer) => 
   };
 
   return (
-    <Box className="about-me">
-      <Box className="me">
+    <Box className="about-developer-container">
+      <Box className="developer">
         <img className="picture" src={picture} alt="Picture of this website creator" />
         <Box className="text-container">
           <Typography className="role">{role}</Typography>
@@ -22,15 +22,15 @@ const AboutMe = ({ name, role, picture, mail, github, linkedin }: Developer) => 
           <Typography className="header-text last-name">{getLastName()}</Typography>
         </Box>
       </Box>
-      <Box className="socials">
+      <Box className="contacts">
         <a href={linkedin} target="_blank" rel="noreferrer">
-          <img className="social-button" src={LINKEDIN_IMAGE} />
+          <img className="contact-button" src={LINKEDIN_IMAGE} />
         </a>
         <a href={github} target="_blank" rel="noreferrer">
-          <img className="social-button" src={GITHUB_IMAGE} />
+          <img className="contact-button" src={GITHUB_IMAGE} />
         </a>
         <a href={`mailto:${mail}`} target="_blank" rel="noreferrer">
-          <img className="social-button" src={EMAIL_IMAGE} />
+          <img className="contact-button" src={EMAIL_IMAGE} />
         </a>
       </Box>
       <Typography variant="caption" className="all-rights-reserved">
@@ -40,4 +40,4 @@ const AboutMe = ({ name, role, picture, mail, github, linkedin }: Developer) => 
   );
 };
 
-export default AboutMe;
+export default AboutDeveloper;
