@@ -35,6 +35,7 @@ const ExperienceInfo = ({
           <Box>
             <Typography variant="caption">Responsibilities</Typography>
             <IconButton
+              aria-label="toggle-responsibilities-visibility-button"
               sx={{ color: 'text.primary' }}
               className={`expand-button ${areResponsibilitiesVisible ? 'collapse' : ''}`}
               onClick={toggleResponsibilitiesVisibility}>

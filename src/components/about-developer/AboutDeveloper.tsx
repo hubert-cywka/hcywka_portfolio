@@ -24,13 +24,13 @@ const AboutDeveloper = ({ name, role, picture, mail, github, linkedin }: Develop
       </Box>
       <Box className="contacts">
         <a href={linkedin} target="_blank" rel="noreferrer">
-          <img className="contact-button" src={LINKEDIN_IMAGE} />
+          <img className="contact-button" alt="LinkedIn icon" src={LINKEDIN_IMAGE} />
         </a>
         <a href={github} target="_blank" rel="noreferrer">
-          <img className="contact-button" src={GITHUB_IMAGE} />
+          <img className="contact-button" alt="GitHub icon" src={GITHUB_IMAGE} />
         </a>
         <a href={`mailto:${mail}`} target="_blank" rel="noreferrer">
-          <img className="contact-button" src={EMAIL_IMAGE} />
+          <img className="contact-button" alt="Email icon" src={EMAIL_IMAGE} />
         </a>
       </Box>
       <Typography variant="caption" className="all-rights-reserved">

@@ -35,11 +35,11 @@ export const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
     <Box className="project-picture-container">
       <img className="project-picture" src={imageSrc[imageIndex]} alt={name} />
       <Box className="image-change-buttons">
-        <IconButton onClick={decrementImageIndex}>
+        <IconButton onClick={decrementImageIndex} aria-label="previous-picture-button">
           <KeyboardArrowLeftRounded />
         </IconButton>
         <Typography variant="caption">{`${imageIndex + 1} / ${imageSrc.length}`}</Typography>
-        <IconButton onClick={incrementImageIndex}>
+        <IconButton onClick={incrementImageIndex} aria-label="next-picture-button">
           <KeyboardArrowRightRounded />
         </IconButton>
       </Box>

@@ -10,12 +10,12 @@ const FLAVOURIFY: Project = {
   github: FLAVOURIFY_GITHUB_URL,
   url: FLAVOURIFY_URL,
   imageSrc: [
-    'projects/flavourify/1.png',
-    'projects/flavourify/2.png',
-    'projects/flavourify/3.png',
-    'projects/flavourify/4.png',
-    'projects/flavourify/5.png',
-    'projects/flavourify/6.png'
+    'projects/flavourify/1.webp',
+    'projects/flavourify/2.webp',
+    'projects/flavourify/3.webp',
+    'projects/flavourify/4.webp',
+    'projects/flavourify/5.webp',
+    'projects/flavourify/6.webp'
   ],
   name: 'Flavourify',
   description: [
@@ -29,7 +29,7 @@ const FLAVOURIFY: Project = {
 const PORTFOLIO: Project = {
   github: PORTFOLIO_GITHUB_URL,
   url: PORTFOLIO_URL,
-  imageSrc: ['projects/portfolio/1.png', 'projects/portfolio/2.png'],
+  imageSrc: ['projects/portfolio/1.webp', 'projects/portfolio/2.webp'],
   name: 'Portfolio',
   description: [
     'Modern, simple and elegant responsive portfolio website created in React with as little libraries as possible.',
