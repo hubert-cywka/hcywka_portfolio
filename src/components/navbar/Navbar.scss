@@ -17,6 +17,12 @@
     display: none;
   }
 
+  &:hover {
+    .navbar-item {
+      transform: scale(1.15);
+    }
+  }
+
   .navbar-item {
     @include tile;
     border-radius: 50px;

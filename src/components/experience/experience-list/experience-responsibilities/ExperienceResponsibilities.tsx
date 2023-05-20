@@ -11,7 +11,7 @@ const ExperienceResponsibilities = ({ responsibilities }: ExperienceResponsibili
       {responsibilities.map((responsibility, index) => {
         return (
           <Typography variant="caption" className="responsibility" key={index}>
-            {responsibility}
+            - {responsibility}
           </Typography>
         );
       })}

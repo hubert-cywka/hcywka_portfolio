@@ -4,6 +4,7 @@
   padding: $spacing-xxl 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  position: relative;
 
   @media (min-width: $md-breakpoint) {
     padding-top: 10%;

@@ -17,6 +17,7 @@ import {
 import Description from '../../description/Description';
 import ProjectsList from '../../project/projects-list/ProjectsList';
 import SectionHeader from '../../section-header/SectionHeader';
+import ParallaxBackground from '../../parallax-background/ParallaxBackground';
 
 const MD_BREAKPOINT = 900;
 
@@ -33,6 +34,8 @@ const LandingPage = () => {
       justifyContent="center"
       className="landing-page-container"
       sx={{ color: 'text.primary' }}>
+      <ParallaxBackground />
+
       <Grid className="content-container" item xs={12} md={11}>
         <Grid container spacing={5} alignItems="center">
           <Grid item xs={12} md={4} lg={3}>

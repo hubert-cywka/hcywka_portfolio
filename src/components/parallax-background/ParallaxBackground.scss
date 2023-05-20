@@ -1,0 +1,26 @@
+.parallax-background {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background-image: url("../../../public/endless-constellation.svg");
+  transition: 1s ease-out;
+  opacity: 0.1;
+  z-index: -1;
+
+  &.first {
+    filter: blur(3px);
+    background-size: 35vh;
+  }
+
+  &.second {
+    filter: blur(2px);
+    background-size: 40vh;
+  }
+
+  &.third {
+    filter: blur(1px);
+    background-size: 50vh;
+  }
+}
