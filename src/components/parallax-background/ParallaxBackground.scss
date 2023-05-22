@@ -4,23 +4,23 @@
   left: -50%;
   right: -50%;
   bottom: -50%;
-  background-image: url("../../../public/endless-constellation.svg");
+  background-image: url("../../../public/background.svg");
   transition: 1s ease-out;
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: -1;
 
-  &.first {
+  &:nth-child(1) {
     filter: blur(3px);
-    background-size: 35vh;
+    background-size: 60vh;
   }
 
-  &.second {
+  &:nth-child(2) {
     filter: blur(2px);
-    background-size: 40vh;
+    background-size: 80vh;
   }
 
-  &.third {
+  &:nth-child(3) {
     filter: blur(1px);
-    background-size: 50vh;
+    background-size: 100vh;
   }
 }

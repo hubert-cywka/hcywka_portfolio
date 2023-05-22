@@ -11,13 +11,14 @@
   .project-picture {
     max-width: 80%;
     border-radius: 50px;
-    padding: $spacing-l;
     box-sizing: border-box;
     @include tile;
+    padding: 0;
     margin-top: $spacing-xl;
   }
 
   .image-change-buttons {
+    margin-top: $spacing-standard;
     align-items: center;
     display: flex;
     gap: $spacing-standard;

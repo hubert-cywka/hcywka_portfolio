@@ -11,11 +11,11 @@
   .timeline-point {
     position: absolute;
     left: 0;
-    width: 7px;
+    width: 10px;
     aspect-ratio: 1;
     background: $purple-lighter;
     border-radius: 10px;
-    transform: translateX(calc(-50% - 1px)) translateY(8px);
+    transform: translateX(calc(-50% - 1px)) translateY($spacing-standard);
     box-sizing: border-box;
   }
 }

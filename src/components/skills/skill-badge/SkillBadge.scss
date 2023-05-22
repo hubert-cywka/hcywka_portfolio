@@ -3,7 +3,15 @@
 
 .skill-badge-container {
   @include badge;
+  box-sizing: border-box;
   width: 100px;
+  transition: 0.2s;
+  border-bottom: thin solid transparent;
+
+  &:hover {
+    border-bottom: 3px solid $purple;
+    transform: translateY(-$spacing-s);
+  }
 
   .skill-level {
     margin-top: $spacing-standard;

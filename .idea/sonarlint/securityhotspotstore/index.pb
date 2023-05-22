@@ -15,8 +15,6 @@ C
 src/AppProvider.tsx,3\d\3d9e664fd875ff98eb0cf116ed82805d6a14dccf
 R
 "src/components/contact/Contact.tsx,3\4\34693d8d056eaba17ba2628621110d24dadd6cfd
-a
-1src/components/skills/skill-badge/SkillBadge.scss,8\7\87273e547fc48491cc4415ac304f1ceedaa87e64
 b
 2src/components/about-developer/AboutDeveloper.scss,8\5\85672a03173cc917e501a6ac6a106a1c2458a7fd
 `
@@ -27,3 +25,19 @@ m
 =src/components/project/project-container/ProjectContainer.tsx,a\c\acf4cbc9546d57b94c200134f71f3d7bee21e84e
 f
 6src/components/project/projects-list/ProjectsList.scss,1\5\159b172e5ca33ca02d526d7612a396079af295d0
+_
+/src/components/section-header/SectionHeader.tsx,1\e\1eff67c5f9eeab095362316471dd7545673e44c6
+P
+ src/constants/ImageConstants.tsx,4\c\4ce5b1be03925b7fe5119bb1faab3f4774f26c0d
+D
+src/constants/Me.tsx,d\0\d095191626f46cf5da75d5b28578fb551bffe453
+A
+public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
+J
+src/constants/Projects.tsx,9\5\9573eb59e6e0bba958c7a0bf1021da9b96ee77fd
+i
+9src/components/project/project-picture/ProjectPicture.tsx,8\1\81fb471530991fc4b8c83365ca3f8560d55e73da
+q
+Asrc/components/experience/experience-list/ExperienceContainer.tsx,d\b\dbfd85897cf93550e62168d93e12bce75c35f0b0
+P
+ src/components/navbar/Navbar.tsx,4\b\4b455f695ceb089f9e9ff4955514f18ad7b211d5

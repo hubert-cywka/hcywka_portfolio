@@ -1,37 +1,34 @@
 import { Box } from '@mui/material';
 import { useMousePosition } from '../../utility/useMousePosition';
 import './ParallaxBackground.scss';
+import { useScrollPosition } from '../../utility/useScrollPosition';
 
 const ParallaxBackground = () => {
+  const scrollPosition = useScrollPosition();
   const mousePosition = useMousePosition();
-  const translateX = (mousePosition.x / window.innerWidth) * 5 - 5;
-  const translateY = (mousePosition.y / window.innerHeight) * 5 - 5;
+  const scrollPercentageOffset = (scrollPosition / document.body.offsetHeight) * 10 - 5;
+  const translateX = -(mousePosition.x / window.innerWidth) * 5 + 5;
+  const translateY = -(mousePosition.y / window.innerHeight) * 5 + 5 - scrollPercentageOffset;
   const rotation = (mousePosition.x + mousePosition.y) % 3;
+
+  const buildParallaxLayer = (modifier: number) => {
+    return (
+      <Box
+        className="parallax-background"
+        sx={{
+          transform: `translateX(${translateX * modifier}%) translateY(${
+            translateY * modifier
+          }%) rotate(${rotation * modifier}deg)`
+        }}
+      />
+    );
+  };
 
   return (
     <>
-      <Box
-        className="parallax-background first"
-        sx={{
-          transform: `translateX(${translateX / 2}%) translateY(${translateY / 2}%) rotate(${
-            rotation / 2
-          }deg)`
-        }}
-      />
-      <Box
-        className="parallax-background second"
-        sx={{
-          transform: `translateX(${translateX}%) translateY(${translateY}%) rotate(${rotation}deg)`
-        }}
-      />
-      <Box
-        className="parallax-background third"
-        sx={{
-          transform: `translateX(${translateX * 1.5}%) translateY(${translateY * 1.5}%) rotate(${
-            rotation * 1.5
-          }deg)`
-        }}
-      />
+      {buildParallaxLayer(1 / 2)}
+      {buildParallaxLayer(1)}
+      {buildParallaxLayer(1.5)}
     </>
   );
 };
