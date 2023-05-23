@@ -35,7 +35,5 @@ i
 9src/components/project/project-picture/ProjectPicture.tsx,8\1\81fb471530991fc4b8c83365ca3f8560d55e73da
 q
 Asrc/components/experience/experience-list/ExperienceContainer.tsx,d\b\dbfd85897cf93550e62168d93e12bce75c35f0b0
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 P
  src/components/navbar/Navbar.tsx,4\b\4b455f695ceb089f9e9ff4955514f18ad7b211d5

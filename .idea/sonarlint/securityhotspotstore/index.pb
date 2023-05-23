@@ -31,8 +31,6 @@ P
  src/constants/ImageConstants.tsx,4\c\4ce5b1be03925b7fe5119bb1faab3f4774f26c0d
 D
 src/constants/Me.tsx,d\0\d095191626f46cf5da75d5b28578fb551bffe453
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 J
 src/constants/Projects.tsx,9\5\9573eb59e6e0bba958c7a0bf1021da9b96ee77fd
 i

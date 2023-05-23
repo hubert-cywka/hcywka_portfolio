@@ -5,22 +5,19 @@
   right: -50%;
   bottom: -50%;
   background-image: url("../../../public/background.svg");
-  transition: 1s ease-out;
+  transition: transform 1s ease-out;
   opacity: 0.05;
   z-index: -1;
 
   &:nth-child(1) {
-    filter: blur(3px);
     background-size: 60vh;
   }
 
   &:nth-child(2) {
-    filter: blur(2px);
     background-size: 80vh;
   }
 
   &:nth-child(3) {
-    filter: blur(1px);
     background-size: 100vh;
   }
 }

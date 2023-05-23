@@ -1,12 +1,12 @@
 import { Grid } from '@mui/material';
-import AboutDeveloper from '../../about-developer/AboutDeveloper';
+import AboutDeveloper from '../../components/about-developer/AboutDeveloper';
 import './LandingPage.scss';
-import { ME } from '../../../constants/Me';
-import SkillsContainer from '../../skills/skills-container/SkillsContainer';
-import ExperienceList from '../../experience/experience-list/ExperienceContainer';
-import { EXPERIENCE } from '../../../constants/Experience';
-import { PROJECTS } from '../../../constants/Projects';
-import Navbar from '../../navbar/Navbar';
+import { ME } from '../../constants/Me';
+import SkillsContainer from '../../components/skills/skills-container/SkillsContainer';
+import ExperienceList from '../../components/experience/experience-list/ExperienceContainer';
+import { EXPERIENCE } from '../../constants/Experience';
+import { PROJECTS } from '../../constants/Projects';
+import Navbar from '../../components/navbar/Navbar';
 import { useRef } from 'react';
 import {
   AccountCircleRounded,
@@ -14,10 +14,10 @@ import {
   SchoolRounded,
   StarRounded
 } from '@mui/icons-material';
-import Description from '../../description/Description';
-import ProjectsList from '../../project/projects-list/ProjectsList';
-import SectionHeader from '../../section-header/SectionHeader';
-import ParallaxBackground from '../../parallax-background/ParallaxBackground';
+import Description from '../../components/description/Description';
+import ProjectsList from '../../components/project/projects-list/ProjectsList';
+import SectionHeader from '../../components/section-header/SectionHeader';
+import ParallaxBackground from '../../components/parallax-background/ParallaxBackground';
 
 const MD_BREAKPOINT = 900;
 
@@ -34,7 +34,7 @@ const LandingPage = () => {
       justifyContent="center"
       className="landing-page-container"
       sx={{ color: 'text.primary' }}>
-      <ParallaxBackground />
+      {window.innerWidth >= MD_BREAKPOINT && <ParallaxBackground />}
 
       <Grid className="content-container" item xs={12} md={11}>
         <Grid container spacing={5} alignItems="center">
