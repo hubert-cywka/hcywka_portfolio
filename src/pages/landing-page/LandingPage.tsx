@@ -18,6 +18,8 @@ import Description from '../../components/description/Description';
 import ProjectsList from '../../components/project/projects-list/ProjectsList';
 import SectionHeader from '../../components/section-header/SectionHeader';
 import ParallaxBackground from '../../components/parallax-background/ParallaxBackground';
+import { useAppearance } from '../../utility/useAppearance';
+import SlideInWrapper from '../../components/slide-in/SlideInWrapper';
 
 const MD_BREAKPOINT = 900;
 
@@ -26,6 +28,11 @@ const LandingPage = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
+
+  const isProjectSectionVisible = useAppearance(projectsRef);
+  const isExperienceSectionVisible = useAppearance(experienceRef);
+  const isAboutMeSectionVisible = useAppearance(aboutMeRef);
+  const isSkillsSectionVisible = useAppearance(skillsRef);
 
   return (
     <Grid
@@ -39,35 +46,45 @@ const LandingPage = () => {
       <Grid className="content-container" item xs={12} md={11}>
         <Grid container spacing={5} alignItems="center">
           <Grid item xs={12} md={4} lg={3}>
-            <AboutDeveloper {...ME} />
+            <SlideInWrapper isIn={isAboutMeSectionVisible} direction="LEFT">
+              <AboutDeveloper {...ME} />
+            </SlideInWrapper>
           </Grid>
 
           <Grid item xs={12} md={8} lg={9}>
             <SectionHeader headerText="Hi, I am Hubert!" reference={aboutMeRef} disableTopMargin />
-            <Description
-              sx={{
-                width: window.innerWidth > MD_BREAKPOINT ? '80%' : '100%',
-                marginBottom: '50px'
-              }}
-              description={[ME.about]}
-            />
+            <SlideInWrapper isIn={isAboutMeSectionVisible}>
+              <Description
+                sx={{
+                  width: window.innerWidth > MD_BREAKPOINT ? '80%' : '100%',
+                  marginBottom: '50px'
+                }}
+                description={[ME.about]}
+              />
+            </SlideInWrapper>
 
             <SectionHeader
               headerText="Education & Experience"
               reference={experienceRef}
               disableTopMargin={window.innerWidth > MD_BREAKPOINT}
             />
-            <ExperienceList experience={EXPERIENCE} />
+            <SlideInWrapper isIn={isExperienceSectionVisible} direction="RIGHT">
+              <ExperienceList experience={EXPERIENCE} />
+            </SlideInWrapper>
           </Grid>
 
           <Grid item xs={12}>
             <SectionHeader headerText="Featured Projects" reference={projectsRef} />
-            <ProjectsList projects={PROJECTS} />
+            <SlideInWrapper isIn={isProjectSectionVisible} direction="LEFT">
+              <ProjectsList projects={PROJECTS} />
+            </SlideInWrapper>
           </Grid>
 
           <Grid item xs={12}>
             <SectionHeader headerText="Technical Skills" reference={skillsRef} />
-            <SkillsContainer />
+            <SlideInWrapper isIn={isSkillsSectionVisible} direction="RIGHT">
+              <SkillsContainer />
+            </SlideInWrapper>
           </Grid>
         </Grid>
       </Grid>

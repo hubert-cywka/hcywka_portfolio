@@ -1,13 +1,14 @@
-import { Grid } from '@mui/material';
+import { Grid, SxProps } from '@mui/material';
 import ProjectContainer from '../project-container/ProjectContainer';
 import { Project } from '../../../types/interfaces/Project';
 import './ProjectsList.scss';
 
 interface ProjectsListProps {
   projects: Project[];
+  sx?: SxProps;
 }
 
-const ProjectsList = ({ projects }: ProjectsListProps) => {
+const ProjectsList = ({ projects, sx }: ProjectsListProps) => {
   const buildProjectContainers = () => {
     return projects.map((project, index) => (
       <Grid key={index} item xs={12}>
@@ -17,7 +18,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
   };
 
   return (
-    <Grid className="projects-container" container>
+    <Grid sx={sx} className="projects-container" container>
       {buildProjectContainers()}
     </Grid>
   );

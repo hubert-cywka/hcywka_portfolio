@@ -5,7 +5,7 @@
   right: -50%;
   bottom: -50%;
   background-image: url("../../../public/background.svg");
-  transition: transform 1s ease-out;
+  transition: transform 2s cubic-bezier(0.075, 0.580, 0.045, 0.980);
   opacity: 0.05;
   z-index: -1;
 

@@ -15,12 +15,8 @@ C
 src/AppProvider.tsx,3\d\3d9e664fd875ff98eb0cf116ed82805d6a14dccf
 R
 "src/components/contact/Contact.tsx,3\4\34693d8d056eaba17ba2628621110d24dadd6cfd
-b
-2src/components/about-developer/AboutDeveloper.scss,8\5\85672a03173cc917e501a6ac6a106a1c2458a7fd
 `
 0src/components/section-header/SectionHeader.scss,9\c\9c0fa141566750b8930cabb22ac2831a91a1ce26
-e
-5src/components/project/projects-list/ProjectsList.tsx,4\4\44ab6592d3767de3c2df8bb895bd9e0fb0832202
 m
 =src/components/project/project-container/ProjectContainer.tsx,a\c\acf4cbc9546d57b94c200134f71f3d7bee21e84e
 f
@@ -35,7 +31,5 @@ J
 src/constants/Projects.tsx,9\5\9573eb59e6e0bba958c7a0bf1021da9b96ee77fd
 i
 9src/components/project/project-picture/ProjectPicture.tsx,8\1\81fb471530991fc4b8c83365ca3f8560d55e73da
-q
-Asrc/components/experience/experience-list/ExperienceContainer.tsx,d\b\dbfd85897cf93550e62168d93e12bce75c35f0b0
 P
  src/components/navbar/Navbar.tsx,4\b\4b455f695ceb089f9e9ff4955514f18ad7b211d5

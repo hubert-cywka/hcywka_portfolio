@@ -1,15 +1,16 @@
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, SxProps } from '@mui/material';
 import ExperienceInfo from './experience-info/ExperienceInfo';
 import './ExperienceContainer.scss';
 import { Experience } from '../../../types/interfaces/Experience';
 
 interface ExperienceListProps {
   experience: Experience[];
+  sx?: SxProps;
 }
 
-const ExperienceList = ({ experience }: ExperienceListProps) => {
+const ExperienceList = ({ experience, sx }: ExperienceListProps) => {
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} sx={sx}>
       <Grid className="experience-container" container>
         {experience.map((exp, index) => {
           return (
