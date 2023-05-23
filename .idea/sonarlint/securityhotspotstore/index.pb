@@ -33,3 +33,13 @@ i
 9src/components/project/project-picture/ProjectPicture.tsx,8\1\81fb471530991fc4b8c83365ca3f8560d55e73da
 P
  src/components/navbar/Navbar.tsx,4\b\4b455f695ceb089f9e9ff4955514f18ad7b211d5
+;
+src/App.tsx,8\3\835da56f32df714aaed6285a5b7fc3a7807851e4
+>
+src/index.scss,5\b\5bfd084cc3a318b78f32da1cd49fc9f987fb897f
+A
+public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
+=
+src/index.tsx,5\a\5ab44fe33ca96299f51ad4778a73e425b92bf439
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a

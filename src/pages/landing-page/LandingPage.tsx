@@ -29,10 +29,10 @@ const LandingPage = () => {
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
 
-  const isProjectSectionVisible = useAppearance(projectsRef);
-  const isExperienceSectionVisible = useAppearance(experienceRef);
-  const isAboutMeSectionVisible = useAppearance(aboutMeRef);
   const isSkillsSectionVisible = useAppearance(skillsRef);
+  const isProjectSectionVisible = useAppearance(projectsRef) || isSkillsSectionVisible;
+  const isExperienceSectionVisible = useAppearance(experienceRef);
+  const isAboutMeSectionVisible = useAppearance(aboutMeRef, '200px');
 
   return (
     <Grid
