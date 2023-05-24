@@ -5,8 +5,17 @@
   .project-name {
     margin-top: $spacing-xl;
     border-left: 5px solid $purple-lighter;
-    padding-left: $spacing-standard;
-    margin-bottom: $spacing-xxl;
+    margin-bottom: $spacing-xl;
+    width: fit-content;
+    background-image: linear-gradient(to right, $purple-lighter 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    transition: 0.5s ease;
+    will-change: padding, background-position;
+
+    :first-child {
+      padding: $spacing-s $spacing-l $spacing-s 0;
+    }
   }
 
   .buttons-container {

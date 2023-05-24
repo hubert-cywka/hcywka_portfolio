@@ -4,7 +4,7 @@
   width: fit-content;
   margin-bottom: $spacing-standard;
   display: flex;
-  gap: $spacing-standard;
+  gap: $spacing-s $spacing-standard;
   flex-wrap: wrap;
 
   @media (max-width: $md-breakpoint) {

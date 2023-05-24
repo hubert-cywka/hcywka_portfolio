@@ -13,14 +13,8 @@ C
 src/AppProvider.tsx,3\d\3d9e664fd875ff98eb0cf116ed82805d6a14dccf
 R
 "src/components/contact/Contact.tsx,3\4\34693d8d056eaba17ba2628621110d24dadd6cfd
-`
-0src/components/section-header/SectionHeader.scss,9\c\9c0fa141566750b8930cabb22ac2831a91a1ce26
-m
-=src/components/project/project-container/ProjectContainer.tsx,a\c\acf4cbc9546d57b94c200134f71f3d7bee21e84e
 f
 6src/components/project/projects-list/ProjectsList.scss,1\5\159b172e5ca33ca02d526d7612a396079af295d0
-_
-/src/components/section-header/SectionHeader.tsx,1\e\1eff67c5f9eeab095362316471dd7545673e44c6
 P
  src/constants/ImageConstants.tsx,4\c\4ce5b1be03925b7fe5119bb1faab3f4774f26c0d
 D
