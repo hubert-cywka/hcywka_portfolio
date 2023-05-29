@@ -3,30 +3,37 @@
 
 .experience-info-container {
   width: 100%;
+  margin-bottom: $spacing-xl;
 
-  .date {
-    transition: 0.5s;
-    margin-bottom: $spacing-standard;
-    width: fit-content;
-    display: block;
-    opacity: 0.75;
-    border-radius: 5px;
-    padding: $spacing-s $spacing-standard;
-    background: $purple-darker;
-  }
+  .experience-info-header {
+    display: flex;
+    gap: $spacing-standard;
+    align-items: center;
 
-  &:hover {
+
     .date {
-      background: $purple-lighter;
+      transition: 0.5s;
+      width: fit-content;
+      display: block;
+      opacity: 0.75;
+      border-radius: 5px;
+      padding: $spacing-s $spacing-standard;
+      background: $purple-darker;
     }
-  }
 
-  .company-name {
-    margin-bottom: -$spacing-s;
-  }
+    &:hover {
+      .date {
+        background: $purple-lighter;
+      }
+    }
 
-  .position {
-    opacity: 0.75;
+    .company-name {
+      margin-bottom: -$spacing-s;
+    }
+
+    .position {
+      opacity: 0.75;
+    }
   }
 
   .description {

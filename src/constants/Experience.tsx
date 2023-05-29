@@ -27,5 +27,20 @@ export const EXPERIENCE: Experience[] = [
     since: '10.2021',
     description:
       'I am a second-year IT student at Politechnika Łódzka. Currently, I am immersing myself in the world of Information Technology, learning programming, network administration, and system analysis.'
+  },
+  {
+    companyName: 'Freelancing',
+    position: 'Graphic Designer',
+    to: '03.2021',
+    since: '07.2018',
+    responsibilities: [
+      'Designing logotypes, products packaging.',
+      'Drawing vector patterns and illustrations.',
+      'Creating business cards, banners, social media post templates, etc.',
+      'Communicating with clients and gathering info about their needs.',
+      'Providing help with ordering printed business cards, banners.'
+    ],
+    description:
+      'Designing for over two years. I have worked on a diverse range of projects, including logo designs, phone cases, duvet sets, banners, and more. Worked with individual clients in Poland and international companies, eg. duvets manufacturer.'
   }
 ];
