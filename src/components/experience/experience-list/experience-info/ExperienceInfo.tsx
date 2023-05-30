@@ -20,17 +20,13 @@ const ExperienceInfo = ({
 
   return (
     <Box className="experience-info-container">
-      <Box className="experience-info-header">
-        <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
-        <Box>
-          <Typography variant="h6" className="company-name">
-            {companyName}
-          </Typography>
-          <Typography variant="subtitle2" className="position">
-            {position}
-          </Typography>
-        </Box>
-      </Box>
+      <Typography variant="h6" className="company-name">
+        {companyName}
+      </Typography>
+      <Typography variant="subtitle2" className="position">
+        {position}
+      </Typography>
+      <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
       <Typography variant="caption" className="description">
         {description}
       </Typography>

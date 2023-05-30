@@ -2,8 +2,8 @@ import { Experience } from '../types/interfaces/Experience';
 
 export const EXPERIENCE: Experience[] = [
   {
-    companyName: 'IDEMIA',
-    position: 'React Developer',
+    companyName: 'IDEMIA Poland R&D Sp. z o.o.',
+    position: 'Intern React Developer',
     to: 'Present',
     since: '10.2022',
     responsibilities: [
@@ -34,13 +34,12 @@ export const EXPERIENCE: Experience[] = [
     to: '03.2021',
     since: '07.2018',
     responsibilities: [
-      'Designing logotypes, products packaging.',
-      'Drawing vector patterns and illustrations.',
-      'Creating business cards, banners, social media post templates, etc.',
-      'Communicating with clients and gathering info about their needs.',
-      'Providing help with ordering printed business cards, banners.'
+      "Gathering and defining clients' requirements.",
+      'Providing help with printing my projects.',
+      'Designing raster and vector graphics.',
+      'Preparing files for print.'
     ],
     description:
-      'Designing for over two years. I have worked on a diverse range of projects, including logo designs, phone cases, duvet sets, banners, and more. Worked with individual clients in Poland and international companies, eg. duvets manufacturer.'
+      'I have worked on a diverse range of projects, including logo designs, phone cases, duvet sets, banners, and more. Collaborated with individual clients in Poland, Netherlands and international companies.'
   }
 ];
