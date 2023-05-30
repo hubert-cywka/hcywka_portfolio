@@ -43,8 +43,8 @@ const LandingPage = () => {
       sx={{ color: 'text.primary' }}>
       {window.innerWidth >= MD_BREAKPOINT && <ParallaxBackground />}
 
-      <Grid className="content-container" item xs={12} md={11}>
-        <Grid container spacing={5} alignItems="center">
+      <Grid item xs={12} md={11}>
+        <Grid container spacing={5}>
           <Grid item xs={12} md={4} lg={3}>
             <SlideInWrapper isIn={isAboutMeSectionVisible} direction="LEFT">
               <AboutDeveloper {...ME} />

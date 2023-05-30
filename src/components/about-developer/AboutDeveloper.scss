@@ -24,8 +24,8 @@
       padding: $spacing-standard;
       width: 20px;
       height: 20px;
-      border: thin solid #888;
-      filter: invert(1) brightness(50%);
+      border: thin solid $gray;
+      filter: invert(1) brightness(40%);
       transition: 0.2s;
 
       &:hover {
@@ -50,7 +50,7 @@
         color: $purple-lighter;
         font-size: $s-font;
         letter-spacing: 0.5rem;
-        font-weight: bold;
+        font-weight: 700;
         margin-bottom: $spacing-xl;
       }
 

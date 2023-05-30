@@ -35,10 +35,6 @@ A
 src/index.tsx,5\a\5ab44fe33ca96299f51ad4778a73e425b92bf439
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-b
-2src/components/about-developer/AboutDeveloper.scss,8\5\85672a03173cc917e501a6ac6a106a1c2458a7fd
-a
-1src/components/about-developer/AboutDeveloper.tsx,1\f\1f1605443ea588d2a6f92be4d9fb711153f84809
 j
 :src/components/parallax-background/ParallaxBackground.scss,b\2\b2c5a2d390e2630550e15681ceedd13959218b9c
 j
