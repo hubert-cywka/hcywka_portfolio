@@ -24,6 +24,7 @@
 
   .badge-icon {
     filter: brightness(0) invert(1);
+    aspect-ratio: 1;
     transition: filter 0.25s;
     max-width: 25%;
   }
