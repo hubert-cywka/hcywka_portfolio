@@ -1,13 +1,18 @@
 import { Box } from '@mui/material';
-import { SKILLS } from '../../../constants/Skills';
 import SkillBadge from '../skill-badge/SkillBadge';
 import './SkillsContainer.scss';
+import { Skill } from '../../../types/interfaces/Skill';
 
-const SkillsContainer = () => {
+interface SkillsContainerProps {
+  skills: Skill[];
+  wide?: boolean;
+}
+
+const SkillsContainer = ({ skills, wide }: SkillsContainerProps) => {
   return (
     <Box className="skills-container">
-      {SKILLS.map((skill, index) => (
-        <SkillBadge key={index} imageSrc={skill.img} name={skill.name} level={skill.level} />
+      {skills.map((skill, index) => (
+        <SkillBadge key={index} skill={skill} className={wide ? 'wide' : ''} />
       ))}
     </Box>
   );

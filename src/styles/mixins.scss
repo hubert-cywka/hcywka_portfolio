@@ -16,9 +16,16 @@
   border-radius: 15px;
   box-sizing: border-box;
 
+  &:hover {
+    .badge-icon {
+      filter: invert(1) sepia(1) saturate(100) hue-rotate(120deg) brightness(1) contrast(1);
+    }
+  }
+
   .badge-icon {
-    filter: brightness(100%) saturate(100%) invert(1);
-    max-width: $xl-font;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s;
+    max-width: 25%;
   }
 
   .badge-name {

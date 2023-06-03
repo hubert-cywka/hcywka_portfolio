@@ -8,6 +8,11 @@
   transition: 0.2s;
   border-bottom: thin solid transparent;
 
+  &.wide {
+    width: 200px;
+    aspect-ratio: 2;
+  }
+
   &:hover {
     border-bottom: 3px solid $purple;
     transform: translateY(-$spacing-s);

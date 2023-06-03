@@ -1,31 +1,35 @@
 import { Box, Typography } from '@mui/material';
 import './SkillBadge.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
+import { Skill } from '../../../types/interfaces/Skill';
 
 interface SkillBadgeProps {
-  imageSrc: string;
-  name: string;
-  level: number;
+  skill: Skill;
+  className?: string;
 }
 
-const SkillBadge = ({ imageSrc, name, level }: SkillBadgeProps) => {
+const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
   const getSkillLevel = () => {
+    if (skill.level === undefined) return;
     const skillLevelDots: ReactJSXElement[] = [];
     for (let iterator = 1; iterator <= 5; iterator++) {
       skillLevelDots.push(
-        <Box key={iterator} className={`skill-level-dot ${level >= iterator ? 'on' : 'off'}`} />
+        <Box
+          key={iterator}
+          className={`skill-level-dot ${skill.level >= iterator ? 'on' : 'off'}`}
+        />
       );
     }
     return skillLevelDots;
   };
 
   return (
-    <Box className="skill-badge-container">
-      <img className="badge-icon" src={imageSrc} alt={name} />
+    <Box className={`skill-badge-container ${className ?? ''}`}>
+      <img className="badge-icon" src={skill.img} alt={skill.name} />
       <Typography color="text.primary" className="badge-name">
-        {name}
+        {skill.name}
       </Typography>
-      <Box className="skill-level">{getSkillLevel()}</Box>
+      {skill.level !== undefined && <Box className="skill-level">{getSkillLevel()}</Box>}
     </Box>
   );
 };

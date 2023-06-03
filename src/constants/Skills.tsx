@@ -1,7 +1,11 @@
 import { Skill } from '../types/interfaces/Skill';
 import {
+  C_IMAGE,
+  CPP_IMAGE,
   CSS_IMAGE,
+  CYPRESS_IMAGE,
   DOCKER_IMAGE,
+  EXPRESS_IMAGE,
   GIT_IMAGE,
   GITHUB_IMAGE,
   HTML_IMAGE,
@@ -10,6 +14,8 @@ import {
   JEST_IMAGE,
   JS_IMAGE,
   MUI_IMAGE,
+  NEXTJS_IMAGE,
+  NODEJS_IMAGE,
   PHOTOSHOP_IMAGE,
   REACT_IMAGE,
   REST_IMAGE,
@@ -17,7 +23,7 @@ import {
   TS_IMAGE
 } from './ImageConstants';
 
-export const SKILLS: Skill[] = [
+export const TECHNICAL_SKILLS: Skill[] = [
   {
     img: REACT_IMAGE,
     name: 'React.js',
@@ -64,6 +70,11 @@ export const SKILLS: Skill[] = [
     level: 4
   },
   {
+    img: CYPRESS_IMAGE,
+    name: 'Cypress',
+    level: 3
+  },
+  {
     img: JEST_IMAGE,
     name: 'Jest',
     level: 4
@@ -72,6 +83,16 @@ export const SKILLS: Skill[] = [
     img: REST_IMAGE,
     name: 'REST API',
     level: 3
+  },
+  {
+    img: C_IMAGE,
+    name: 'C',
+    level: 3
+  },
+  {
+    img: CPP_IMAGE,
+    name: 'C++',
+    level: 2
   },
   {
     img: JAVA_IMAGE,
@@ -92,5 +113,20 @@ export const SKILLS: Skill[] = [
     img: ILLUSTRATOR_IMAGE,
     name: 'Illustrator',
     level: 4
+  }
+];
+
+export const NEXT_SKILLS: Skill[] = [
+  {
+    img: NEXTJS_IMAGE,
+    name: 'Next.js'
+  },
+  {
+    img: EXPRESS_IMAGE,
+    name: 'Express'
+  },
+  {
+    img: NODEJS_IMAGE,
+    name: 'Node.js'
   }
 ];

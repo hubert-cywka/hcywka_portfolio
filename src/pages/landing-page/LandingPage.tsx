@@ -20,6 +20,7 @@ import SectionHeader from '../../components/section-header/SectionHeader';
 import ParallaxBackground from '../../components/parallax-background/ParallaxBackground';
 import { useAppearance } from '../../utility/useAppearance';
 import SlideInWrapper from '../../components/slide-in/SlideInWrapper';
+import { NEXT_SKILLS, TECHNICAL_SKILLS } from '../../constants/Skills';
 
 const MD_BREAKPOINT = 900;
 
@@ -28,8 +29,10 @@ const LandingPage = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
+  const nextSkillsRef = useRef<HTMLDivElement>(null);
 
   const isSkillsSectionVisible = useAppearance(skillsRef);
+  const isNextSkillsSectionVisible = useAppearance(nextSkillsRef);
   const isProjectSectionVisible = useAppearance(projectsRef) || isSkillsSectionVisible;
   const isExperienceSectionVisible = useAppearance(experienceRef);
   const isAboutMeSectionVisible = useAppearance(aboutMeRef, '200px');
@@ -83,7 +86,14 @@ const LandingPage = () => {
           <Grid item xs={12}>
             <SectionHeader headerText="Technical Skills" reference={skillsRef} />
             <SlideInWrapper isIn={isSkillsSectionVisible} direction="RIGHT">
-              <SkillsContainer />
+              <SkillsContainer skills={TECHNICAL_SKILLS} />
+            </SlideInWrapper>
+          </Grid>
+
+          <Grid item xs={12}>
+            <SectionHeader headerText="Currently Learning" reference={nextSkillsRef} />
+            <SlideInWrapper isIn={isNextSkillsSectionVisible} direction="LEFT">
+              <SkillsContainer skills={NEXT_SKILLS} wide />
             </SlideInWrapper>
           </Grid>
         </Grid>

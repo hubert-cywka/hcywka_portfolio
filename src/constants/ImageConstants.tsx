@@ -1,7 +1,6 @@
 export const GITHUB_IMAGE = 'icons/github.svg';
 export const LINKEDIN_IMAGE = 'icons/linkedin.svg';
 export const EMAIL_IMAGE = 'icons/mail.svg';
-export const IDEMIA_IMAGE = 'icons/idemia-logo.svg';
 export const GIT_IMAGE = 'icons/git.svg';
 export const JS_IMAGE = 'icons/js.svg';
 export const TS_IMAGE = 'icons/ts.svg';
@@ -16,3 +15,9 @@ export const REST_IMAGE = 'icons/rest.svg';
 export const PHOTOSHOP_IMAGE = 'icons/photoshop.svg';
 export const ILLUSTRATOR_IMAGE = 'icons/illustrator.svg';
 export const REACT_IMAGE = 'icons/react.svg';
+export const NEXTJS_IMAGE = 'icons/next.svg';
+export const EXPRESS_IMAGE = 'icons/express.svg';
+export const NODEJS_IMAGE = 'icons/node.svg';
+export const CYPRESS_IMAGE = 'icons/cypress.svg';
+export const C_IMAGE = 'icons/c.svg';
+export const CPP_IMAGE = 'icons/c++.svg';

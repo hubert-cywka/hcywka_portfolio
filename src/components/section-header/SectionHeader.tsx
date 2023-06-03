@@ -4,7 +4,7 @@ import './SectionHeader.scss';
 
 interface SectionHeaderProps {
   headerText: string;
-  reference: RefObject<HTMLDivElement>;
+  reference?: RefObject<HTMLDivElement>;
   disableTopMargin?: boolean;
 }
 
