@@ -12,7 +12,7 @@ const buildExperienceInfo = (mockExperience: Experience) => {
 
 describe('Testing <ExperienceInfo />', () => {
   beforeEach(() => {
-    buildExperienceInfo(ExperienceInfoPO.MOCK_EXPERIENCE);
+    buildExperienceInfo(ExperienceInfoPO.EXPERIENCE);
   });
 
   describe('Testing layout', () => {
@@ -24,29 +24,29 @@ describe('Testing <ExperienceInfo />', () => {
       ExperienceInfoPO.companyName
         .should('exist')
         .should('be.visible')
-        .should('contain.text', ExperienceInfoPO.MOCK_EXPERIENCE.companyName);
+        .should('contain.text', ExperienceInfoPO.EXPERIENCE.companyName);
     });
 
     it('should display correct position', () => {
       ExperienceInfoPO.position
         .should('exist')
         .should('be.visible')
-        .should('contain.text', ExperienceInfoPO.MOCK_EXPERIENCE.position);
+        .should('contain.text', ExperienceInfoPO.EXPERIENCE.position);
     });
 
     it('should display correct description', () => {
       ExperienceInfoPO.description
         .should('exist')
         .should('be.visible')
-        .should('contain.text', ExperienceInfoPO.MOCK_EXPERIENCE.description);
+        .should('contain.text', ExperienceInfoPO.EXPERIENCE.description);
     });
 
     it('should display correct date', () => {
       ExperienceInfoPO.date
         .should('exist')
         .should('be.visible')
-        .should('contain.text', ExperienceInfoPO.MOCK_EXPERIENCE.since)
-        .should('contain.text', ExperienceInfoPO.MOCK_EXPERIENCE.to);
+        .should('contain.text', ExperienceInfoPO.EXPERIENCE.since)
+        .should('contain.text', ExperienceInfoPO.EXPERIENCE.to);
     });
 
     it('should display expand button if responsibilities are present', () => {
@@ -55,7 +55,7 @@ describe('Testing <ExperienceInfo />', () => {
 
     it('should not display expand button if responsibilities are not present', () => {
       cleanup();
-      buildExperienceInfo(ExperienceInfoPO.MOCK_EXPERIENCE_WITHOUT_RESPONSIBILITIES);
+      buildExperienceInfo(ExperienceInfoPO.EXPERIENCE_WITHOUT_RESPONSIBILITIES);
       ExperienceInfoPO.showResponsibilitiesButton.should('not.exist');
     });
   });

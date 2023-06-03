@@ -10,7 +10,7 @@ const buildDescription = (mockDescription: string[]) => {
 
 describe('Testing <Description/>', () => {
   beforeEach(() => {
-    buildDescription(DescriptionPO.MOCK_DESCRIPTION);
+    buildDescription(DescriptionPO.DESCRIPTION);
   });
 
   describe('Testing layout', () => {
@@ -26,12 +26,12 @@ describe('Testing <Description/>', () => {
 
     it('should contain correct paragraphs content', () => {
       DescriptionPO.paragraphs.each(($paragraph, index) => {
-        cy.wrap($paragraph).should('contain.text', DescriptionPO.MOCK_DESCRIPTION[index]);
+        cy.wrap($paragraph).should('contain.text', DescriptionPO.DESCRIPTION[index]);
       });
     });
 
     it('should be contain correct amount of paragraphs', () => {
-      DescriptionPO.paragraphs.should('have.length', DescriptionPO.MOCK_DESCRIPTION.length);
+      DescriptionPO.paragraphs.should('have.length', DescriptionPO.DESCRIPTION.length);
     });
   });
 });

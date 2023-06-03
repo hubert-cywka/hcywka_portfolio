@@ -29,6 +29,7 @@ const ProjectContainer = ({ name, description, url, github, imageSrc }: Project)
           <Box className="buttons-container">
             <Button
               component="a"
+              aria-label="show live project"
               href={url}
               target="_blank"
               variant="contained"
@@ -37,6 +38,7 @@ const ProjectContainer = ({ name, description, url, github, imageSrc }: Project)
             </Button>
             <Button
               component="a"
+              aria-label="show project repository"
               href={github}
               target="_blank"
               variant="contained"

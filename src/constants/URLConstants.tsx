@@ -1,4 +1,4 @@
-export const LINKEDIN_URL = 'https://linkedin.com/in/hubert-cywka/';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/hubert-cywka/';
 export const GITHUB_URL = 'https://github.com/hejs22';
 export const FLAVOURIFY_GITHUB_URL = 'https://github.com/hejs22/flavourify';
 export const FLAVOURIFY_URL = 'https://flavourify.netlify.app';

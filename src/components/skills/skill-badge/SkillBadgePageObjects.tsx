@@ -1,13 +1,13 @@
 import { Skill } from '../../../types/interfaces/Skill';
 
 export class SkillBadgePageObjects {
-  public MOCK_SKILL: Skill = {
+  public SKILL: Skill = {
     img: 'MOCK_IMG_1',
     name: 'MOCK_NAME_1',
     level: 2
   };
 
-  public MOCK_SKILL_WITHOUT_LEVEL: Skill = {
+  public SKILL_WITHOUT_LEVEL: Skill = {
     img: 'MOCK_IMG_2',
     name: 'MOCK_NAME_2'
   };

@@ -11,7 +11,7 @@ const buildExperienceContainer = (mockExperience: Experience[]) => {
 
 describe('Testing <ExperienceContainer/>', () => {
   beforeEach(() => {
-    buildExperienceContainer(ExperienceContainerPO.MOCK_EXPERIENCE);
+    buildExperienceContainer(ExperienceContainerPO.EXPERIENCE);
   });
 
   describe('Testing layout', () => {
@@ -28,7 +28,7 @@ describe('Testing <ExperienceContainer/>', () => {
     it('should should display correct amount of timeline points', () => {
       ExperienceContainerPO.timelinePoints.should(
         'have.length',
-        ExperienceContainerPO.MOCK_EXPERIENCE.length
+        ExperienceContainerPO.EXPERIENCE.length
       );
     });
 
@@ -41,7 +41,7 @@ describe('Testing <ExperienceContainer/>', () => {
     it('should should display correct amount of experience info', () => {
       ExperienceContainerPO.experienceInfo.should(
         'have.length',
-        ExperienceContainerPO.MOCK_EXPERIENCE.length
+        ExperienceContainerPO.EXPERIENCE.length
       );
     });
   });

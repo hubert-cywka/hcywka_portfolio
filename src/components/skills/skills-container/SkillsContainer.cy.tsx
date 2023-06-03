@@ -12,7 +12,7 @@ const buildSkillsContainer = (mockSkills: Skill[], wide?: boolean) => {
 
 describe('Testing <SkillsContainer/>', () => {
   beforeEach(() => {
-    buildSkillsContainer(SkillsContainerPO.MOCK_SKILLS);
+    buildSkillsContainer(SkillsContainerPO.SKILLS);
   });
 
   describe('Testing layout', () => {
@@ -21,7 +21,7 @@ describe('Testing <SkillsContainer/>', () => {
     });
 
     it('should contain correct amount of skill badges', () => {
-      SkillsContainerPO.skillBadges.should('have.length', SkillsContainerPO.MOCK_SKILLS.length);
+      SkillsContainerPO.skillBadges.should('have.length', SkillsContainerPO.SKILLS.length);
     });
 
     it(`should not pass 'wide' class when prop is set to false`, () => {
@@ -32,7 +32,7 @@ describe('Testing <SkillsContainer/>', () => {
 
     it(`should pass 'wide' class when prop is set to true`, () => {
       cleanup();
-      buildSkillsContainer(SkillsContainerPO.MOCK_SKILLS, true);
+      buildSkillsContainer(SkillsContainerPO.SKILLS, true);
       SkillsContainerPO.skillBadges.each(($badge) => cy.wrap($badge).should('have.class', 'wide'));
     });
   });

@@ -1,5 +1,5 @@
 export class SectionHeaderPageObjects {
-  public MOCK_HEADER = 'MOCK HEADER';
+  public HEADER = 'MOCK HEADER';
 
   get header() {
     return cy.get('.section-header');

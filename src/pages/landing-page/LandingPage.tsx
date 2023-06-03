@@ -7,7 +7,7 @@ import ExperienceList from '../../components/experience/experience-list/Experien
 import { EXPERIENCE } from '../../constants/Experience';
 import { PROJECTS } from '../../constants/Projects';
 import Navbar from '../../components/navbar/Navbar';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   AccountCircleRounded,
   AssignmentRounded,
@@ -36,6 +36,10 @@ const LandingPage = () => {
   const isProjectSectionVisible = useAppearance(projectsRef) || isSkillsSectionVisible;
   const isExperienceSectionVisible = useAppearance(experienceRef);
   const isAboutMeSectionVisible = useAppearance(aboutMeRef, '200px');
+
+  useEffect(() => {
+    aboutMeRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }, []);
 
   return (
     <Grid

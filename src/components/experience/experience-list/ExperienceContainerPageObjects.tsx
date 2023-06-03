@@ -1,7 +1,7 @@
 import { EXPERIENCE } from '../../../constants/Experience';
 
 export class ExperienceContainerPageObjects {
-  public MOCK_EXPERIENCE = EXPERIENCE;
+  public EXPERIENCE = EXPERIENCE;
 
   get experienceContainer() {
     return cy.get('.experience-container');

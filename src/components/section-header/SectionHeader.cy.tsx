@@ -10,7 +10,7 @@ const buildSectionHeader = (mockHeader: string) => {
 
 describe('Testing <SectionHeader />', () => {
   beforeEach(() => {
-    buildSectionHeader(SectionHeaderPO.MOCK_HEADER);
+    buildSectionHeader(SectionHeaderPO.HEADER);
   });
 
   describe('Testing layout', () => {
@@ -25,14 +25,14 @@ describe('Testing <SectionHeader />', () => {
     });
 
     it('should split header into separate words', () => {
-      const words = SectionHeaderPO.MOCK_HEADER.split(' ');
+      const words = SectionHeaderPO.HEADER.split(' ');
       SectionHeaderPO.headerWords.each(($word, index) => {
         cy.wrap($word).should('contain.text', words[index]);
       });
     });
 
     it('should split header into exactly one block for one word', () => {
-      const words = SectionHeaderPO.MOCK_HEADER.split(' ');
+      const words = SectionHeaderPO.HEADER.split(' ');
       SectionHeaderPO.headerWords.should('have.length', words.length);
     });
   });

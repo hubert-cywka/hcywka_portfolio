@@ -6,7 +6,7 @@ import {
   PORTFOLIO_URL
 } from './URLConstants';
 
-const FLAVOURIFY: Project = {
+export const FLAVOURIFY: Project = {
   github: FLAVOURIFY_GITHUB_URL,
   url: FLAVOURIFY_URL,
   imageSrc: [

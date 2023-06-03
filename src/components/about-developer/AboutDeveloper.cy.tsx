@@ -11,7 +11,7 @@ const buildAboutDeveloper = (mockDeveloper: Developer) => {
 
 describe('Testing <AboutDeveloper/>', () => {
   beforeEach(() => {
-    return buildAboutDeveloper(AboutDeveloperPO.MOCK_DEVELOPER);
+    return buildAboutDeveloper(AboutDeveloperPO.DEVELOPER);
   });
 
   describe('Testing layout', () => {
@@ -19,21 +19,21 @@ describe('Testing <AboutDeveloper/>', () => {
       AboutDeveloperPO.name
         .should('exist')
         .should('be.visible')
-        .should('contain.text', AboutDeveloperPO.MOCK_DEVELOPER.name);
+        .should('contain.text', AboutDeveloperPO.DEVELOPER.name);
     });
 
     it('should display correct role', () => {
       AboutDeveloperPO.role
         .should('exist')
         .should('be.visible')
-        .should('contain.text', AboutDeveloperPO.MOCK_DEVELOPER.role);
+        .should('contain.text', AboutDeveloperPO.DEVELOPER.role);
     });
 
     it('should display correct picture', () => {
       AboutDeveloperPO.picture
         .should('exist')
         .should('be.visible')
-        .should('have.attr', 'src', AboutDeveloperPO.MOCK_DEVELOPER.picture);
+        .should('have.attr', 'src', AboutDeveloperPO.DEVELOPER.picture);
     });
 
     it('should display contact buttons container', () => {
@@ -49,7 +49,7 @@ describe('Testing <AboutDeveloper/>', () => {
 
   describe('Testing actions', () => {
     it('each button should have proper href attribute', () => {
-      AboutDeveloperPO.MOCK_DEVELOPER.contacts.map((contact) => {
+      AboutDeveloperPO.DEVELOPER.contacts.map((contact) => {
         AboutDeveloperPO.buttonByAltText(contact.name).should('have.attr', 'href', contact.href);
       });
     });

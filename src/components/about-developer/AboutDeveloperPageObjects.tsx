@@ -1,7 +1,9 @@
 import { ME } from '../../constants/Me';
 
 export class AboutDeveloperPageObjects {
-  public MOCK_DEVELOPER = ME;
+  public DEVELOPER = ME;
+  public LINKEDIN = ME.contacts[0];
+  public GITHUB = ME.contacts[1];
 
   get picture() {
     return cy.get('.picture');

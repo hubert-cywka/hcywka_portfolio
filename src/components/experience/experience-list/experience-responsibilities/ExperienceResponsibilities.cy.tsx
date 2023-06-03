@@ -10,7 +10,7 @@ const buildExperienceResponsibilities = (mockResponsibilities: string[]) => {
 
 describe('Testing <ExperienceResponsibilities/>', () => {
   beforeEach(() => {
-    buildExperienceResponsibilities(ExperienceResponsibilitiesPO.MOCK_RESPONSIBILITIES);
+    buildExperienceResponsibilities(ExperienceResponsibilitiesPO.RESPONSIBILITIES);
   });
 
   describe('Testing layout', () => {
@@ -28,7 +28,7 @@ describe('Testing <ExperienceResponsibilities/>', () => {
       ExperienceResponsibilitiesPO.responsibilities.each(($responsibility, index) => {
         cy.wrap($responsibility).should(
           'contain.text',
-          ExperienceResponsibilitiesPO.MOCK_RESPONSIBILITIES[index]
+          ExperienceResponsibilitiesPO.RESPONSIBILITIES[index]
         );
       });
     });
@@ -36,7 +36,7 @@ describe('Testing <ExperienceResponsibilities/>', () => {
     it('should display correct amount of responsibilities', () => {
       ExperienceResponsibilitiesPO.responsibilities.should(
         'have.length',
-        ExperienceResponsibilitiesPO.MOCK_RESPONSIBILITIES.length
+        ExperienceResponsibilitiesPO.RESPONSIBILITIES.length
       );
     });
   });
