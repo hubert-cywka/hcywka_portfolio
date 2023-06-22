@@ -10,8 +10,8 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  background: rgb(25, 25, 37);
-  background: radial-gradient(circle, rgb(25, 25, 37) 0%, rgb(23, 16, 39) 100%);
+  background-color: rgb(25, 25, 37);
+  background-image: radial-gradient(circle, rgb(25, 25, 37) 0%, rgb(23, 16, 39) 100%);
   background-size: 100% 200%;
   height: var(--trueViewportHeight);
   width: 100%;

@@ -3,19 +3,19 @@ import { Experience } from '../types/interfaces/Experience';
 export const IDEMIA_EXPERIENCE: Experience = {
   companyName: 'IDEMIA Poland R&D Sp. z o.o.',
   position: 'Intern Frontend Developer',
-  to: 'Present',
+  to: '06.2023',
   since: '10.2022',
   responsibilities: [
-    'Creating web application using React, HTML, SCSS, TypeScript.',
-    'Implementing several libraries, eg. React Query, React Hook Form.',
-    'Writing unit tests with usage of Jest.',
-    'Creating and conducting UATs.',
-    'Reviewing code of coworkers.',
-    'Organizing work using Git, GitHub and Trello.',
-    'Gathering and defining customer requirements.',
-    'Presenting results of work during weekly demos.',
-    'Participating in designing openAPI.',
-    'Using Agile methods.'
+    'Developed the MVP of a web application for a company recently ranked #1 by NIST.',
+    'Integrated new interfaces with backend api, eg. a user system including best authorization practices.',
+    'Developed over 50% of all functionalities on the frontend side.',
+    'Prototyped design and provided the best possible UX and UI in cooperation with customers.',
+    'Created a significant portion of unit tests, conducted UATs, reduced the time needed to run tests by 40%.',
+    'Reviewed the code of coworkers and discussed necessary solutions.',
+    'Participated in the implementation of CI/CD using Microsoft Azure and GitHub Actions.',
+    'Optimized work using Git, GitHub, and Trello, utilized Agile methods to improve efficiency.',
+    'Gathered and defined customer requirements and presented work results during weekly demos.',
+    'Designed openAPI and prepared documentation, flow diagrams, use cases and release notes.'
   ],
   description:
     'It was a great opportunity to learn good practices in a controlled environment and learn about the process of creating applications, including collecting customer requirements, presentations of progress, or the process of releasing applications to the cloud. We worked from scratch on a web application project with a team of 9. '

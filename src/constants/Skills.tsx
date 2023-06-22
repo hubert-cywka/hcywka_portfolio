@@ -18,7 +18,6 @@ import {
   NODEJS_IMAGE,
   PHOTOSHOP_IMAGE,
   REACT_IMAGE,
-  REST_IMAGE,
   SPRING_IMAGE,
   TS_IMAGE
 } from './ImageConstants';
@@ -70,6 +69,16 @@ export const TECHNICAL_SKILLS: Skill[] = [
     level: 4
   },
   {
+    img: EXPRESS_IMAGE,
+    name: 'Express',
+    level: 2
+  },
+  {
+    img: NODEJS_IMAGE,
+    name: 'Node.js',
+    level: 2
+  },
+  {
     img: CYPRESS_IMAGE,
     name: 'Cypress',
     level: 3
@@ -78,11 +87,6 @@ export const TECHNICAL_SKILLS: Skill[] = [
     img: JEST_IMAGE,
     name: 'Jest',
     level: 4
-  },
-  {
-    img: REST_IMAGE,
-    name: 'REST API',
-    level: 3
   },
   {
     img: C_IMAGE,
@@ -120,13 +124,5 @@ export const NEXT_SKILLS: Skill[] = [
   {
     img: NEXTJS_IMAGE,
     name: 'Next.js'
-  },
-  {
-    img: EXPRESS_IMAGE,
-    name: 'Express'
-  },
-  {
-    img: NODEJS_IMAGE,
-    name: 'Node.js'
   }
 ];
