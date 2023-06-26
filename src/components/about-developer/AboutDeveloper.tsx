@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import './AboutDeveloper.scss';
-import { Developer } from '../../types/interfaces/Developer';
+import { Developer } from '../../shared/types/interfaces/Developer';
 
 const AboutDeveloper = ({ name, role, picture, contacts }: Developer) => {
   return (

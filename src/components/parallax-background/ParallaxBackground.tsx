@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
-import { useMousePosition } from '../../utility/useMousePosition';
+import { useMousePosition } from '../../shared/hooks/useMousePosition';
 import './ParallaxBackground.scss';
-import { useScrollPosition } from '../../utility/useScrollPosition';
+import { useScrollPosition } from '../../shared/hooks/useScrollPosition';
 
 const ParallaxBackground = () => {
   const scrollPosition = useScrollPosition();

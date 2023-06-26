@@ -6,7 +6,7 @@ import {
   setCustomViewportHeightVariable,
   setCustomViewportSizeVariableUpdater,
   setCustomViewportWidthVariable
-} from './utility/viewportHeightUtils';
+} from './shared/utils/viewportHeightUtils';
 
 function App() {
   setCustomViewportWidthVariable();

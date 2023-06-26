@@ -1,4 +1,4 @@
-import { ME } from '../../constants/Me';
+import { ME } from '../../shared/constants/Me';
 
 export class AboutDeveloperPageObjects {
   public DEVELOPER = ME;

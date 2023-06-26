@@ -1,10 +1,10 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import './ProjectContainer.scss';
-import { Project } from '../../../types/interfaces/Project';
+import { Project } from '../../../shared/types/interfaces/Project';
 import Description from '../../description/Description';
 import { ProjectPicture } from '../project-picture/ProjectPicture';
 import { useRef } from 'react';
-import { useIntersection } from '../../../utility/useIntersection';
+import { useIntersection } from '../../../shared/hooks/useIntersection';
 
 const ProjectContainer = ({ name, description, url, github, imageSrc }: Project) => {
   const projectNameRef = useRef<HTMLElement>(null);

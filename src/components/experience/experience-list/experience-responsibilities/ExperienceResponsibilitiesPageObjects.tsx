@@ -1,4 +1,4 @@
-import { IDEMIA_EXPERIENCE } from '../../../../constants/Experience';
+import { IDEMIA_EXPERIENCE } from '../../../../shared/constants/Experience';
 
 export class ExperienceResponsibilitiesPageObjects {
   public RESPONSIBILITIES = IDEMIA_EXPERIENCE.responsibilities ?? [];

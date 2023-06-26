@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import './SkillBadge.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
-import { Skill } from '../../../types/interfaces/Skill';
+import { Skill } from '../../../shared/types/interfaces/Skill';
 
 interface SkillBadgeProps {
   skill: Skill;

@@ -1,4 +1,4 @@
-import { PROJECTS } from '../../constants/Projects';
+import { PROJECTS } from '../../shared/constants/Projects';
 
 export class DescriptionPageObjects {
   public DESCRIPTION = PROJECTS[0].description;

@@ -1,7 +1,7 @@
 import { ProjectContainerPageObjects } from './ProjectContainerPageObjects';
 import { mount } from 'cypress/react18';
 import ProjectContainer from './ProjectContainer';
-import { Project } from '../../../types/interfaces/Project';
+import { Project } from '../../../shared/types/interfaces/Project';
 
 const ProjectContainerPO = new ProjectContainerPageObjects();
 

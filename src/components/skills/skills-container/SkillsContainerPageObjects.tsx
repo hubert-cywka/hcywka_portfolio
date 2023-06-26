@@ -1,4 +1,4 @@
-import { TECHNICAL_SKILLS } from '../../../constants/Skills';
+import { TECHNICAL_SKILLS } from '../../../shared/constants/Skills';
 
 export class SkillsContainerPageObjects {
   public SKILLS = TECHNICAL_SKILLS;

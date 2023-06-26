@@ -1,4 +1,4 @@
-import { IDEMIA_EXPERIENCE, LODZ_EXPERIENCE } from '../../../../constants/Experience';
+import { IDEMIA_EXPERIENCE, LODZ_EXPERIENCE } from '../../../../shared/constants/Experience';
 
 export class ExperienceInfoPageObjects {
   public EXPERIENCE = IDEMIA_EXPERIENCE;

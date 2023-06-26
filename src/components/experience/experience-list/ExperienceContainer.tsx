@@ -1,7 +1,7 @@
 import { Box, Grid, SxProps } from '@mui/material';
 import ExperienceInfo from './experience-info/ExperienceInfo';
 import './ExperienceContainer.scss';
-import { Experience } from '../../../types/interfaces/Experience';
+import { Experience } from '../../../shared/types/interfaces/Experience';
 
 interface ExperienceListProps {
   experience: Experience[];

@@ -1,6 +1,6 @@
 import { mount } from 'cypress/react18';
 import ProjectsList from './ProjectsList';
-import { Project } from '../../../types/interfaces/Project';
+import { Project } from '../../../shared/types/interfaces/Project';
 import { ProjectsListPageObjects } from './ProjectsListPageObjects';
 
 const ProjectsListPO = new ProjectsListPageObjects();

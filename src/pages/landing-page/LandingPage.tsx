@@ -1,11 +1,11 @@
 import { Grid } from '@mui/material';
 import AboutDeveloper from '../../components/about-developer/AboutDeveloper';
 import './LandingPage.scss';
-import { ME } from '../../constants/Me';
+import { ME } from '../../shared/constants/Me';
 import SkillsContainer from '../../components/skills/skills-container/SkillsContainer';
 import ExperienceList from '../../components/experience/experience-list/ExperienceContainer';
-import { EXPERIENCE } from '../../constants/Experience';
-import { PROJECTS } from '../../constants/Projects';
+import { EXPERIENCE } from '../../shared/constants/Experience';
+import { PROJECTS } from '../../shared/constants/Projects';
 import Navbar from '../../components/navbar/Navbar';
 import { useRef } from 'react';
 import {
@@ -18,9 +18,9 @@ import Description from '../../components/description/Description';
 import ProjectsList from '../../components/project/projects-list/ProjectsList';
 import SectionHeader from '../../components/section-header/SectionHeader';
 import ParallaxBackground from '../../components/parallax-background/ParallaxBackground';
-import { useAppearance } from '../../utility/useAppearance';
+import { useAppearance } from '../../shared/hooks/useAppearance';
 import SlideInWrapper from '../../components/slide-in/SlideInWrapper';
-import { NEXT_SKILLS, TECHNICAL_SKILLS } from '../../constants/Skills';
+import { NEXT_SKILLS, TECHNICAL_SKILLS } from '../../shared/constants/Skills';
 
 const MD_BREAKPOINT = 900;
 

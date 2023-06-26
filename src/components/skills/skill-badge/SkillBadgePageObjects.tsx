@@ -1,4 +1,4 @@
-import { Skill } from '../../../types/interfaces/Skill';
+import { Skill } from '../../../shared/types/interfaces/Skill';
 
 export class SkillBadgePageObjects {
   public SKILL: Skill = {

@@ -1,4 +1,4 @@
-import { FLAVOURIFY } from '../../../constants/Projects';
+import { FLAVOURIFY } from '../../../shared/constants/Projects';
 
 export class ProjectPicturePageObjects {
   public PICTURES = FLAVOURIFY.imageSrc;
