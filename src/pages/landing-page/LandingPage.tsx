@@ -19,8 +19,8 @@ import { EXPERIENCE } from '../../shared/constants/Experience';
 import ProjectsList from '../../components/content/project/projects-list/ProjectsList';
 import SkillsContainer from '../../components/content/skills/skills-container/SkillsContainer';
 import { PROJECTS } from '../../shared/constants/Projects';
-import { NEXT_SKILLS, TECHNICAL_SKILLS } from '../../shared/constants/Skills';
 import Navbar from '../../components/navigation/navbar/Navbar';
+import { Skills } from '../../shared/constants/Skills';
 
 const MD_BREAKPOINT = 900;
 
@@ -29,10 +29,8 @@ const LandingPage = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
-  const nextSkillsRef = useRef<HTMLDivElement>(null);
 
   const isSkillsSectionVisible = useAppearance(skillsRef);
-  const isNextSkillsSectionVisible = useAppearance(nextSkillsRef);
   const isProjectSectionVisible = useAppearance(projectsRef) || isSkillsSectionVisible;
   const isExperienceSectionVisible = useAppearance(experienceRef);
   const isAboutMeSectionVisible = useAppearance(aboutMeRef, '200px');
@@ -86,14 +84,13 @@ const LandingPage = () => {
           <Grid item xs={12}>
             <SectionHeader headerText="Technical Skills" reference={skillsRef} />
             <SlideInWrapper isIn={isSkillsSectionVisible} direction="RIGHT">
-              <SkillsContainer skills={TECHNICAL_SKILLS} />
-            </SlideInWrapper>
-          </Grid>
-
-          <Grid item xs={12}>
-            <SectionHeader headerText="Currently Learning" reference={nextSkillsRef} />
-            <SlideInWrapper isIn={isNextSkillsSectionVisible} direction="LEFT">
-              <SkillsContainer skills={NEXT_SKILLS} wide />
+              <SkillsContainer
+                frontend={Skills.FRONTEND_SKILLS}
+                backend={Skills.BACKEND_SKILLS}
+                design={Skills.DESIGN_SKILLS}
+                tools={Skills.TOOLS_SKILLS}
+                testing={Skills.TESTING_SKILLS}
+              />
             </SlideInWrapper>
           </Grid>
         </Grid>

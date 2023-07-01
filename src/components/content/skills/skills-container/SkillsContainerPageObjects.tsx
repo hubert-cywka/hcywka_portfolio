@@ -1,7 +1,7 @@
-import { TECHNICAL_SKILLS } from 'shared/constants/Skills';
+import { Skills } from 'shared/constants/Skills';
 
 export class SkillsContainerPageObjects {
-  public SKILLS = TECHNICAL_SKILLS;
+  public SKILLS = Skills.FRONTEND_SKILLS;
 
   get skillsContainer() {
     return cy.get('.skills-container');

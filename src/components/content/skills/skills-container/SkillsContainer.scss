@@ -2,12 +2,42 @@
 
 .skills-container {
   display: flex;
-  gap: $spacing-standard;
+  margin-top: $spacing-xl;
+  gap: $spacing-xxl;
   flex-wrap: wrap;
   justify-content: center;
 
-  .wide {
-    width: 200px;
-    height: 100px;
+  .skills-category-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-standard;
+    align-items: center;
+
+    &:hover {
+      .skills-category-header {
+        background-color: rgba($purple, 0.9);
+      }
+    }
+
+    .skills-category-header {
+      text-align: center;
+      padding: $spacing-s $spacing-xl;
+      border-radius: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      background-color: rgba($purple, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .skills-category-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .wide {
+        width: 200px;
+        height: 100px;
+      }
+    }
   }
 }

@@ -7,7 +7,16 @@ import { cleanup } from '@testing-library/react';
 const SkillsContainerPO = new SkillsContainerPageObjects();
 
 const buildSkillsContainer = (mockSkills: Skill[], wide?: boolean) => {
-  return mount(<SkillsContainer skills={mockSkills} wide={wide} />);
+  return mount(
+    <SkillsContainer
+      frontend={mockSkills}
+      backend={mockSkills}
+      tools={mockSkills}
+      testing={mockSkills}
+      design={mockSkills}
+      wide={wide}
+    />
+  );
 };
 
 describe('Testing <SkillsContainer/>', () => {
@@ -18,10 +27,6 @@ describe('Testing <SkillsContainer/>', () => {
   describe('Testing layout', () => {
     it('should be visible', () => {
       SkillsContainerPO.skillsContainer.should('exist').should('be.visible');
-    });
-
-    it('should contain correct amount of skill badges', () => {
-      SkillsContainerPO.skillBadges.should('have.length', SkillsContainerPO.SKILLS.length);
     });
 
     it(`should not pass 'wide' class when prop is set to false`, () => {
