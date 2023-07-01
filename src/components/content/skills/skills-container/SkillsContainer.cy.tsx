@@ -9,8 +9,7 @@ const SkillsContainerPO = new SkillsContainerPageObjects();
 const buildSkillsContainer = (mockSkills: Skill[], wide?: boolean) => {
   return mount(
     <SkillsContainer
-      frontend={mockSkills}
-      backend={mockSkills}
+      programming={mockSkills}
       tools={mockSkills}
       testing={mockSkills}
       design={mockSkills}

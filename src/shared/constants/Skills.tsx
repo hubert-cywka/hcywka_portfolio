@@ -20,7 +20,7 @@ import {
 } from './ImageConstants';
 
 export class Skills {
-  static FRONTEND_SKILLS: Skill[] = [
+  static PROGRAMMING_SKILLS: Skill[] = [
     {
       img: REACT_IMAGE,
       name: 'React.js',
@@ -50,6 +50,26 @@ export class Skills {
       img: MUI_IMAGE,
       name: 'Material UI',
       level: 4
+    },
+    {
+      img: EXPRESS_IMAGE,
+      name: 'Express',
+      level: 2
+    },
+    {
+      img: NODEJS_IMAGE,
+      name: 'Node.js',
+      level: 2
+    },
+    {
+      img: JAVA_IMAGE,
+      name: 'Java',
+      level: 2
+    },
+    {
+      img: SPRING_IMAGE,
+      name: 'Spring Boot',
+      level: 1
     }
   ];
 
@@ -81,29 +101,6 @@ export class Skills {
       img: DOCKER_IMAGE,
       name: 'Docker',
       level: 2
-    }
-  ];
-
-  static BACKEND_SKILLS: Skill[] = [
-    {
-      img: EXPRESS_IMAGE,
-      name: 'Express',
-      level: 2
-    },
-    {
-      img: NODEJS_IMAGE,
-      name: 'Node.js',
-      level: 2
-    },
-    {
-      img: JAVA_IMAGE,
-      name: 'Java',
-      level: 2
-    },
-    {
-      img: SPRING_IMAGE,
-      name: 'Spring Boot',
-      level: 1
     }
   ];
 

@@ -85,8 +85,7 @@ const LandingPage = () => {
             <SectionHeader headerText="Technical Skills" reference={skillsRef} />
             <SlideInWrapper isIn={isSkillsSectionVisible} direction="RIGHT">
               <SkillsContainer
-                frontend={Skills.FRONTEND_SKILLS}
-                backend={Skills.BACKEND_SKILLS}
+                programming={Skills.PROGRAMMING_SKILLS}
                 design={Skills.DESIGN_SKILLS}
                 tools={Skills.TOOLS_SKILLS}
                 testing={Skills.TESTING_SKILLS}

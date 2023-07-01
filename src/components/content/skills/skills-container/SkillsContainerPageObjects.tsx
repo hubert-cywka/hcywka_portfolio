@@ -1,7 +1,7 @@
 import { Skills } from 'shared/constants/Skills';
 
 export class SkillsContainerPageObjects {
-  public SKILLS = Skills.FRONTEND_SKILLS;
+  public SKILLS = Skills.PROGRAMMING_SKILLS;
 
   get skillsContainer() {
     return cy.get('.skills-container');

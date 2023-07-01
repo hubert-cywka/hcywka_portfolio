@@ -4,22 +4,14 @@ import './SkillsContainer.scss';
 import { Skill } from 'shared/types/interfaces/Skill';
 
 interface SkillsContainerProps {
-  frontend: Skill[];
-  backend: Skill[];
+  programming: Skill[];
   tools: Skill[];
   design: Skill[];
   testing: Skill[];
   wide?: boolean;
 }
 
-const SkillsContainer = ({
-  frontend,
-  backend,
-  tools,
-  design,
-  testing,
-  wide
-}: SkillsContainerProps) => {
+const SkillsContainer = ({ programming, tools, design, testing, wide }: SkillsContainerProps) => {
   const buildListOfSkills = (skills: Skill[], header: string) => {
     return (
       <Box className="skills-category-container">
@@ -35,10 +27,9 @@ const SkillsContainer = ({
 
   return (
     <Box className="skills-container">
-      {buildListOfSkills(frontend, 'Frontend')}
+      {buildListOfSkills(programming, 'Languages, Libraries & Frameworks')}
       {buildListOfSkills(tools, 'Tools')}
       {buildListOfSkills(testing, 'Testing')}
-      {buildListOfSkills(backend, 'Backend')}
       {buildListOfSkills(design, 'Design')}
     </Box>
   );
