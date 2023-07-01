@@ -1,10 +1,14 @@
-import { Box, Typography } from '@mui/material';
+import { Box, SxProps, Typography } from '@mui/material';
 import './AboutDeveloper.scss';
 import { Developer } from 'shared/types/interfaces/Developer';
 
-const AboutDeveloper = ({ name, role, picture, contacts }: Developer) => {
+interface AboutDeveloperProps extends Developer {
+  sx?: SxProps;
+}
+
+const AboutDeveloper = ({ name, role, picture, contacts, sx }: AboutDeveloperProps) => {
   return (
-    <Box className="about-developer-container">
+    <Box className="about-developer-container" sx={sx}>
       <Box className="developer">
         <img className="picture" src={picture} alt="Picture of this website creator" />
         <Box className="text-container">

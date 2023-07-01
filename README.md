@@ -15,7 +15,7 @@ My personal portfolio created in React + TypeScript with Mobile First approach i
 Just run `npm install` and then `npm run`. Your app should be available at `localhost:3000`.
 
 ## Other commands
-`npm run test-coverage` - runs unit tests and displays code coverage.
+`npm run cypress:component`- runs unit tests.
 
 ## Gallery
 

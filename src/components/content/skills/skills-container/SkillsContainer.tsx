@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, SxProps, Typography } from '@mui/material';
 import SkillBadge from '../skill-badge/SkillBadge';
 import './SkillsContainer.scss';
 import { Skill } from 'shared/types/interfaces/Skill';
@@ -9,12 +9,20 @@ interface SkillsContainerProps {
   design: Skill[];
   testing: Skill[];
   wide?: boolean;
+  sx?: SxProps;
 }
 
-const SkillsContainer = ({ programming, tools, design, testing, wide }: SkillsContainerProps) => {
+const SkillsContainer = ({
+  programming,
+  tools,
+  design,
+  testing,
+  wide,
+  sx
+}: SkillsContainerProps) => {
   const buildListOfSkills = (skills: Skill[], header: string) => {
     return (
-      <Box className="skills-category-container">
+      <Box className="skills-category-container" sx={sx}>
         <Typography className="skills-category-header">{header}</Typography>
         <Box className="skills-category-list">
           {skills.map((skill, index) => (
