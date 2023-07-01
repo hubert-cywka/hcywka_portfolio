@@ -2,9 +2,9 @@
 
 $md-breakpoint: 900px;
 
-$purple-lighter: #8a15ff;
 $purple: #6700cc;
-$purple-darker: #5300a7;
+$purple-lighter: lighten($purple, 10%);
+$purple-darker: darken($purple, 10%);
 $gray: #222222;
 
 $standard-font-size: 1rem;
