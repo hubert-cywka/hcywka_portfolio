@@ -20,10 +20,10 @@ Just run `npm install` and then `npm run`. Your app should be available at `loca
 ## Gallery
 
 Contact and Experience sections
-![about.png](github/about.png)
+![about.png](media/about.png)
 
 Projects section
-![projects.png](github/projects.png)
+![projects.png](media/projects.png)
 
 Projects and Technical skills sections
-![skills and project.png](github/skills and project.png)
+![skills and project.png](media/skills and project.png)

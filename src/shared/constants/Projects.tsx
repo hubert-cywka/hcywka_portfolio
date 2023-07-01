@@ -1,5 +1,7 @@
 import { Project } from '../types/interfaces/Project';
 import {
+  BEERS_TASK_GITHUB_URL,
+  BEERS_TASK_URL,
   FLAVOURIFY_GITHUB_URL,
   FLAVOURIFY_URL,
   PORTFOLIO_GITHUB_URL,
@@ -34,8 +36,25 @@ const PORTFOLIO: Project = {
   description: [
     'Modern, simple and elegant responsive portfolio website created in React with as little libraries as possible.',
     'There were actually at least 3 design versions, but only this one met my requirements. I am quite happy of the outcome, especially that I have achieved that with low amount of css and it took me like only 3 hours to complete my vision.',
-    "Technologies used: React, TypeScript, SCSS, MaterialUI. That's it."
+    'Technologies used: React, TypeScript, SCSS, MaterialUI, Cypress, Webpack, ESLint, Prettier.'
   ]
 };
 
-export const PROJECTS: Project[] = [FLAVOURIFY, PORTFOLIO];
+const BEERS_TASK: Project = {
+  github: BEERS_TASK_GITHUB_URL,
+  url: BEERS_TASK_URL,
+  imageSrc: [
+    'projects/beers/1.webp',
+    'projects/beers/2.webp',
+    'projects/beers/3.webp',
+    'projects/beers/4.webp'
+  ],
+  name: 'Beers.',
+  description: [
+    'This application was created as a recruitment task.',
+    'It allows to browse list of beers from public api and check their details. App is fully responsive, provides seamless user experience and is unbreakable and bug-free.',
+    'Technologies used: React, TypeScript, SCSS, React Router, Cypress, Webpack, ESLint, Prettier.'
+  ]
+};
+
+export const PROJECTS: Project[] = [FLAVOURIFY, PORTFOLIO, BEERS_TASK];

@@ -46,11 +46,7 @@ describe('Testing <ProjectContainer />', () => {
 
   describe('Testing actions', () => {
     it('should have proper href attribute on website button', () => {
-      ProjectContainerPO.websiteButton.should(
-        'have.attr',
-        'href',
-        ProjectContainerPO.PROJECT.url
-      );
+      ProjectContainerPO.websiteButton.should('have.attr', 'href', ProjectContainerPO.PROJECT.url);
     });
 
     it('should have proper href attribute on github button', () => {

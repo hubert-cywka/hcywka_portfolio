@@ -29,6 +29,10 @@ describe('Testing <SkillsContainer/>', () => {
       SkillsContainerPO.skillsContainer.should('exist').should('be.visible');
     });
 
+    it('should display skills category header', () => {
+      SkillsContainerPO.skillsCategoryHeader.should('exist').should('be.visible');
+    });
+
     it(`should not pass 'wide' class when prop is set to false`, () => {
       SkillsContainerPO.skillBadges.each(($badge) =>
         cy.wrap($badge).should('not.have.class', 'wide')

@@ -7,7 +7,11 @@ export class SkillsContainerPageObjects {
     return cy.get('.skills-container');
   }
 
+  get skillsCategoryHeader() {
+    return this.skillsContainer.get('.skills-category-header');
+  }
+
   get skillBadges() {
-    return this.skillsContainer.children();
+    return this.skillsContainer.get('.skills-category-list').children();
   }
 }
