@@ -34,11 +34,17 @@ describe('Testing <ExperienceInfo />', () => {
         .should('contain.text', ExperienceInfoPO.EXPERIENCE.position);
     });
 
-    it('should display correct description', () => {
+    it('should display correct description if it is present', () => {
       ExperienceInfoPO.description
         .should('exist')
         .should('be.visible')
         .should('contain.text', ExperienceInfoPO.EXPERIENCE.description);
+    });
+
+    it('should not display description if it is not present', () => {
+      cleanup();
+      buildExperienceInfo(ExperienceInfoPO.SHORT_EXPERIENCE);
+      ExperienceInfoPO.description.should('not.exist');
     });
 
     it('should display correct date', () => {
@@ -55,7 +61,7 @@ describe('Testing <ExperienceInfo />', () => {
 
     it('should not display expand button if responsibilities are not present', () => {
       cleanup();
-      buildExperienceInfo(ExperienceInfoPO.EXPERIENCE_WITHOUT_RESPONSIBILITIES);
+      buildExperienceInfo(ExperienceInfoPO.SHORT_EXPERIENCE);
       ExperienceInfoPO.showResponsibilitiesButton.should('not.exist');
     });
   });

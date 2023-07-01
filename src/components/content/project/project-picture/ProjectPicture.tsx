@@ -2,7 +2,6 @@ import './ProjectPicture.scss';
 import { Box, IconButton, Typography } from '@mui/material';
 import { useState } from 'react';
 import { KeyboardArrowLeftRounded, KeyboardArrowRightRounded } from '@mui/icons-material';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 interface ProjectPictureProps {
   imageSrc: string[];
@@ -34,13 +33,7 @@ export const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
 
   return (
     <Box className="project-picture-container">
-      <div className="zoom-wrapper">
-        <TransformWrapper>
-          <TransformComponent>
-            <img className="project-picture" src={imageSrc[imageIndex]} alt={name} loading="lazy" />
-          </TransformComponent>
-        </TransformWrapper>
-      </div>
+      <img className="project-picture" src={imageSrc[imageIndex]} alt={name} loading="lazy" />
       <Box className="image-change-buttons">
         <IconButton onClick={decrementImageIndex} aria-label="previous picture button">
           <KeyboardArrowLeftRounded />

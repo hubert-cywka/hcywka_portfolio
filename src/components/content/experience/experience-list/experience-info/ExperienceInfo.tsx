@@ -20,16 +20,22 @@ const ExperienceInfo = ({
 
   return (
     <Box className="experience-info-container">
-      <Typography variant="h6" className="company-name">
-        {companyName}
-      </Typography>
-      <Typography variant="subtitle2" className="position">
-        {position}
-      </Typography>
-      <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
-      <Typography variant="caption" className="description">
-        {description}
-      </Typography>
+      <Box className="experience-header">
+        <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
+        <Box>
+          <Typography variant="h6" className="company-name">
+            {companyName}
+          </Typography>
+          <Typography variant="subtitle2" className="position">
+            {position}
+          </Typography>
+        </Box>
+      </Box>
+      {description?.length && (
+        <Typography variant="caption" className="description">
+          {description}
+        </Typography>
+      )}
       {responsibilities?.length && (
         <>
           <Box>

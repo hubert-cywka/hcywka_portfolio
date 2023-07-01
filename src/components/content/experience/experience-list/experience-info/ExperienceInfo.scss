@@ -5,29 +5,37 @@
   width: 100%;
   margin-bottom: $spacing-xl;
 
-  .date {
-    transition: 0.5s;
-    width: fit-content;
-    display: block;
-    opacity: 0.75;
-    border-radius: 5px;
-    padding: $spacing-s $spacing-standard;
-    background: $purple-darker;
-    margin-top: $spacing-standard;
-  }
-
   &:hover {
-    .date {
-      background: $purple-lighter;
+    .experience-header {
+      .date {
+        background: $purple-lighter;
+      }
     }
   }
 
-  .company-name {
-    margin-bottom: -$spacing-s;
-  }
+  .experience-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-l;
 
-  .position {
-    opacity: 0.75;
+    .date {
+      height: fit-content;
+      transition: 0.5s;
+      width: fit-content;
+      display: block;
+      opacity: 0.75;
+      border-radius: 5px;
+      padding: $spacing-s $spacing-standard;
+      background: $purple-darker;
+    }
+
+    .company-name {
+      margin-bottom: -$spacing-s;
+    }
+
+    .position {
+      opacity: 0.75;
+    }
   }
 
   .description {

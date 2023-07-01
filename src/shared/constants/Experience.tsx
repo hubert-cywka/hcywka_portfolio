@@ -1,7 +1,7 @@
 import { Experience } from '../types/interfaces/Experience';
 
 export const IDEMIA_EXPERIENCE: Experience = {
-  companyName: 'IDEMIA Poland R&D Sp. z o.o.',
+  companyName: 'IDEMIA Poland R&D',
   position: 'Intern Frontend Developer',
   to: '06.2023',
   since: '10.2022',
@@ -25,9 +25,7 @@ export const LODZ_EXPERIENCE: Experience = {
   companyName: 'Politechnika Łódzka',
   position: 'Bachelor Degree of IT',
   to: 'Present',
-  since: '10.2021',
-  description:
-    'I am a second-year IT student at Politechnika Łódzka. Currently, I am immersing myself in the world of Information Technology, learning programming, network administration, and system analysis.'
+  since: '10.2021'
 };
 
 export const GRAPHIC_EXPERIENCE: Experience = {
@@ -40,9 +38,7 @@ export const GRAPHIC_EXPERIENCE: Experience = {
     'Providing help with printing my projects.',
     'Designing raster and vector graphics.',
     'Preparing files for print.'
-  ],
-  description:
-    'I have worked on a diverse range of projects, including logo designs, phone cases, duvet sets, banners, and more. Collaborated with individual clients in Poland, Netherlands and international companies.'
+  ]
 };
 
 export const EXPERIENCE: Experience[] = [IDEMIA_EXPERIENCE, LODZ_EXPERIENCE, GRAPHIC_EXPERIENCE];

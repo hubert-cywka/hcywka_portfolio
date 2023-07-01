@@ -9,18 +9,13 @@
   width: 100%;
   margin-top: $spacing-xxl;
 
-  .zoom-wrapper {
+  .project-picture {
     margin: auto;
     width: fit-content;
     @include tile;
     padding: 0;
     border-radius: 50px;
     max-width: 80%;
-    overflow: hidden;
-
-    .project-picture {
-      max-width: 100%;
-    }
   }
 
   .image-change-buttons {

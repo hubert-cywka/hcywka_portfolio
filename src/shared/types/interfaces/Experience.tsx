@@ -3,6 +3,6 @@ export interface Experience {
   since: string;
   to: string;
   position: string;
-  description: string;
+  description?: string;
   responsibilities?: string[];
 }
