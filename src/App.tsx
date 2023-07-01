@@ -7,6 +7,7 @@ import {
   setCustomViewportSizeVariableUpdater,
   setCustomViewportWidthVariable
 } from './shared/utils/viewportHeightUtils';
+import '@fontsource-variable/montserrat';
 
 function App() {
   setCustomViewportWidthVariable();
