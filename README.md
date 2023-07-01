@@ -26,4 +26,4 @@ Projects section
 ![projects.png](media/projects.png)
 
 Projects and Technical skills sections
-![skills and project.png](media/skills and project.png)
+![skills.png](media/skills.png)
