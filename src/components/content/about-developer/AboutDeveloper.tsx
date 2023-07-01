@@ -9,7 +9,7 @@ const AboutDeveloper = ({ name, role, picture, contacts }: Developer) => {
         <img className="picture" src={picture} alt="Picture of this website creator" />
         <Box className="text-container">
           <Typography className="role">{role}</Typography>
-          <Typography className="header-text name">{name}</Typography>
+          <Typography className="name">{name}</Typography>
         </Box>
       </Box>
       <Box className="contacts">

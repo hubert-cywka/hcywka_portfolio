@@ -46,13 +46,13 @@ const LandingPage = () => {
 
       <Grid item xs={12} md={11}>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={4} lg={3}>
+          <Grid item sm={12} md={5} lg={4}>
             <SlideInWrapper isIn={isAboutMeSectionVisible} direction="LEFT">
               <AboutDeveloper {...ME} />
             </SlideInWrapper>
           </Grid>
 
-          <Grid item xs={12} md={8} lg={9}>
+          <Grid item sm={12} md={7} lg={8}>
             <SectionHeader headerText="Hi, I am Hubert!" reference={aboutMeRef} disableTopMargin />
             <SlideInWrapper isIn={isAboutMeSectionVisible}>
               <Description

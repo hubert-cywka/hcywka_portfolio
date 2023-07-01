@@ -1,32 +1,32 @@
 @import "src/styles/constants";
 @import "src/styles/mixins";
 
+
 .about-developer-container {
-  @include tile;
-  max-width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background: radial-gradient(circle, rgba(25, 25, 37, 0.5) 0%, rgba(23, 16, 39, 0.5) 100%);
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-l;
 
   @media (max-width: $md-breakpoint) {
     min-height: 85vh;
   }
 
   .contacts {
-    margin: 0 auto;
     width: fit-content;
     display: flex;
     gap: $spacing-standard;
 
     .contact-button {
-      border-radius: 100%;
+      border-radius: 50px;
       padding: $spacing-standard;
-      width: 20px;
-      height: 20px;
       border: thin solid $gray;
       filter: invert(1) brightness(40%);
       transition: 0.2s;
+      width: 20px;
+      height: 20px;
 
       &:hover {
         filter: invert(1);
@@ -42,35 +42,37 @@
     text-align: center;
     text-transform: uppercase;
     gap: $spacing-l;
-    padding: $spacing-xl;
     box-sizing: border-box;
 
     .text-container {
       .role {
-        color: $purple-lighter;
-        letter-spacing: 0.35rem;
-        font-weight: 900;
-        margin-bottom: $spacing-xl;
+        width: fit-content;
+        background-color: $purple-lighter;
+        padding: $spacing-s $spacing-l;
+        border-radius: 50px;
+        font-weight: 750;
+        margin: 0 auto $spacing-standard;
       }
 
-      .header-text {
-        line-height: $xxxl-font;
-        font-size: $xxxl-font;
-        font-weight: 700;
+      .name {
+        word-spacing: 100vw;
+        line-height: $xxl-font;
+        font-size: $xxl-font;
+        font-weight: 750;
       }
     }
 
     .picture {
-      max-width: 200px;
+      max-width: 225px;
       border-radius: 20px;
       border: thin solid $purple-lighter;
       background: $purple-darker;
+      margin-bottom: $spacing-standard;
     }
   }
 
   .all-rights-reserved {
     opacity: 0.5;
-    margin: $spacing-standard auto;
     display: block;
     width: fit-content;
   }
