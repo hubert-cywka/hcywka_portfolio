@@ -1,0 +1,16 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  .description-paragraph {
+    opacity: 0.75;
+    text-align: justify;
+    display: block;
+    border-left: 2px solid $gray;
+    padding-left: $spacing-standard;
+  }
+}

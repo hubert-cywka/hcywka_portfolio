@@ -1,0 +1,23 @@
+.parallax-background {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background-image: url("../../../../public/background.svg");
+  transition: transform 2s cubic-bezier(0.075, 0.580, 0.045, 0.980);
+  opacity: 0.05;
+  z-index: -1;
+
+  &:nth-child(1) {
+    background-size: 60vh;
+  }
+
+  &:nth-child(2) {
+    background-size: 80vh;
+  }
+
+  &:nth-child(3) {
+    background-size: 100vh;
+  }
+}
