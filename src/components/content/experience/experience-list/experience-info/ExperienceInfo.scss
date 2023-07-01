@@ -19,21 +19,25 @@
     gap: $spacing-l;
 
     .date {
+      white-space: nowrap;
       font-weight: 650;
       height: fit-content;
       transition: 0.5s;
       width: fit-content;
       display: block;
       border-radius: 50px;
+      font-size: $s-font;
       padding: $spacing-s $spacing-l;
       background: rgba($purple, 0.5);
     }
 
     .company-name {
       margin-bottom: -$spacing-s;
+      font-weight: 700;
     }
 
     .position {
+      font-size: $s-font;
       opacity: 0.75;
     }
   }

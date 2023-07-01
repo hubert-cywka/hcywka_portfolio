@@ -1,7 +1,7 @@
 @import "src/styles/constants";
 
 .landing-page-container {
-  padding: $spacing-xxl 0;
+  padding: $spacing-xxl $spacing-xl;
   overflow-x: hidden;
   box-sizing: border-box;
   position: relative;

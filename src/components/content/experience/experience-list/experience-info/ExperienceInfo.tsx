@@ -23,12 +23,8 @@ const ExperienceInfo = ({
       <Box className="experience-header">
         <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
         <Box>
-          <Typography variant="h6" className="company-name">
-            {companyName}
-          </Typography>
-          <Typography variant="subtitle2" className="position">
-            {position}
-          </Typography>
+          <Typography className="company-name">{companyName}</Typography>
+          <Typography className="position">{position}</Typography>
         </Box>
       </Box>
       {description?.length && (

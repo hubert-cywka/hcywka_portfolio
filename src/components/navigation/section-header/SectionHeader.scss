@@ -13,7 +13,11 @@
   }
 
   &.extra-margin {
-    margin: $header-spacing 0 $spacing-l;
+    margin: $spacing-xxxl 0 $spacing-l;
+
+    @media (min-width: $md-breakpoint) {
+      margin: $header-spacing 0 $spacing-l;
+    }
   }
 
   :last-child {
