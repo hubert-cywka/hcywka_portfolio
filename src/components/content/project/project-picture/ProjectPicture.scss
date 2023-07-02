@@ -15,7 +15,11 @@
     @include tile;
     padding: 0;
     border-radius: 50px;
-    max-width: 80%;
+    max-width: 95%;
+
+    @media (min-width: $md-breakpoint) {
+      max-width: 80%;
+    }
   }
 
   .image-change-buttons {
