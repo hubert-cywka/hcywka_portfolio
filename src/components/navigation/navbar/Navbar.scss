@@ -12,7 +12,7 @@
   gap: $spacing-xl;
   padding: $spacing-s;
   border-radius: 50px;
-  background-color: rgba($purple-darker, 0.5);
+  background-color: rgba($primary-dark, 0.5);
   color: white;
   transition: transform 0.3s;
 
@@ -39,12 +39,15 @@
 
   .navbar-item {
     @include tile;
-    border-color: $purple-lighter;
     border-radius: 50px;
     display: flex;
     cursor: pointer;
     opacity: 0.75;
     transition: 0.2s;
+
+    &.active {
+      border-color: $primary-light;
+    }
 
     * {
       font-size: 1rem;

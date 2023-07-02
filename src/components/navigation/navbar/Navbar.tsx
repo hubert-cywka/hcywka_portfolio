@@ -11,12 +11,13 @@ export interface NavbarItem {
 }
 
 interface NavbarProps {
+  activeIndex: number;
   items: NavbarItem[];
 }
 
 const SCROLL_THRESHOLD = 50;
 
-const Navbar = ({ items }: NavbarProps) => {
+const Navbar = ({ items, activeIndex }: NavbarProps) => {
   const isScrollingDown = useScrollDirection(SCROLL_THRESHOLD) === 'down';
 
   const scrollTo = (element: HTMLDivElement | null) => {
@@ -26,7 +27,10 @@ const Navbar = ({ items }: NavbarProps) => {
   const buildItems = () => {
     return items.map((item, index) => {
       return (
-        <Box className="navbar-item" onClick={() => scrollTo(item.ref?.current)} key={index}>
+        <Box
+          className={classNames('navbar-item', { active: activeIndex === index })}
+          onClick={() => scrollTo(item.ref?.current)}
+          key={index}>
           {item.icon}
         </Box>
       );

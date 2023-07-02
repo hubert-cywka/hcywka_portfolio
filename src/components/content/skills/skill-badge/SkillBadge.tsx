@@ -3,6 +3,7 @@ import './SkillBadge.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import { Skill } from 'shared/types/interfaces/Skill';
 import classNames from 'classnames';
+import { memo } from 'react';
 
 interface SkillBadgeProps {
   skill: Skill;
@@ -35,4 +36,4 @@ const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
   );
 };
 
-export default SkillBadge;
+export default memo(SkillBadge);

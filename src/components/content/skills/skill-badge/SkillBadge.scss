@@ -9,7 +9,7 @@
   border-bottom: thin solid transparent;
 
   &:hover {
-    border-bottom: 3px solid $purple;
+    border-bottom: 3px solid $primary;
     transform: translateY(-$spacing-s);
   }
 
@@ -22,7 +22,7 @@
       width: 6px;
       aspect-ratio: 1;
       border-radius: 50px;
-      background: $purple;
+      background: $primary;
 
       &.highlighted {
         transform: scale(1.1);

@@ -39,8 +39,17 @@ const AppProvider = ({ children }: AppProviderProps) => {
             props: { variant: 'contained' },
             style: {
               color: '#ffffff',
-              backgroundColor: '#7100fb',
-              ':hover': { backgroundColor: darken('#7100fb', 0.15) }
+              backgroundColor: '#cc0055',
+              ':hover': { backgroundColor: darken('#cc0055', 0.15) }
+            }
+          },
+          {
+            props: { variant: 'outlined' },
+            style: {
+              color: '#ffffff',
+              borderColor: '#cc0055',
+              borderRadius: '100px',
+              ':hover': { borderColor: darken('#cc0055', 0.15) }
             }
           }
         ]

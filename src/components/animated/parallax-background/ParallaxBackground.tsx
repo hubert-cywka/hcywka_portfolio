@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import { useMousePosition } from 'shared/hooks/useMousePosition';
 import './ParallaxBackground.scss';
 import { useScrollPosition } from 'shared/hooks/useScrollPosition';
+import { memo } from 'react';
 
 const ParallaxBackground = () => {
   const scrollPosition = useScrollPosition();
@@ -33,4 +34,4 @@ const ParallaxBackground = () => {
   );
 };
 
-export default ParallaxBackground;
+export default memo(ParallaxBackground);

@@ -2,6 +2,7 @@ import { Grid, SxProps } from '@mui/material';
 import ProjectContainer from '../project-container/ProjectContainer';
 import { Project } from 'shared/types/interfaces/Project';
 import './ProjectsList.scss';
+import { memo } from 'react';
 
 interface ProjectsListProps {
   projects: Project[];
@@ -24,4 +25,4 @@ const ProjectsList = ({ projects, sx }: ProjectsListProps) => {
   );
 };
 
-export default ProjectsList;
+export default memo(ProjectsList);

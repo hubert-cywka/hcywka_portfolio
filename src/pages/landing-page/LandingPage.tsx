@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import './LandingPage.scss';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   AccountCircleRounded,
   AssignmentRounded,
@@ -22,27 +22,51 @@ import Navbar from '../../components/navigation/navbar/Navbar';
 import { Skills } from '../../shared/constants/Skills';
 import { useSlideInProps } from '../../shared/hooks/useSlideInProps';
 import { useWindowSize } from '../../shared/hooks/useWindowResize';
+import { useIntersection } from '../../shared/hooks/useIntersection';
 
 const MD_BREAKPOINT = 900;
 
 const LandingPage = () => {
   const [windowWidth] = useWindowSize();
+  const [activeSectionIndex, setActiveSectionIndex] = useState(0);
 
   const projectsRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
 
-  const isSkillsSectionVisible = useAppearance(skillsRef);
-  const isProjectSectionVisible = useAppearance(projectsRef) || isSkillsSectionVisible;
-  const isExperienceSectionVisible = useAppearance(experienceRef);
-  const isAboutMeSectionVisible = useAppearance(aboutMeRef, '200px');
+  const hasSkillsAppeared = useAppearance(skillsRef);
+  const hasProjectsAppeared = useAppearance(projectsRef) || hasSkillsAppeared;
+  const hasExperienceAppeared = useAppearance(experienceRef);
+  const hasAboutMeAppeared = useAppearance(aboutMeRef, '200px');
 
-  const skillsSlideInProps = useSlideInProps(isSkillsSectionVisible, 'RIGHT');
-  const projectsSlideInProps = useSlideInProps(isProjectSectionVisible, 'LEFT');
-  const experienceSlideInProps = useSlideInProps(isExperienceSectionVisible, 'RIGHT');
-  const aboutMeSlideInProps = useSlideInProps(isAboutMeSectionVisible, 'RIGHT');
-  const developerSlideInProps = useSlideInProps(isAboutMeSectionVisible, 'LEFT');
+  const isSkillsSectionVisible = useIntersection(skillsRef);
+  const isProjectsSectionVisible = useIntersection(projectsRef);
+  const isExperienceSectionVisible = useIntersection(experienceRef);
+  const isAboutMeSectionVisible = useIntersection(aboutMeRef);
+
+  const skillsSlideInProps = useSlideInProps(hasSkillsAppeared, 'RIGHT');
+  const projectsSlideInProps = useSlideInProps(hasProjectsAppeared, 'LEFT');
+  const experienceSlideInProps = useSlideInProps(hasExperienceAppeared, 'RIGHT');
+  const aboutMeSlideInProps = useSlideInProps(hasAboutMeAppeared, 'RIGHT');
+  const developerSlideInProps = useSlideInProps(hasAboutMeAppeared, 'LEFT');
+
+  useEffect(() => {
+    if (isAboutMeSectionVisible) {
+      setActiveSectionIndex(0);
+    } else if (isExperienceSectionVisible) {
+      setActiveSectionIndex(1);
+    } else if (isProjectsSectionVisible) {
+      setActiveSectionIndex(2);
+    } else if (isSkillsSectionVisible) {
+      setActiveSectionIndex(3);
+    }
+  }, [
+    isSkillsSectionVisible,
+    isProjectsSectionVisible,
+    isExperienceSectionVisible,
+    isAboutMeSectionVisible
+  ]);
 
   return (
     <Grid
@@ -97,6 +121,7 @@ const LandingPage = () => {
       </Grid>
 
       <Navbar
+        activeIndex={activeSectionIndex}
         items={[
           { icon: <AccountCircleRounded />, ref: aboutMeRef },
           { icon: <SchoolRounded />, ref: experienceRef },

@@ -1,5 +1,6 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import './Description.scss';
+import { memo } from 'react';
 
 interface DescriptionProps {
   description: string[];
@@ -18,4 +19,4 @@ const Description = ({ description, sx }: DescriptionProps) => {
   );
 };
 
-export default Description;
+export default memo(Description);

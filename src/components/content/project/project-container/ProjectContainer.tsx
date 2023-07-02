@@ -2,8 +2,8 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import './ProjectContainer.scss';
 import { Project } from 'shared/types/interfaces/Project';
 import Description from 'components/content/description/Description';
-import { ProjectPicture } from '../project-picture/ProjectPicture';
-import { useRef } from 'react';
+import ProjectPicture from '../project-picture/ProjectPicture';
+import { memo, useRef } from 'react';
 import { useIntersection } from 'shared/hooks/useIntersection';
 import classNames from 'classnames';
 
@@ -52,4 +52,4 @@ const ProjectContainer = ({ name, description, url, github, imageSrc }: Project)
   );
 };
 
-export default ProjectContainer;
+export default memo(ProjectContainer);

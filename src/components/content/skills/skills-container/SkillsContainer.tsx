@@ -2,6 +2,7 @@ import { Box, SxProps, Typography } from '@mui/material';
 import SkillBadge from '../skill-badge/SkillBadge';
 import './SkillsContainer.scss';
 import { Skill } from 'shared/types/interfaces/Skill';
+import { memo } from 'react';
 
 interface SkillsContainerProps {
   programming: Skill[];
@@ -43,4 +44,4 @@ const SkillsContainer = ({
   );
 };
 
-export default SkillsContainer;
+export default memo(SkillsContainer);

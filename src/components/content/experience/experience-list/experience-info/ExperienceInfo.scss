@@ -7,7 +7,7 @@
   &:hover {
     .experience-header {
       .date {
-        background: $purple-lighter;
+        background: $primary-light;
       }
     }
   }
@@ -26,7 +26,7 @@
       display: block;
       border-radius: 50px;
       padding: $spacing-s $spacing-l;
-      background: rgba($purple, 0.5);
+      background: rgba($primary, 0.5);
     }
 
     .company-name {
@@ -50,12 +50,20 @@
     }
   }
 
-  .expand-button {
-    transition: 0.2s;
-    margin-left: $spacing-m;
+  .expand-button-container {
+    margin: $spacing-s 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
 
-    &.collapse {
-      transform: rotate(180deg);
+    .expand-button {
+      transition: 0.2s;
+      margin-left: $spacing-m;
+
+      &.collapse {
+        transform: rotate(180deg);
+      }
     }
   }
 }

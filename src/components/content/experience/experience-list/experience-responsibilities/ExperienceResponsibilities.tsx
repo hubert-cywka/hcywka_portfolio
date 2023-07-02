@@ -1,5 +1,6 @@
 import './ExperienceResponsibilities.scss';
 import { Box, Typography } from '@mui/material';
+import { memo } from 'react';
 
 interface ExperienceResponsibilitiesProps {
   responsibilities: string[];
@@ -23,4 +24,4 @@ const ExperienceResponsibilities = ({ responsibilities }: ExperienceResponsibili
   );
 };
 
-export default ExperienceResponsibilities;
+export default memo(ExperienceResponsibilities);

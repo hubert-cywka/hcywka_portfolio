@@ -1,6 +1,6 @@
 import { ProjectPicturePageObjects } from './ProjectPicturePageObjects';
 import { mount } from 'cypress/react18';
-import { ProjectPicture } from './ProjectPicture';
+import ProjectPicture from './ProjectPicture';
 
 const ProjectPicturePO = new ProjectPicturePageObjects();
 

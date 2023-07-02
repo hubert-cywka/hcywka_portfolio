@@ -24,8 +24,8 @@
       border: thin solid $gray;
       filter: invert(1) brightness(40%);
       transition: 0.2s;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
 
       &:hover {
         filter: invert(1);
@@ -46,7 +46,7 @@
     .text-container {
       .role {
         width: fit-content;
-        background-color: $purple-lighter;
+        background-color: $primary-light;
         padding: $spacing-s $spacing-l;
         border-radius: 50px;
         font-weight: 750;
@@ -63,8 +63,8 @@
     .picture {
       max-width: 200px;
       border-radius: 20px;
-      border: thin solid $purple-lighter;
-      background: $purple;
+      border: thin solid $primary-light;
+      background: $primary;
       margin-bottom: $spacing-m;
       filter: grayscale(0.25);
     }
@@ -72,7 +72,7 @@
 
   .all-rights-reserved {
     opacity: 0.5;
-    display: block;
     width: fit-content;
+    white-space: pre-line;
   }
 }

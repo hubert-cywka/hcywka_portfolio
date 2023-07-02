@@ -1,6 +1,6 @@
 import './ProjectPicture.scss';
 import { Box, IconButton, Typography } from '@mui/material';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { KeyboardArrowLeftRounded, KeyboardArrowRightRounded } from '@mui/icons-material';
 
 interface ProjectPictureProps {
@@ -8,7 +8,7 @@ interface ProjectPictureProps {
   name: string;
 }
 
-export const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
+const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const incrementImageIndex = () => {
@@ -46,3 +46,5 @@ export const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
     </Box>
   );
 };
+
+export default memo(ProjectPicture);

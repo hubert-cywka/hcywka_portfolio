@@ -1,9 +1,10 @@
-import { Box, Collapse, IconButton, Typography } from '@mui/material';
+import { Box, Collapse, Typography } from '@mui/material';
 import { Experience } from 'shared/types/interfaces/Experience';
 import './ExperienceInfo.scss';
 import ExperienceResponsibilities from '../experience-responsibilities/ExperienceResponsibilities';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { KeyboardArrowDownRounded } from '@mui/icons-material';
+import classNames from 'classnames';
 
 const ExperienceInfo = ({
   since,
@@ -36,15 +37,17 @@ const ExperienceInfo = ({
       )}
       {responsibilities?.length && (
         <>
-          <Box>
-            <Typography variant="caption">Responsibilities</Typography>
-            <IconButton
-              aria-label="toggle-responsibilities-visibility-button"
+          <Box
+            onClick={toggleResponsibilitiesVisibility}
+            className="expand-button-container"
+            aria-label="toggle-responsibilities-visibility-button">
+            <Typography fontWeight={750} variant="caption">
+              {areResponsibilitiesVisible ? 'Wow!' : 'See what I did!'}
+            </Typography>
+            <KeyboardArrowDownRounded
+              className={classNames('expand-button', { collapse: areResponsibilitiesVisible })}
               sx={{ color: 'text.primary' }}
-              className={`expand-button ${areResponsibilitiesVisible ? 'collapse' : ''}`}
-              onClick={toggleResponsibilitiesVisibility}>
-              <KeyboardArrowDownRounded />
-            </IconButton>
+            />
           </Box>
           <Collapse in={areResponsibilitiesVisible}>
             <ExperienceResponsibilities responsibilities={responsibilities} />
@@ -55,4 +58,4 @@ const ExperienceInfo = ({
   );
 };
 
-export default ExperienceInfo;
+export default memo(ExperienceInfo);

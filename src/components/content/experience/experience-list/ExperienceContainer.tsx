@@ -2,6 +2,7 @@ import { Box, Grid, SxProps } from '@mui/material';
 import ExperienceInfo from './experience-info/ExperienceInfo';
 import './ExperienceContainer.scss';
 import { Experience } from 'shared/types/interfaces/Experience';
+import { memo } from 'react';
 
 interface ExperienceListProps {
   experience: Experience[];
@@ -25,4 +26,4 @@ const ExperienceList = ({ experience, sx }: ExperienceListProps) => {
   );
 };
 
-export default ExperienceList;
+export default memo(ExperienceList);

@@ -1,6 +1,7 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import './AboutDeveloper.scss';
 import { Developer } from 'shared/types/interfaces/Developer';
+import { memo } from 'react';
 
 interface AboutDeveloperProps extends Developer {
   sx?: SxProps;
@@ -18,6 +19,7 @@ const AboutDeveloper = ({ name, role, picture, contacts, sx }: AboutDeveloperPro
           </Typography>
         </Box>
       </Box>
+
       <Box component="section" className="contacts">
         {contacts.map((contact) => (
           <a key={contact.name} href={contact.href} target="_blank" rel="noreferrer">
@@ -26,10 +28,11 @@ const AboutDeveloper = ({ name, role, picture, contacts, sx }: AboutDeveloperPro
         ))}
       </Box>
       <Typography variant="caption" className="all-rights-reserved">
-        HC. All rights reserved ©
+        {`HC. All rights reserved ©
+        Feel free to contact me.`}
       </Typography>
     </Box>
   );
 };
 
-export default AboutDeveloper;
+export default memo(AboutDeveloper);
