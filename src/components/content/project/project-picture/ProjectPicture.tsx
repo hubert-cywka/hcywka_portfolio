@@ -1,14 +1,15 @@
 import './ProjectPicture.scss';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, IconButton, SxProps, Typography } from '@mui/material';
 import { memo, useState } from 'react';
 import { KeyboardArrowLeftRounded, KeyboardArrowRightRounded } from '@mui/icons-material';
 
 interface ProjectPictureProps {
   imageSrc: string[];
   name: string;
+  sx?: SxProps;
 }
 
-const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
+const ProjectPicture = ({ imageSrc, name, sx }: ProjectPictureProps) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const incrementImageIndex = () => {
@@ -32,7 +33,7 @@ const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
   };
 
   return (
-    <Box component="section" className="project-picture-container">
+    <Box sx={sx} component="section" className="project-picture-container">
       <img className="project-picture" src={imageSrc[imageIndex]} alt={name} loading="lazy" />
       <Box className="image-change-buttons">
         <IconButton onClick={decrementImageIndex} aria-label="previous picture button">

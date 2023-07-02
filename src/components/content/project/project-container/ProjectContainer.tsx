@@ -6,10 +6,16 @@ import ProjectPicture from '../project-picture/ProjectPicture';
 import { memo, useRef } from 'react';
 import { useIntersection } from 'shared/hooks/useIntersection';
 import classNames from 'classnames';
+import { useSlideInProps } from '../../../../shared/hooks/useSlideInProps';
+import { useAppearance } from '../../../../shared/hooks/useAppearance';
+
+const APPEAR_THRESHOLD = '-150px';
 
 const ProjectContainer = ({ name, description, url, github, imageSrc }: Project) => {
   const projectNameRef = useRef<HTMLElement>(null);
-  const isVisible = useIntersection(projectNameRef, '-150px');
+  const isVisible = useIntersection(projectNameRef, APPEAR_THRESHOLD);
+  const shouldSlideIn = useAppearance(projectNameRef, APPEAR_THRESHOLD);
+  const pictureSlideInProps = useSlideInProps(shouldSlideIn, 'RIGHT');
 
   return (
     <Grid component="article" item xs={12} className="project-container">
@@ -45,7 +51,7 @@ const ProjectContainer = ({ name, description, url, github, imageSrc }: Project)
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={6} alignItems="center">
-          <ProjectPicture imageSrc={imageSrc} name={name} />
+          <ProjectPicture imageSrc={imageSrc} name={name} sx={pictureSlideInProps} />
         </Grid>
       </Grid>
     </Grid>
