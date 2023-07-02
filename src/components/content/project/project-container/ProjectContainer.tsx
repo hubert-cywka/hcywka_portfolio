@@ -5,28 +5,25 @@ import Description from 'components/content/description/Description';
 import { ProjectPicture } from '../project-picture/ProjectPicture';
 import { useRef } from 'react';
 import { useIntersection } from 'shared/hooks/useIntersection';
+import classNames from 'classnames';
 
 const ProjectContainer = ({ name, description, url, github, imageSrc }: Project) => {
   const projectNameRef = useRef<HTMLElement>(null);
   const isVisible = useIntersection(projectNameRef, '-150px');
 
   return (
-    <Grid item xs={12} className="project-container">
+    <Grid component="article" item xs={12} className="project-container">
       <Grid container alignItems="center">
         <Grid item xs={12} sm={12} md={6}>
-          <Box
-            className="project-name"
-            ref={projectNameRef}
-            sx={{
-              backgroundPosition: isVisible ? 'left' : 'right',
-              paddingLeft: isVisible ? '30px' : '15px'
-            }}>
-            <Typography variant="h5" fontWeight="bold">
-              {name}
-            </Typography>
-          </Box>
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            className={classNames('project-name', { highlighted: isVisible })}
+            ref={projectNameRef}>
+            {name}
+          </Typography>
           <Description description={description} />
-          <Box className="buttons-container">
+          <Box component="section" className="buttons-container">
             <Button
               component="a"
               aria-label="show live project"

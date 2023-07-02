@@ -34,7 +34,9 @@ const Navbar = ({ items }: NavbarProps) => {
   };
 
   return (
-    <Box className={classNames('navbar-container', { collapsable: isScrollingDown })}>
+    <Box
+      component="nav"
+      className={classNames('navbar-container', { collapsable: isScrollingDown })}>
       {buildItems()}
     </Box>
   );

@@ -32,7 +32,7 @@ export const ProjectPicture = ({ imageSrc, name }: ProjectPictureProps) => {
   };
 
   return (
-    <Box className="project-picture-container">
+    <Box component="section" className="project-picture-container">
       <img className="project-picture" src={imageSrc[imageIndex]} alt={name} loading="lazy" />
       <Box className="image-change-buttons">
         <IconButton onClick={decrementImageIndex} aria-label="previous picture button">

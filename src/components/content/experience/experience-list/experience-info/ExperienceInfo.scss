@@ -25,7 +25,6 @@
       width: fit-content;
       display: block;
       border-radius: 50px;
-      font-size: $s-font;
       padding: $spacing-s $spacing-l;
       background: rgba($purple, 0.5);
     }
@@ -36,7 +35,6 @@
     }
 
     .position {
-      font-size: $s-font;
       opacity: 0.75;
     }
   }

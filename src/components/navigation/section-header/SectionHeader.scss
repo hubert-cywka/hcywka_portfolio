@@ -2,7 +2,7 @@
 
 .section-header {
   width: fit-content;
-  margin-bottom: $spacing-m;
+  padding-bottom: $spacing-l;
   display: flex;
   gap: $spacing-s $spacing-m;
   flex-wrap: wrap;
@@ -13,10 +13,10 @@
   }
 
   &.extraMargin {
-    margin: $spacing-xxxl 0 $spacing-l;
+    margin-top: $spacing-xxxl;
 
     @media (min-width: $md-breakpoint) {
-      margin: $header-spacing 0 $spacing-l;
+      margin-top: $header-spacing;
     }
   }
 

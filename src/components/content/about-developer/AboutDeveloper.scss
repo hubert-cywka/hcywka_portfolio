@@ -1,7 +1,6 @@
 @import "src/styles/constants";
 @import "src/styles/mixins";
 
-
 .about-developer-container {
   height: 100%;
   display: flex;
@@ -57,7 +56,6 @@
       .name {
         word-spacing: 100vw;
         line-height: $xxl-font;
-        font-size: $xxl-font;
         font-weight: 750;
       }
     }
@@ -66,8 +64,9 @@
       max-width: 200px;
       border-radius: 20px;
       border: thin solid $purple-lighter;
-      background: $purple-darker;
+      background: $purple;
       margin-bottom: $spacing-m;
+      filter: grayscale(0.25);
     }
   }
 

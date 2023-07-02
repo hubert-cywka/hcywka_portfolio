@@ -22,7 +22,7 @@ const SkillsContainer = ({
 }: SkillsContainerProps) => {
   const buildListOfSkills = (skills: Skill[], header: string) => {
     return (
-      <Box className="skills-category-container" sx={sx}>
+      <Box component="section" className="skills-category-container" sx={sx}>
         <Typography className="skills-category-header">{header}</Typography>
         <Box className="skills-category-list">
           {skills.map((skill, index) => (
@@ -34,7 +34,7 @@ const SkillsContainer = ({
   };
 
   return (
-    <Box className="skills-container">
+    <Box component="article" className="skills-container">
       {buildListOfSkills(programming, 'Languages, Libraries & Frameworks')}
       {buildListOfSkills(tools, 'Tools')}
       {buildListOfSkills(testing, 'Testing')}

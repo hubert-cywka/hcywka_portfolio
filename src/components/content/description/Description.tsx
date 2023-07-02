@@ -8,7 +8,7 @@ interface DescriptionProps {
 
 const Description = ({ description, sx }: DescriptionProps) => {
   return (
-    <Box className="description-container" sx={sx}>
+    <Box component="section" className="description-container" sx={sx}>
       {description?.map((paragraph, index) => (
         <Typography variant="caption" key={index} className="description-paragraph">
           {paragraph}

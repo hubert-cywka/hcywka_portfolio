@@ -11,7 +11,7 @@ interface ExperienceListProps {
 const ExperienceList = ({ experience, sx }: ExperienceListProps) => {
   return (
     <Grid item xs={12} sx={sx}>
-      <Grid className="experience-container" container>
+      <Grid component="article" className="experience-container" container>
         {experience.map((exp, index) => {
           return (
             <Grid key={index} item xs={12}>

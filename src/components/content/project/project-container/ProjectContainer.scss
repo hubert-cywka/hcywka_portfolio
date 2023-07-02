@@ -11,10 +11,13 @@
     background-repeat: no-repeat;
     background-size: 200% 100%;
     transition: 0.5s ease;
+    padding: $spacing-s $spacing-xxl $spacing-s $spacing-xl;
+    background-position: right;
     will-change: padding, background-position;
 
-    :first-child {
-      padding: $spacing-s $spacing-xxl $spacing-s 0;
+    &.highlighted {
+      background-position: left;
+      padding-left: $spacing-xxl;
     }
   }
 

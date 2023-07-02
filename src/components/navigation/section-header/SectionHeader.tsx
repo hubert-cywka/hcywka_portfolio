@@ -12,15 +12,17 @@ interface SectionHeaderProps {
 const SectionHeader = ({ headerText, reference, reduceTopMargin }: SectionHeaderProps) => {
   const words = headerText.split(' ');
   return (
-    <Box
+    <Typography
+      fontWeight="700"
+      variant="h4"
       ref={reference}
       className={classNames('section-header', { extraMargin: !reduceTopMargin })}>
       {words.map((word, index) => (
-        <Typography fontWeight="600" key={index} variant="h4">
+        <Box key={index} component="span">
           {word}
-        </Typography>
+        </Box>
       ))}
-    </Box>
+    </Typography>
   );
 };
 

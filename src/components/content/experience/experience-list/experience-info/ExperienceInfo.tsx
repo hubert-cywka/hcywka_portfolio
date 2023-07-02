@@ -19,12 +19,14 @@ const ExperienceInfo = ({
   };
 
   return (
-    <Box className="experience-info-container">
-      <Box className="experience-header">
-        <Typography variant="subtitle2" className="date">{`${since} - ${to}`}</Typography>
+    <Box component="section" className="experience-info-container">
+      <Box component="section" className="experience-header">
+        <Typography variant="caption" className="date">{`${since} - ${to}`}</Typography>
         <Box>
           <Typography className="company-name">{companyName}</Typography>
-          <Typography className="position">{position}</Typography>
+          <Typography className="position" variant="caption">
+            {position}
+          </Typography>
         </Box>
       </Box>
       {description?.length && (

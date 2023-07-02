@@ -7,11 +7,15 @@ interface ExperienceResponsibilitiesProps {
 
 const ExperienceResponsibilities = ({ responsibilities }: ExperienceResponsibilitiesProps) => {
   return (
-    <Box className="experience-responsibilities-container">
-      {responsibilities.map((responsibility, index) => {
+    <Box component="ol" className="experience-responsibilities-container">
+      {responsibilities.map((responsibility) => {
         return (
-          <Typography variant="caption" className="responsibility" key={index}>
-            - {responsibility}
+          <Typography
+            variant="caption"
+            component="li"
+            className="responsibility"
+            key={responsibility}>
+            {responsibility}
           </Typography>
         );
       })}

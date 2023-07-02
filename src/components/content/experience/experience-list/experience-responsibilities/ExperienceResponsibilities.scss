@@ -1,8 +1,11 @@
 @import "src/styles/mixins";
+@import "src/styles/constants";
 
 .experience-responsibilities-container {
+  list-style-type: disc;
+  margin-left: $spacing-l;
+
   .responsibility {
-    display: block;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 }
