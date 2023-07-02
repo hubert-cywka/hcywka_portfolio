@@ -6,7 +6,7 @@
   flex-direction: column;
   border-left: 2px solid rgba($purple-darker, 0.75);
   padding-left: $spacing-xl;
-  gap: $spacing-xl;
+  gap: $spacing-xxl;
 
   .timeline-point {
     position: absolute;
@@ -15,7 +15,7 @@
     aspect-ratio: 1;
     background: $purple-lighter;
     border-radius: 10px;
-    transform: translateX(calc(-50% - 1px)) translateY($spacing-xl);
+    transform: translateX(calc(-50% - 1px)) translateY($spacing-l);
     box-sizing: border-box;
   }
 }

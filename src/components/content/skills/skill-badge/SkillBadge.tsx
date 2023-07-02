@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material';
 import './SkillBadge.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import { Skill } from 'shared/types/interfaces/Skill';
+import classNames from 'classnames';
 
 interface SkillBadgeProps {
   skill: Skill;
@@ -16,7 +17,7 @@ const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
       skillLevelDots.push(
         <Box
           key={iterator}
-          className={`skill-level-dot ${skill.level >= iterator ? 'on' : 'off'}`}
+          className={classNames('skill-level-dot', { highlighted: skill.level >= iterator })}
         />
       );
     }
@@ -24,7 +25,7 @@ const SkillBadge = ({ skill, className }: SkillBadgeProps) => {
   };
 
   return (
-    <Box className={`skill-badge-container ${className ?? ''}`}>
+    <Box className={classNames('skill-badge-container', className)}>
       <img className="badge-icon" src={skill.img} alt={skill.name} />
       <Typography color="text.primary" className="badge-name">
         {skill.name}

@@ -2,6 +2,8 @@ import { Box } from '@mui/material';
 import { RefObject } from 'react';
 import './Navbar.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
+import { useScrollDirection } from '../../../shared/hooks/useScrollDirection';
+import classNames from 'classnames';
 
 export interface NavbarItem {
   ref: RefObject<HTMLDivElement>;
@@ -12,7 +14,11 @@ interface NavbarProps {
   items: NavbarItem[];
 }
 
+const SCROLL_THRESHOLD = 50;
+
 const Navbar = ({ items }: NavbarProps) => {
+  const isScrollingDown = useScrollDirection(SCROLL_THRESHOLD) === 'down';
+
   const scrollTo = (element: HTMLDivElement | null) => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -27,7 +33,11 @@ const Navbar = ({ items }: NavbarProps) => {
     });
   };
 
-  return <Box className="navbar-container">{buildItems()}</Box>;
+  return (
+    <Box className={classNames('navbar-container', { collapsable: isScrollingDown })}>
+      {buildItems()}
+    </Box>
+  );
 };
 
 export default Navbar;

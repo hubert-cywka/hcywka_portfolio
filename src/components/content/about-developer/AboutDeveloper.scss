@@ -17,11 +17,11 @@
   .contacts {
     width: fit-content;
     display: flex;
-    gap: $spacing-standard;
+    gap: $spacing-m;
 
     .contact-button {
       border-radius: 50px;
-      padding: $spacing-standard;
+      padding: $spacing-m;
       border: thin solid $gray;
       filter: invert(1) brightness(40%);
       transition: 0.2s;
@@ -51,7 +51,7 @@
         padding: $spacing-s $spacing-l;
         border-radius: 50px;
         font-weight: 750;
-        margin: 0 auto $spacing-standard;
+        margin: 0 auto $spacing-m;
       }
 
       .name {
@@ -67,7 +67,7 @@
       border-radius: 20px;
       border: thin solid $purple-lighter;
       background: $purple-darker;
-      margin-bottom: $spacing-standard;
+      margin-bottom: $spacing-m;
     }
   }
 

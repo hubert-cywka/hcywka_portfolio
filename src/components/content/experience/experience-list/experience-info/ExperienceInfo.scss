@@ -3,7 +3,6 @@
 
 .experience-info-container {
   width: 100%;
-  margin-bottom: $spacing-xl;
 
   &:hover {
     .experience-header {
@@ -55,7 +54,7 @@
 
   .expand-button {
     transition: 0.2s;
-    margin-left: $spacing-standard;
+    margin-left: $spacing-m;
 
     &.collapse {
       transform: rotate(180deg);

@@ -21,10 +21,13 @@ import { PROJECTS } from '../../shared/constants/Projects';
 import Navbar from '../../components/navigation/navbar/Navbar';
 import { Skills } from '../../shared/constants/Skills';
 import { useSlideInProps } from '../../shared/hooks/useSlideInProps';
+import { useWindowSize } from '../../shared/hooks/useWindowResize';
 
 const MD_BREAKPOINT = 900;
 
 const LandingPage = () => {
+  const [windowWidth] = useWindowSize();
+
   const projectsRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -48,7 +51,7 @@ const LandingPage = () => {
       justifyContent="center"
       className="landing-page-container"
       sx={{ color: 'text.primary' }}>
-      {window.innerWidth >= MD_BREAKPOINT && <ParallaxBackground />}
+      {windowWidth >= MD_BREAKPOINT && <ParallaxBackground />}
 
       <Grid item xs={12} md={11}>
         <Grid container spacing={5}>
@@ -57,10 +60,10 @@ const LandingPage = () => {
           </Grid>
 
           <Grid item sm={12} md={7} lg={8}>
-            <SectionHeader headerText="Hi, I am Hubert!" reference={aboutMeRef} disableTopMargin />
+            <SectionHeader headerText="Hi, I am Hubert!" reference={aboutMeRef} reduceTopMargin />
             <Description
               sx={{
-                width: window.innerWidth > MD_BREAKPOINT ? '80%' : '100%',
+                width: windowWidth > MD_BREAKPOINT ? '80%' : '100%',
                 marginBottom: '50px',
                 ...aboutMeSlideInProps
               }}
@@ -70,7 +73,7 @@ const LandingPage = () => {
             <SectionHeader
               headerText="Education & Experience"
               reference={experienceRef}
-              disableTopMargin={window.innerWidth > MD_BREAKPOINT}
+              reduceTopMargin={windowWidth > MD_BREAKPOINT}
             />
             <ExperienceList experience={EXPERIENCE} sx={experienceSlideInProps} />
           </Grid>
@@ -93,16 +96,14 @@ const LandingPage = () => {
         </Grid>
       </Grid>
 
-      <Grid item xs={0} md={1}>
-        <Navbar
-          items={[
-            { icon: <AccountCircleRounded />, ref: aboutMeRef },
-            { icon: <SchoolRounded />, ref: experienceRef },
-            { icon: <AssignmentRounded />, ref: projectsRef },
-            { icon: <StarRounded />, ref: skillsRef }
-          ]}
-        />
-      </Grid>
+      <Navbar
+        items={[
+          { icon: <AccountCircleRounded />, ref: aboutMeRef },
+          { icon: <SchoolRounded />, ref: experienceRef },
+          { icon: <AssignmentRounded />, ref: projectsRef },
+          { icon: <StarRounded />, ref: skillsRef }
+        ]}
+      />
     </Grid>
   );
 };

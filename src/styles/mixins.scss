@@ -3,7 +3,7 @@
 @mixin tile {
   box-sizing: border-box;
   border: thin solid $purple-darker;
-  padding: $spacing-standard;
+  padding: $spacing-m;
   border-radius: 10px;
 }
 

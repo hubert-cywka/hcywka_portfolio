@@ -14,7 +14,7 @@
   }
 
   .skill-level {
-    margin-top: $spacing-standard;
+    margin-top: $spacing-m;
     display: flex;
     gap: $spacing-s;
 
@@ -24,11 +24,11 @@
       border-radius: 50px;
       background: $purple;
 
-      &.on {
+      &.highlighted {
         transform: scale(1.1);
       }
 
-      &.off {
+      &:not(.highlighted) {
         opacity: 0.35;
       }
     }
