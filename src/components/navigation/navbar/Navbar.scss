@@ -43,7 +43,8 @@
     display: flex;
     cursor: pointer;
     opacity: 0.75;
-    transition: 0.2s;
+    transition: 0.35s;
+    border-color: $gray;
 
     &.active {
       border-color: $primary-light;
@@ -55,6 +56,7 @@
 
     &:hover {
       opacity: 1;
+      border-color: $primary-light;
     }
   }
 }

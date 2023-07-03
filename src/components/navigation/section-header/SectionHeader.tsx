@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { RefObject } from 'react';
+import { memo, RefObject } from 'react';
 import './SectionHeader.scss';
 import classNames from 'classnames';
 
@@ -26,4 +26,4 @@ const SectionHeader = ({ headerText, reference, reduceTopMargin }: SectionHeader
   );
 };
 
-export default SectionHeader;
+export default memo(SectionHeader);
