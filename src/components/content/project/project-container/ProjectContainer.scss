@@ -4,13 +4,13 @@
 .project-container {
   .project-name {
     margin-top: $spacing-xl;
-    border-left: 5px solid $primary-light;
+    border-left: 5px solid var(--primary-light);
     margin-bottom: $spacing-xl;
     width: fit-content;
-    background-image: linear-gradient(to right, $primary-light 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--primary-light) 50%, transparent 50%);
     background-repeat: no-repeat;
     background-size: 200% 100%;
-    transition: 0.5s ease;
+    transition: padding 0.5s ease, background-position 0.5s ease;
     padding: $spacing-s $spacing-xxl $spacing-s $spacing-xl;
     background-position: right;
     will-change: padding, background-position;

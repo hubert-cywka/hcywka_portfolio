@@ -1,11 +1,23 @@
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
-import { createTheme, darken, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
+import { updateGlobalColors } from './shared/utils/updateGlobalColors';
+import { COLORS } from './shared/constants/Colors';
+import { PrimaryColorContext } from './shared/contexts/PrimaryColorContext';
+import { memo, useEffect, useState } from 'react';
 
 interface AppProviderProps {
   children: ReactJSXElement | ReactJSXElement[];
 }
 
+const INITIAL_COLOR = COLORS[0];
+
 const AppProvider = ({ children }: AppProviderProps) => {
+  const [primaryColor, setPrimaryColor] = useState(INITIAL_COLOR);
+
+  useEffect(() => {
+    updateGlobalColors(INITIAL_COLOR);
+  }, []);
+
   const theme = createTheme({
     typography: {
       allVariants: {
@@ -39,17 +51,17 @@ const AppProvider = ({ children }: AppProviderProps) => {
             props: { variant: 'contained' },
             style: {
               color: '#ffffff',
-              backgroundColor: '#cc0055',
-              ':hover': { backgroundColor: darken('#cc0055', 0.15) }
+              backgroundColor: 'var(--primary)',
+              ':hover': { backgroundColor: 'var(--primary-dark)' }
             }
           },
           {
             props: { variant: 'outlined' },
             style: {
               color: '#ffffff',
-              borderColor: '#cc0055',
+              borderColor: 'var(--primary)',
               borderRadius: '100px',
-              ':hover': { borderColor: darken('#cc0055', 0.15) }
+              ':hover': { borderColor: 'var(--primary-dark)' }
             }
           }
         ]
@@ -57,7 +69,16 @@ const AppProvider = ({ children }: AppProviderProps) => {
     }
   });
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  const handleColorChange = (color: string) => {
+    updateGlobalColors(color);
+    setPrimaryColor(color);
+  };
+
+  return (
+    <PrimaryColorContext.Provider value={{ primaryColor, setPrimaryColor: handleColorChange }}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </PrimaryColorContext.Provider>
+  );
 };
 
-export default AppProvider;
+export default memo(AppProvider);

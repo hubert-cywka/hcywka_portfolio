@@ -24,7 +24,7 @@ import { useSlideInProps } from '../../shared/hooks/useSlideInProps';
 import { useWindowSize } from '../../shared/hooks/useWindowResize';
 import { useIntersection } from '../../shared/hooks/useIntersection';
 
-const MD_BREAKPOINT = 900;
+export const MD_BREAKPOINT = 900;
 
 const LandingPage = () => {
   const [windowWidth] = useWindowSize();

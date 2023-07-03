@@ -46,7 +46,7 @@
     .text-container {
       .role {
         width: fit-content;
-        background-color: $primary-light;
+        background-color: var(--primary-light);
         padding: $spacing-s $spacing-l;
         border-radius: 50px;
         font-weight: 750;
@@ -63,8 +63,8 @@
     .picture {
       max-width: 200px;
       border-radius: 20px;
-      border: thin solid $primary-light;
-      background: $primary;
+      border: thin solid var(--primary-light);
+      background: var(--primary);
       margin-bottom: $spacing-m;
       filter: grayscale(0.25);
     }

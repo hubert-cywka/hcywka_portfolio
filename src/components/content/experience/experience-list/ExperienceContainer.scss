@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  border-left: 2px solid rgba($primary-dark, 0.75);
+  border-left: 2px solid var(--primary-semi-transparent);
   padding-left: $spacing-xl;
   gap: $spacing-xxl;
 
@@ -13,7 +13,7 @@
     left: 0;
     width: 10px;
     aspect-ratio: 1;
-    background: $primary-light;
+    background: var(--primary-light);
     border-radius: 10px;
     transform: translateX(calc(-50% - 1px)) translateY($spacing-l);
     box-sizing: border-box;

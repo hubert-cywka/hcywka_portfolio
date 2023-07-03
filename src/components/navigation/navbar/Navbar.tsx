@@ -1,9 +1,11 @@
 import { Box } from '@mui/material';
-import { RefObject } from 'react';
+import { memo, RefObject } from 'react';
 import './Navbar.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import { useScrollDirection } from '../../../shared/hooks/useScrollDirection';
 import classNames from 'classnames';
+import ColorPanel from './color-panel/ColorPanel';
+import { COLORS } from '../../../shared/constants/Colors';
 
 export interface NavbarItem {
   ref: RefObject<HTMLDivElement>;
@@ -42,8 +44,9 @@ const Navbar = ({ items, activeIndex }: NavbarProps) => {
       component="nav"
       className={classNames('navbar-container', { collapsable: isScrollingDown })}>
       {buildItems()}
+      <ColorPanel className="navbar-item" colors={COLORS} />
     </Box>
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

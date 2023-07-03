@@ -1,0 +1,36 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.color-panel {
+  @include tile;
+  border-radius: 100px;
+  display: flex;
+
+  @media (min-width: $md-breakpoint) {
+    flex-direction: column;
+  }
+
+  .colors {
+    gap: $spacing-m;
+    display: flex;
+    align-items: center;
+    margin-left: $spacing-m;
+
+    @media (min-width: $md-breakpoint) {
+      flex-direction: column;
+      margin: $spacing-m 0 0;
+    }
+
+    .color-selector {
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      border-radius: 100px;
+      box-sizing: border-box;
+
+      &.active {
+        border: 2px solid white;
+      }
+    }
+  }
+}

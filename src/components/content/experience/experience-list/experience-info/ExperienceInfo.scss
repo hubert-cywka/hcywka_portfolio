@@ -7,7 +7,7 @@
   &:hover {
     .experience-header {
       .date {
-        background: $primary-light;
+        background-color: var(--primary-light);
       }
     }
   }
@@ -21,12 +21,12 @@
       white-space: nowrap;
       font-weight: 650;
       height: fit-content;
-      transition: 0.5s;
+      transition: background-color 0.5s;
       width: fit-content;
       display: block;
       border-radius: 50px;
       padding: $spacing-s $spacing-l;
-      background: rgba($primary, 0.5);
+      background: var(--primary-semi-transparent);
     }
 
     .company-name {

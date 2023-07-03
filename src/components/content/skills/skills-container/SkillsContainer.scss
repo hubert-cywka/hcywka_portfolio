@@ -15,7 +15,7 @@
 
     &:hover {
       .skills-category-header {
-        background-color: rgba($primary, 0.9);
+        background-color:var(--primary);
       }
     }
 
@@ -27,7 +27,7 @@
       width: 100%;
       font-weight: 650;
       font-size: $s-font;
-      background-color: rgba($primary, 0.1);
+      background-color: var(--primary-transparent);
       transition: background-color 0.3s;
     }
 

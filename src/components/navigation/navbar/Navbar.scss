@@ -12,8 +12,8 @@
   gap: $spacing-xl;
   padding: $spacing-s;
   border-radius: 50px;
-  background-color: rgba($primary-dark, 0.5);
   color: white;
+  background: rgba($gray, 0.75);
   transition: transform 0.3s;
 
   @media (max-width: calc(#{$md-breakpoint} - 1px)) {
@@ -46,17 +46,17 @@
     transition: 0.35s;
     border-color: $gray;
 
-    &.active {
-      border-color: $primary-light;
+    * {
+      font-size: $standard-font-size;
     }
 
-    * {
-      font-size: 1rem;
+    &.active {
+      border-color: var(--primary-light);
     }
 
     &:hover {
       opacity: 1;
-      border-color: $primary-light;
+      border-color: var(--primary-light);
     }
   }
 }
