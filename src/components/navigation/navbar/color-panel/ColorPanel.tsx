@@ -1,4 +1,4 @@
-import { Box, Collapse } from '@mui/material';
+import { Box, ClickAwayListener, Collapse } from '@mui/material';
 import './ColorPanel.scss';
 import { ComponentProps, SyntheticEvent, useContext, useState } from 'react';
 import classNames from 'classnames';
@@ -37,16 +37,18 @@ const ColorPanel = ({ colors, className }: ColorPanelProps) => {
   };
 
   return (
-    <Box
-      className={classNames('color-panel', { active: isColorPanelVisible }, className)}
-      onClick={toggleColorPanelVisibility}>
-      <Settings />
-      <Collapse
-        in={isColorPanelVisible}
-        orientation={windowWidth >= MD_BREAKPOINT ? 'vertical' : 'horizontal'}>
-        <Box className="colors">{buildColorSelectors()}</Box>
-      </Collapse>
-    </Box>
+    <ClickAwayListener onClickAway={() => setIsColorPanelVisible(false)}>
+      <Box
+        className={classNames('color-panel', { active: isColorPanelVisible }, className)}
+        onClick={toggleColorPanelVisibility}>
+        <Settings />
+        <Collapse
+          in={isColorPanelVisible}
+          orientation={windowWidth >= MD_BREAKPOINT ? 'vertical' : 'horizontal'}>
+          <Box className="colors">{buildColorSelectors()}</Box>
+        </Collapse>
+      </Box>
+    </ClickAwayListener>
   );
 };
 
