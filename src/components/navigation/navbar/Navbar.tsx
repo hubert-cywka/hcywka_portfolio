@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { memo, RefObject } from 'react';
+import { RefObject } from 'react';
 import './Navbar.scss';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import { useScrollDirection } from '../../../shared/hooks/useScrollDirection';
@@ -49,4 +49,4 @@ const Navbar = ({ items, activeIndex }: NavbarProps) => {
   );
 };
 
-export default memo(Navbar);
+export default Navbar;

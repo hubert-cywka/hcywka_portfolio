@@ -43,6 +43,8 @@ const ColorPanel = ({ colors, className }: ColorPanelProps) => {
         onClick={toggleColorPanelVisibility}>
         <Settings />
         <Collapse
+          mountOnEnter
+          unmountOnExit
           in={isColorPanelVisible}
           orientation={windowWidth >= MD_BREAKPOINT ? 'vertical' : 'horizontal'}>
           <Box className="colors">{buildColorSelectors()}</Box>

@@ -9,16 +9,20 @@
   top: 5%;
   height: fit-content;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: $spacing-xl;
   padding: $spacing-s;
-  border-radius: 50px;
+  border-radius: 10px;
   color: white;
-  background: rgba($gray, 0.75);
+  flex-wrap: wrap;
   transition: transform 0.3s;
 
   @media (max-width: calc(#{$md-breakpoint} - 1px)) {
+    width: 100vw;
+
     &.collapsable {
-      transform: translateX(-50%) translateY(-100px);
+      transform: translateX(-50%) translateY(-400px);
     }
   }
 
@@ -31,13 +35,8 @@
     flex-direction: column;
   }
 
-  &:hover {
-    .navbar-item {
-      transform: scale(1.15);
-    }
-  }
-
   .navbar-item {
+    background: rgba($gray, 0.95);
     @include tile;
     border-radius: 50px;
     display: flex;
