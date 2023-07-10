@@ -1,7 +1,7 @@
 import { mount } from 'cypress/react18';
 import SkillsContainer from './SkillsContainer';
 import { SkillsContainerPageObjects } from './SkillsContainerPageObjects';
-import { Skill } from 'shared/types/interfaces/Skill';
+import { Skill } from 'shared/types/Portfolio';
 import { cleanup } from '@testing-library/react';
 
 const SkillsContainerPO = new SkillsContainerPageObjects();

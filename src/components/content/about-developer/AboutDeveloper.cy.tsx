@@ -1,4 +1,4 @@
-import { Developer } from 'shared/types/interfaces/Developer';
+import { Developer } from 'shared/types/Portfolio';
 import { mount } from 'cypress/react18';
 import AboutDeveloper from './AboutDeveloper';
 import { AboutDeveloperPageObjects } from './AboutDeveloperPageObjects';

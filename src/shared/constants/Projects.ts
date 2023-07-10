@@ -1,4 +1,4 @@
-import { Project } from '../types/interfaces/Project';
+import { Project } from 'shared/types/Portfolio';
 import {
   BEERS_TASK_GITHUB_URL,
   BEERS_TASK_URL,

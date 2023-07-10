@@ -1,6 +1,6 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import './AboutDeveloper.scss';
-import { Developer } from 'shared/types/interfaces/Developer';
+import { Developer } from 'shared/types/Portfolio';
 import { memo } from 'react';
 
 interface AboutDeveloperProps extends Developer {

@@ -1,4 +1,4 @@
-import { Experience } from '../types/interfaces/Experience';
+import { Experience } from 'shared/types/Portfolio';
 
 export const IDEMIA_EXPERIENCE: Experience = {
   companyName: 'IDEMIA Poland R&D',

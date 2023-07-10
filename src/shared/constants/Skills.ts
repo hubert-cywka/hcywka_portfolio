@@ -1,4 +1,4 @@
-import { Skill } from '../types/interfaces/Skill';
+import { Skill } from 'shared/types/Portfolio';
 import {
   CSS_IMAGE,
   CYPRESS_IMAGE,

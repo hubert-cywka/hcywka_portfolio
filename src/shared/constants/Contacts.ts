@@ -1,4 +1,4 @@
-import { Contact } from '../types/interfaces/Contact';
+import { Contact } from 'shared/types/Portfolio';
 import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from './URLConstants';
 import { EMAIL_IMAGE, GITHUB_IMAGE, LINKEDIN_IMAGE } from './ImageConstants';
 

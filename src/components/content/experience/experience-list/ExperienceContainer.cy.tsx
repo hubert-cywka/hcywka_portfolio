@@ -1,4 +1,4 @@
-import { Experience } from 'shared/types/interfaces/Experience';
+import { Experience } from 'shared/types/Portfolio';
 import { mount } from 'cypress/react18';
 import ExperienceContainer from './ExperienceContainer';
 import { ExperienceContainerPageObjects } from './ExperienceContainerPageObjects';

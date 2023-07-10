@@ -1,5 +1,5 @@
 import { mount } from 'cypress/react18';
-import { Skill } from 'shared/types/interfaces/Skill';
+import { Skill } from 'shared/types/Portfolio';
 import SkillBadge from './SkillBadge';
 import { SkillBadgePageObjects } from './SkillBadgePageObjects';
 

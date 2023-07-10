@@ -1,7 +1,7 @@
 import { Box, SxProps, Typography } from '@mui/material';
 import SkillBadge from '../skill-badge/SkillBadge';
 import './SkillsContainer.scss';
-import { Skill } from 'shared/types/interfaces/Skill';
+import { Skill } from 'shared/types/Portfolio';
 import { memo } from 'react';
 
 interface SkillsContainerProps {

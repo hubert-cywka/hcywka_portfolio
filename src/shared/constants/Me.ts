@@ -1,4 +1,4 @@
-import { Developer } from '../types/interfaces/Developer';
+import { Developer } from 'shared/types/Portfolio';
 import { CONTACTS } from './Contacts';
 
 export const ME: Developer = {

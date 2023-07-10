@@ -1,5 +1,5 @@
 import { Box, Collapse, Typography } from '@mui/material';
-import { Experience } from 'shared/types/interfaces/Experience';
+import { Experience } from 'shared/types/Portfolio';
 import './ExperienceInfo.scss';
 import ExperienceResponsibilities from '../experience-responsibilities/ExperienceResponsibilities';
 import { memo, useState } from 'react';

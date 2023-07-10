@@ -1,13 +1,13 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import './ProjectContainer.scss';
-import { Project } from 'shared/types/interfaces/Project';
+import { Project } from 'shared/types/Portfolio';
 import Description from 'components/content/description/Description';
 import ProjectPicture from '../project-picture/ProjectPicture';
 import { memo, useRef } from 'react';
 import { useIntersection } from 'shared/hooks/useIntersection';
 import classNames from 'classnames';
-import { useSlideInProps } from '../../../../shared/hooks/useSlideInProps';
-import { useAppearance } from '../../../../shared/hooks/useAppearance';
+import { useSlideInProps } from 'shared/hooks/useSlideInProps';
+import { useAppearance } from 'shared/hooks/useAppearance';
 
 const APPEAR_THRESHOLD = '-150px';
 
