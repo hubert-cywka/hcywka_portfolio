@@ -25,17 +25,6 @@ const ColorPanel = ({ colors, className }: ColorPanelProps) => {
     setPrimaryColor(color);
   };
 
-  const buildColorSelectors = () => {
-    return colors.map((color) => (
-      <Box
-        className={classNames('color-selector', { active: primaryColor === color })}
-        key={color}
-        sx={{ backgroundColor: color }}
-        onClick={(e) => handleColorSelection(e, color)}
-      />
-    ));
-  };
-
   return (
     <ClickAwayListener onClickAway={() => setIsColorPanelVisible(false)}>
       <Box
@@ -47,7 +36,16 @@ const ColorPanel = ({ colors, className }: ColorPanelProps) => {
           unmountOnExit
           in={isColorPanelVisible}
           orientation={windowWidth >= MD_BREAKPOINT ? 'vertical' : 'horizontal'}>
-          <Box className="colors">{buildColorSelectors()}</Box>
+          <Box className="colors">
+            {colors.map((color) => (
+              <Box
+                className={classNames('color-selector', { active: primaryColor === color })}
+                key={color}
+                sx={{ backgroundColor: color }}
+                onClick={(e) => handleColorSelection(e, color)}
+              />
+            ))}
+          </Box>
         </Collapse>
       </Box>
     </ClickAwayListener>

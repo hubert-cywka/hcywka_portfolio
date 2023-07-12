@@ -10,14 +10,13 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader = ({ headerText, reference, reduceTopMargin }: SectionHeaderProps) => {
-  const words = headerText.split(' ');
   return (
     <Typography
       fontWeight="700"
       variant="h4"
       ref={reference}
       className={classNames('section-header', { extraMargin: !reduceTopMargin })}>
-      {words.map((word, index) => (
+      {headerText.split(' ').map((word, index) => (
         <Box key={index} component="span">
           {word}
         </Box>

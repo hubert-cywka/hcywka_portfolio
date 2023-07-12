@@ -10,17 +10,13 @@ interface ProjectsListProps {
 }
 
 const ProjectsList = ({ projects, sx }: ProjectsListProps) => {
-  const buildProjectContainers = () => {
-    return projects.map((project, index) => (
-      <Grid key={index} item xs={12}>
-        <ProjectContainer {...project} />
-      </Grid>
-    ));
-  };
-
   return (
     <Grid sx={sx} className="projects-container" container>
-      {buildProjectContainers()}
+      {projects.map((project, index) => (
+        <Grid key={index} item xs={12}>
+          <ProjectContainer {...project} />
+        </Grid>
+      ))}
     </Grid>
   );
 };
