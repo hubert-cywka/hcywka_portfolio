@@ -5,11 +5,13 @@ import {
   FLAVOURIFY_GITHUB_URL,
   FLAVOURIFY_URL,
   PORTFOLIO_GITHUB_URL,
-  PORTFOLIO_URL
+  PORTFOLIO_URL,
+  TEAMUP_BACK_GITHUB_URL,
+  TEAMUP_UI_GITHUB_URL
 } from './URLConstants';
 
 export const FLAVOURIFY: Project = {
-  github: FLAVOURIFY_GITHUB_URL,
+  uiGithub: FLAVOURIFY_GITHUB_URL,
   url: FLAVOURIFY_URL,
   imageSrc: [
     'projects/flavourify/1.webp',
@@ -29,7 +31,7 @@ export const FLAVOURIFY: Project = {
 };
 
 const PORTFOLIO: Project = {
-  github: PORTFOLIO_GITHUB_URL,
+  uiGithub: PORTFOLIO_GITHUB_URL,
   url: PORTFOLIO_URL,
   imageSrc: ['projects/portfolio/1.webp', 'projects/portfolio/2.webp'],
   name: 'Portfolio',
@@ -41,7 +43,7 @@ const PORTFOLIO: Project = {
 };
 
 const BEERS_TASK: Project = {
-  github: BEERS_TASK_GITHUB_URL,
+  uiGithub: BEERS_TASK_GITHUB_URL,
   url: BEERS_TASK_URL,
   imageSrc: [
     'projects/beers/1.webp',
@@ -57,4 +59,17 @@ const BEERS_TASK: Project = {
   ]
 };
 
-export const PROJECTS: Project[] = [FLAVOURIFY, PORTFOLIO, BEERS_TASK];
+const TEAMUP: Project = {
+  uiGithub: TEAMUP_UI_GITHUB_URL,
+  backendGithub: TEAMUP_BACK_GITHUB_URL,
+  imageSrc: ['projects/teamup/1.webp', 'projects/teamup/2.webp', 'projects/teamup/3.webp'],
+  name: 'Team.Up (WIP)',
+  description: [
+    'Work in progress.',
+    'Ever wanted to find a team to play some football or find a partner to go to gym? Team.Up allows you to do so! Create your own sport event or join existing one and keep up your healthy lifestyle!',
+    'Team.Up frontend is created in Next.js, TypeScript and CSS modules and uses NextAuth. Backend application is created in Express.js and uses MongoDB. It is built on top of three-layer architecture.',
+    'Technologies used: Next.js, React, TypeScript, SCSS, CSS modules, Cypress, Jest, Express.js, Node.js, MongoDB, Webpack, ESLint, Prettier.'
+  ]
+};
+
+export const PROJECTS: Project[] = [FLAVOURIFY, PORTFOLIO, BEERS_TASK, TEAMUP];

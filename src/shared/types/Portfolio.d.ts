@@ -30,8 +30,9 @@ export interface Link {
 export interface Project {
   imageSrc: string[];
   name: string;
-  url: string;
-  github: string;
+  url?: string;
+  uiGithub: string;
+  backendGithub?: string;
   description: string[];
 }
 

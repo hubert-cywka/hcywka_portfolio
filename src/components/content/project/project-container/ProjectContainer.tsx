@@ -11,7 +11,14 @@ import { useAppearance } from 'shared/hooks/useAppearance';
 
 const APPEAR_THRESHOLD = '-150px';
 
-const ProjectContainer = ({ name, description, url, github, imageSrc }: Project) => {
+const ProjectContainer = ({
+  name,
+  description,
+  url,
+  uiGithub,
+  backendGithub,
+  imageSrc
+}: Project) => {
   const projectNameRef = useRef<HTMLElement>(null);
   const isVisible = useIntersection(projectNameRef, APPEAR_THRESHOLD);
   const shouldSlideIn = useAppearance(projectNameRef, APPEAR_THRESHOLD);
@@ -30,24 +37,37 @@ const ProjectContainer = ({ name, description, url, github, imageSrc }: Project)
           </Typography>
           <Description description={description} />
           <Box component="section" className="buttons-container">
+            {url && (
+              <Button
+                component="a"
+                aria-label="show live project"
+                href={url}
+                target="_blank"
+                variant="contained"
+                className="redirect-button">
+                See website
+              </Button>
+            )}
             <Button
               component="a"
-              aria-label="show live project"
-              href={url}
+              aria-label="show project frontend repository"
+              href={uiGithub}
               target="_blank"
               variant="contained"
               className="redirect-button">
-              See website
+              GitHub - UI
             </Button>
-            <Button
-              component="a"
-              aria-label="show project repository"
-              href={github}
-              target="_blank"
-              variant="contained"
-              className="redirect-button">
-              GitHub
-            </Button>
+            {backendGithub && (
+              <Button
+                component="a"
+                aria-label="show project backend repository"
+                href={backendGithub}
+                target="_blank"
+                variant="contained"
+                className="redirect-button">
+                GitHub - Backend
+              </Button>
+            )}
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={6} alignItems="center">

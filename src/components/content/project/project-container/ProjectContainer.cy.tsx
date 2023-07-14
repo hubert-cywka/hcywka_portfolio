@@ -53,7 +53,7 @@ describe('Testing <ProjectContainer />', () => {
       ProjectContainerPO.gitHubButton.should(
         'have.attr',
         'href',
-        ProjectContainerPO.PROJECT.github
+        ProjectContainerPO.PROJECT.uiGithub
       );
     });
   });

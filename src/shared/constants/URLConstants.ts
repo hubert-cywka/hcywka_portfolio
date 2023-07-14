@@ -7,3 +7,5 @@ export const PORTFOLIO_GITHUB_URL = 'https://github.com/hejs22/hcywka_portfolio'
 export const PORTFOLIO_URL = 'https://hcywka.netlify.app';
 export const BEERS_TASK_GITHUB_URL = 'https://github.com/hejs22/exlabs_recruitment_task';
 export const BEERS_TASK_URL = 'https://hcywka-beers.netlify.app';
+export const TEAMUP_UI_GITHUB_URL = 'https://github.com/hejs22/team.up-ui';
+export const TEAMUP_BACK_GITHUB_URL = 'https://github.com/hejs22/team.up-back';
