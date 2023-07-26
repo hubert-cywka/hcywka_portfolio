@@ -12,6 +12,7 @@ import {
   JEST_IMAGE,
   JS_IMAGE,
   MUI_IMAGE,
+  NEXTJS_IMAGE,
   NODEJS_IMAGE,
   PHOTOSHOP_IMAGE,
   REACT_IMAGE,
@@ -23,97 +24,84 @@ export class Skills {
   static PROGRAMMING_SKILLS: Skill[] = [
     {
       img: REACT_IMAGE,
-      name: 'React.js',
-      level: 4
+      name: 'React.js'
+    },
+    {
+      img: NEXTJS_IMAGE,
+      name: 'Next.js'
     },
     {
       img: JS_IMAGE,
-      name: 'JavaScript',
-      level: 3
+      name: 'JavaScript'
     },
     {
       img: TS_IMAGE,
-      name: 'TypeScript',
-      level: 3
+      name: 'TypeScript'
     },
     {
       img: HTML_IMAGE,
-      name: 'HTML',
-      level: 4
+      name: 'HTML'
     },
     {
       img: CSS_IMAGE,
-      name: 'CSS',
-      level: 4
+      name: 'CSS'
     },
     {
       img: MUI_IMAGE,
-      name: 'Material UI',
-      level: 4
+      name: 'Material UI'
     },
     {
       img: EXPRESS_IMAGE,
-      name: 'Express',
-      level: 2
+      name: 'Express'
     },
     {
       img: NODEJS_IMAGE,
-      name: 'Node.js',
-      level: 2
+      name: 'Node.js'
     },
     {
       img: JAVA_IMAGE,
-      name: 'Java',
-      level: 2
+      name: 'Java'
     },
     {
       img: SPRING_IMAGE,
-      name: 'Spring Boot',
-      level: 1
+      name: 'Spring Boot'
     }
   ];
 
   static TESTING_SKILLS: Skill[] = [
     {
       img: CYPRESS_IMAGE,
-      name: 'Cypress',
-      level: 3
+      name: 'Cypress'
     },
     {
       img: JEST_IMAGE,
-      name: 'Jest',
-      level: 4
+      name: 'Jest'
     }
   ];
 
   static TOOLS_SKILLS: Skill[] = [
     {
       img: GITHUB_IMAGE,
-      name: 'GitHub',
-      level: 4
+      name: 'GitHub'
     },
     {
       img: GIT_IMAGE,
-      name: 'Git',
-      level: 4
+      name: 'Git'
     },
     {
       img: DOCKER_IMAGE,
-      name: 'Docker',
-      level: 2
+      name: 'Docker'
     }
   ];
 
   static DESIGN_SKILLS: Skill[] = [
     {
       img: PHOTOSHOP_IMAGE,
-      name: 'Photoshop',
-      level: 3
+      name: 'Photoshop'
     },
     {
       img: ILLUSTRATOR_IMAGE,
-      name: 'Illustrator',
-      level: 4
+      name: 'Illustrator'
     }
   ];
 }

@@ -10,17 +10,31 @@ import {
   TEAMUP_UI_GITHUB_URL
 } from './URLConstants';
 
+import FLAVOURIFY1 from 'components/content/project/project-picture/assets/flavourify/1.webp';
+import FLAVOURIFY2 from 'components/content/project/project-picture/assets/flavourify/2.webp';
+import FLAVOURIFY3 from 'components/content/project/project-picture/assets/flavourify/3.webp';
+import FLAVOURIFY4 from 'components/content/project/project-picture/assets/flavourify/4.webp';
+import FLAVOURIFY5 from 'components/content/project/project-picture/assets/flavourify/5.webp';
+import FLAVOURIFY6 from 'components/content/project/project-picture/assets/flavourify/6.webp';
+
+import PORTFOLIO1 from 'components/content/project/project-picture/assets/portfolio/1.webp';
+import PORTFOLIO2 from 'components/content/project/project-picture/assets/portfolio/2.webp';
+
+import BEERS1 from 'components/content/project/project-picture/assets/beers/1.webp';
+import BEERS2 from 'components/content/project/project-picture/assets/beers/2.webp';
+import BEERS3 from 'components/content/project/project-picture/assets/beers/3.webp';
+import BEERS4 from 'components/content/project/project-picture/assets/beers/4.webp';
+
+import TEAMUP1 from 'components/content/project/project-picture/assets/teamup/1.webp';
+import TEAMUP2 from 'components/content/project/project-picture/assets/teamup/2.webp';
+import TEAMUP3 from 'components/content/project/project-picture/assets/teamup/3.webp';
+import TEAMUP4 from 'components/content/project/project-picture/assets/teamup/4.webp';
+import TEAMUP5 from 'components/content/project/project-picture/assets/teamup/5.webp';
+
 export const FLAVOURIFY: Project = {
   uiGithub: FLAVOURIFY_GITHUB_URL,
   url: FLAVOURIFY_URL,
-  imageSrc: [
-    'projects/flavourify/1.webp',
-    'projects/flavourify/2.webp',
-    'projects/flavourify/3.webp',
-    'projects/flavourify/4.webp',
-    'projects/flavourify/5.webp',
-    'projects/flavourify/6.webp'
-  ],
+  imageSrc: [FLAVOURIFY1, FLAVOURIFY2, FLAVOURIFY3, FLAVOURIFY4, FLAVOURIFY5, FLAVOURIFY6],
   name: 'Flavourify',
   description: [
     "I've developed a recipe book app that caters to users' needs (actually, mine needs) by providing a convenient way to maintain collection of recipes. This app also incorporates a user system.",
@@ -33,7 +47,7 @@ export const FLAVOURIFY: Project = {
 const PORTFOLIO: Project = {
   uiGithub: PORTFOLIO_GITHUB_URL,
   url: PORTFOLIO_URL,
-  imageSrc: ['projects/portfolio/1.webp', 'projects/portfolio/2.webp'],
+  imageSrc: [PORTFOLIO1, PORTFOLIO2],
   name: 'Portfolio',
   description: [
     'Modern, simple and elegant responsive portfolio website created in React with as little libraries as possible.',
@@ -45,12 +59,7 @@ const PORTFOLIO: Project = {
 const BEERS_TASK: Project = {
   uiGithub: BEERS_TASK_GITHUB_URL,
   url: BEERS_TASK_URL,
-  imageSrc: [
-    'projects/beers/1.webp',
-    'projects/beers/2.webp',
-    'projects/beers/3.webp',
-    'projects/beers/4.webp'
-  ],
+  imageSrc: [BEERS1, BEERS2, BEERS3, BEERS4],
   name: 'Beers.',
   description: [
     'This application was created as a recruitment task.',
@@ -62,7 +71,7 @@ const BEERS_TASK: Project = {
 const TEAMUP: Project = {
   uiGithub: TEAMUP_UI_GITHUB_URL,
   backendGithub: TEAMUP_BACK_GITHUB_URL,
-  imageSrc: ['projects/teamup/1.webp', 'projects/teamup/2.webp', 'projects/teamup/3.webp'],
+  imageSrc: [TEAMUP1, TEAMUP2, TEAMUP3, TEAMUP4, TEAMUP5],
   name: 'Team.Up (WIP)',
   description: [
     'Work in progress.',
